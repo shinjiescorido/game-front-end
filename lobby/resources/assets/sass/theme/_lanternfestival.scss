@@ -1,0 +1,144 @@
+
+.wrapper-effects {
+  @include wh(100%, 100%);
+  @include prefix(transform-origin, top left );
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.particles {
+  @include wh(15px, 15px);
+  @include bradius(all, 50%);
+  @include box-shadow(0 0 25px 3px #fbe071);
+  @include background-image(radial-gradient(circle at top left, #ffec9d, #fbe071));
+  @include animation(light 3s ease infinite);
+  position: absolute;
+  opacity: 0;
+  display: block;
+
+  @at-root {
+    @include keyframes(light) {
+      0% {
+        // @include transform(scale(0));
+        @include opacity(0);
+      }
+      50% {
+        @include opacity((random(1) + 0.5));
+        // @include transform(scale(1));
+      }
+      100% {
+        // @include transform(scale(0));
+        @include opacity(0);
+      }
+    }
+  }
+} //particles\
+
+.logo {
+  @include wh(338px, 72px);
+  @include animation(logo 3s steps(50) infinite);
+  background-image: url('/img/seasonal_theme/lantern_theme/logo_web.png');
+  display: block;
+  background-position: 0 0;
+  position: relative;
+  margin-left: -50px;
+
+  @at-root {
+    @include keyframes(logo) {
+      from { background-position: 0; }
+      to { background-position: -16900px; }
+    }
+  }
+} //logo
+
+.game-wrap { padding: 0; }
+.game__con { margin-bottom: 20px; }
+.sidebar--lobby {
+  @include bgs('/img/seasonal_theme/lantern_theme/bg_lobby.png', contain);
+  padding: 15px 30px 35px 30px;
+}
+
+.sidebar--game {
+  @include bgs('/img/seasonal_theme/lantern_theme/bg_innerpage.png', contain);
+  padding: 15px 15px 35px 15px;
+}
+.sidebar {
+  -webkit-transform: translateZ(0);
+  h4, h3 {
+    background: #020d36;
+    color: #ffb94a;
+  	display: inline-block;
+  	font: bold 20px ArvoBold;
+    margin: 0 0 10px 0;
+    line-height: 1;
+    padding: 6px;
+    position: relative;
+    span {
+      border: 1px solid #d89e45;
+      padding: 7px 25px;
+      position: relative;
+      display: block;
+
+      &:before{
+        @include vm();
+        content: "";
+        border: 1px solid #c08f45;
+        @include wh(96%, 86%);
+      }
+    } //span
+  } //h4
+} //sidebar
+
+.flying-lantern {
+  @include wh(100%, 100%);
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+} //.flying-lantern
+
+.lantern {
+  @include wh(35px, 41px);
+  @include bgs('/img/seasonal_theme/lantern_theme/lantern.png', contain);
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  // @include animation(float 25s linear infinite);
+
+
+  -webkit-animation: float 25s linear infinite, sideways 5s ease-in-out infinite alternate;
+  -moz-animation: float 25s linear infinite, sideways 5s ease-in-out infinite alternate;
+  -o-animation: float 25s linear infinite, sideways 5s ease-in-out infinite alternate;
+  animation: float 25s linear infinite, sideways 5s ease-in-out infinite alternate;
+
+  // -webkit-backface-visibility: hidden;
+  //
+  @at-root {
+    @include keyframes(float) {
+      0% {
+        @include wh(35px, 41px);
+        @include opacity(1);
+        top: 100%;
+      }
+      100% {
+        @include wh(10px, 15px);
+        @include opacity(0);
+        top: -5%;
+      }
+    } //float
+
+    @include keyframes(sideways) {
+      0% {
+        margin-left: 0
+      }
+      100% {
+        margin-left: 50px;
+      }
+    } //float
+  }
+
+} //lantern

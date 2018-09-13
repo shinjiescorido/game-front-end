@@ -1,0 +1,133 @@
+.logo {
+  @include wh(338px, 72px);
+  @include animation(logo 3s steps(38) infinite);
+  background-image: url('/img/seasonal_theme/chinese_newyear_theme/logo_web.png');
+  display: block;
+  background-position: 0 0;
+  position: relative;
+  margin-left: -70px;
+
+  @at-root {
+    @include keyframes(logo) {
+      from { background-position: 0; }
+      to { background-position: -12844px; }
+    }
+  }
+} //logo
+
+/*************** CONCEPT 1 ****************/
+.sidebar-container {
+  position: relative;
+  display: block;
+  z-index: 30;
+}
+.sidebar--lobby {
+  @include bgs('/img/seasonal_theme/chinese_newyear_theme/lobby_sidebar.png', contain);
+  padding: 15px 30px 35px 30px;
+}
+
+.sidebar--game {
+  @include bgs('/img/seasonal_theme/chinese_newyear_theme/ingame_sidebar.png', contain);
+  padding: 15px 15px 35px 15px;
+}
+.sidebar__lang { z-index: 50; }
+.sidebar {
+  h4 {
+    @include bradius(all, 7px);
+    @include background-image(linear-gradient(to right, #cf0000, #9b0000, #710000));
+    border: 2px solid #d89e45;
+    color: #ffc14a;
+  	display: inline-block;
+  	font: bold 20px ArvoBold;
+    margin: 0 0 15px 0;
+    line-height: 1;
+  	padding: 5px 7px;
+    position: relative;
+
+    span {
+      border: 1px solid #d89e45;
+      padding: 5px 25px;
+      position: relative;
+
+      &:before, &:after {
+        @include wh(8px, 37px);
+        content: '';
+        position: absolute;
+        top: -3px;
+      }
+      &:before {
+        @include bgs('/img/seasonal_theme/chinese_newyear_theme/border.png', contain);
+        left: -4px;
+      }
+      &:after {
+        @include bgs('/img/seasonal_theme/chinese_newyear_theme/border.png', contain);
+        @include transform(rotate(180deg));
+        right: -4px;
+      }
+    }
+
+    &:before {
+      @include vm();
+      @include wh(89%, 85%);
+      @include border(tb,1px solid #d89e45);
+      content: '';
+      position: absolute;
+    }
+
+    // &:after {
+    //   @include vm();
+    //   @include wh(97%, 60%);
+    //   @include border(lr,1px solid #d89e45);
+    //   content: '';
+    //   position: absolute;
+    // }
+  }
+
+} //sidebar
+
+.game__con { margin-bottom: 20px; }
+
+
+.fireworks-con, .loading-fireworks-con {
+  @include wh(100%, 100%);
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+
+  span {
+    @include opacity(0);
+    @include animation(fireworks 2s infinite);
+    position: absolute;
+  //   top: 10%;
+  //   left: 10%;
+  &.blue-fw {
+    @include bgs('/img/seasonal_theme/chinese_newyear_theme/fw_blue02.png', contain);
+  }
+  &.green-fw {
+    @include bgs('/img/seasonal_theme/chinese_newyear_theme/fw_green02.png', contain);
+  }
+  &.yellow-fw {
+    @include bgs('/img/seasonal_theme/chinese_newyear_theme/fw_yellow02.png', contain);
+  }
+  &.grey-fw {
+    @include bgs('/img/seasonal_theme/chinese_newyear_theme/fw_grey.png', contain);
+  }
+    @at-root {
+      @include keyframes(fireworks) {
+        0% {
+          @include transform(scale(0));
+          @include opacity(0);
+        }
+        70% {
+          @include opacity(1);
+        }
+        100% {
+          @include transform(scale(1));
+          @include opacity(0);
+        }
+      }
+    }
+  }
+}

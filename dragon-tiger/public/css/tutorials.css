@@ -1,0 +1,249 @@
+/*--Common styles*/
+.tutorial-wrap {
+  position: absolute;
+  width: 1210px;
+  height: 850px;
+  right: 18.44%;
+  background: rgba(0,0,0,0.7);
+  z-index: 2;
+}
+.tutorial-modal {
+  width: 410px;
+  background: rgba(0,0,0,0.5);
+  position: relative;
+  margin: auto;
+  margin-top: 12.5%;
+}
+.tutorial-modal__body {
+  text-align: center;
+  padding: 2.8em;
+  height: 270px;
+}
+.tutorial-modal__header {
+  font: 20px lato-black;
+  color: #F1E382;
+  padding: 3.6em 0 0.4em 0;
+  position: relative;
+}
+.tutorial-modal__header::before {
+  content: '';
+  display: block;
+  background: url(/img/3.0/prompts/tuts_icon.png);
+  width: 61px;
+  height: 61px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  margin-left: -30px;
+  background-repeat: no-repeat;
+}
+.tutorial-modal__sub-header {
+  color: #fff;
+  font: 20px lato-regular;
+}
+.tutorial-modal__footer {
+  position: relative;
+  overflow: hidden;
+  margin-top: -30px;
+}
+.tutorial-modal__button {
+  width: 50%;
+  height: 62px;
+  float: left;
+  background: #C7BA6C;
+  color: #000;
+  font: 18px lato-black;
+  text-align: center;
+  padding: 1em;
+  cursor: pointer;
+}
+.tutorial-modal__button.-start {
+  background: #68A12E;
+  color: #fff;
+}
+.tutorial-items {
+  margin-top: 24px;
+  float: left;
+  width: 100%;
+}
+.tutorial-item {
+  width: 345px;
+  position: relative;
+}
+.tutorial-item__header {
+  color: #F1E382;
+  font: 20px lato-black;
+  padding: 16px 20px;
+}
+.tutorial-item__sub-header {
+  color: #fff;
+  font: 17px lato-regular;
+  padding: 0 20px 0 0;
+  height: 45px;
+}
+
+.tutorial-item.-center {
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  -webkit-transform: translate(-50%);
+  -moz-transform: translate(-50%);
+  -o-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+}
+
+.tutorial-item.-left {
+  text-align: right;
+  float: left;
+}
+
+.tutorial-item.-right {
+  text-align: left;
+  float: right;
+}
+
+.tutorial-items.-lower {
+  margin-top: 7em;
+}
+
+.tutorial-items.-upper .tutorial-item.-left { padding-left: 40px; }
+.tutorial-items.-upper .tutorial-item.-right { padding-right: 24px; }
+.tutorial-items.-lower .tutorial-item.-left { padding-left: 88px; }
+
+.tutorial-items .tutorial-item:after {
+  content: '';
+  background: #F1E382;
+  width: 100%;
+  height: 1px;
+  display: block;
+  position: absolute;
+  margin: 6px 0;
+  left: 0;
+}
+.tutorial-items.-lower .tutorial-item:before {
+  content: '';
+  background: #F1E382;
+  width: 1px;
+  height: 103px;
+  display: block;
+  position: absolute;
+  top: 100%;
+  margin-top: 6px;
+}
+.tutorial-items.-lower .tutorial-item.-left:before { right : 0; }
+.tutorial-items.-lower .tutorial-item.-right:before { left : 0; }
+.tutorial-items.-lower .tutorial-item.-center:before { left: 50%; height: 56px; }
+.ico--multibet {
+  background: url('/img/3.0/prompts/assets/multibet.png');
+  width: 36px;
+  height: 36px;
+  display: inline-block;
+  margin: -11px 0 -7px 0;
+}
+
+/********* MULTI LANGUAGE **************/
+
+/* CHINESE */
+.lang-zh .tutorial-item__sub-header,
+.lang-zh .tutorial-item__header,
+.lang-zh .tutorial-modal__button,
+.lang-zh .tutorial-modal__sub-header,
+.lang-zh .tutorial-modal__header { font-family: 'Arial Unicode Ms', 'Arial Unicode Ms Regular'}
+
+/* KOREAN */
+/* .lang-kr .tutorial-item__sub-header,
+.lang-kr .tutorial-item__header,
+.lang-kr .tutorial-modal__button,
+.lang-zh .tutorial-modal__sub-header,
+.lang-kr .tutorial-modal__header  { font-family: 'Arial Unicode Ms', 'Arial Unicode Ms Regular'} */
+
+/* JAPAN */
+.lang-jp .tutorial-item__sub-header,
+.lang-jp .tutorial-item__header,
+.lang-jp .tutorial-modal__button,
+.lang-zh .tutorial-modal__sub-header,
+.lang-jp .tutorial-modal__header  { font-family: 'Kozuka Gothic Pr6N', 'Arial Unicode Ms', 'Arial Unicode Ms Regular' }
+
+/* THAILAND */
+.lang-th .tutorial-item__sub-header,
+.lang-th .tutorial-item__header,
+.lang-th .tutorial-modal__button,
+.lang-zh .tutorial-modal__sub-header,
+.lang-th .tutorial-modal__header  { font-family: 'Leelawadee UI', 'Arial Unicode Ms', 'Arial Unicode Ms Regular' }
+
+/* translations adjust font */
+/** KOREAN**/
+
+.lang-kr .tutorial-item__sub-header {
+  height: 49px;
+}
+.lang-kr .tutorial-items.-lower {
+  margin-top: 5.85em;
+}
+.lang-kr .tutorial-items.-upper .tutorial-item.-left {
+  padding-left: 29px;
+}
+
+/** JAPANESE **/
+
+.lang-jp .tutorial-item__sub-header {
+  height: 49px;
+}
+.lang-jp .tutorial-items.-lower {
+  margin-top: 5.85em;
+}
+
+/** JAPANESE **/
+
+.lang-jp .tutorial-modal__button {
+  padding: 15px;
+}
+.lang-jp .tutorial-item__sub-header {
+  height: 49px;
+}
+.lang-jp .tutorial-items.-lower {
+  margin-top: 5.85em;
+}
+
+/** CHINESE **/
+.lang-zh .tutorial-modal__header {
+  padding: 3.2em 0 0.4em 0;
+}
+.lang-zh .tutorial-modal__button {
+  padding: 14px;
+}
+.lang-zh .tutorial-item__sub-header {
+  height: 54px;
+}
+.lang-zh .tutorial-items.-lower {
+  margin-top: 4.7em;
+}
+.lang-zh .tutorial-items.-upper .tutorial-item.-right { padding-right: 68px; }
+.lang-zh .tutorial-item.-left .tutorial-item__sub-header { line-height: 54px; }
+
+/**** Junker Adjustments */
+.junketMode {
+  width: 1921px;
+  right: 0%;
+}
+.junketMode:before {
+  content: '';
+  position: absolute;
+  width: 412px;
+  height: 50.4px;
+  background: inherit;
+  bottom: 0;
+  margin-bottom: -50.4px;
+}
+.junketMode .tutorial-item{
+  width: 620px;
+}
+.junketMode .tutorial-item.-center {
+  width: 345px;
+}
+.junketMode .tutorial-items.-lower {
+  position: absolute;
+  bottom: 59px;
+}
+  

@@ -1,0 +1,392 @@
+[	
+	{
+		"src" : "------------------------------multibet------------------------------",
+		"id" : "bonus_poker",
+		"src" : "/img/multibet/bonus_poker.png"
+	},
+	{
+		"id" : "super6_multibet",
+		"src" : "/img/multibet/super6.png"
+	},
+	{
+		"id" : "bonus_multibet",
+		"src" : "/img/multibet/bonus@2x.png"
+	},
+	{
+		"id" : "classic_multibet",
+		"src" : "/img/multibet/classic@2x.png"
+	},
+	{
+		"id" : "classicPoker_multibet",
+		"src" : "/img/multibet/poker@2x.png"
+	},
+	{
+		"id" : "multi-poker-pocket",
+		"src" : "/img/multibet/3.0/pocket.png"
+	},
+	{
+		"id" :"multi-poker-bonus",
+		"src" :"/img/multibet/3.0/bonus.png"
+	},
+	{
+		"id" :"multi-poker-bonus-plus",
+		"src" :"/img/multibet/3.0/bonusplus.png"
+	},
+	{
+		"id" : "poker-check",
+		"src" : "/img/multibet/check-flat.png"
+	},
+	{
+		"id" : "poker-fold",
+		"src" : "/img/multibet/fold-flat.png"
+	},
+	{
+		"id" : "bonusplus_multibet",
+		"src" : "/img/multibet/bonuspLus.png"
+	},
+	{
+		"id" : "super6btn_multibet",
+		"src" : "/img/multibet/super6@2x.png"
+	},
+	{
+		"id" : "multibet-fold",
+		"src" : "/img/multibet/fold-flat.png"
+	},
+	{
+		"id" : "multibet-check",
+		"src" : "/img/multibet/check-flat.png"
+	},
+	{
+		"id" : "sicbo_betboard",
+		"src" : "/img/multibet/sicbo-multibet.png"
+	},
+	{
+		"id" : "sicbo_betboard_zh",
+		"src" : "/img/multibet/sicbo-multibet-zh.png"
+	},
+	{
+		"id" : "suited-tie-multibet",
+		"src" : "/img/multibet/suited-tie_multibet.png"
+	},
+	{
+		"id" : "suited-tie-multibet-zh",
+		"src" : "/img/multibet/suited-tie_multibet_zh.png"
+	},
+	{
+		"id" : "void",
+		"src" : "/img/multibet/void/void_web.png"
+	},
+	{
+		"id" : "multi-supersix",
+		"src" : "/img/multibet/3.0/super6_logo.png"
+	},
+	{
+		"id" : "multi-suited",
+		"src" : "/img/multibet/3.0/suited-tie_logo.png"
+	},
+	{
+		"id" : "multi-suited-zh",
+		"src" : "/img/multibet/3.0/suited-tie_logo_zh.png"
+	},
+	{
+		"id" : "user_icon",
+		"src" : "/img/icons/user_icon.png"
+	},
+	{
+		"id" : "suitedtie",
+		"src" : "/img/common/suitedtie.png"
+	},
+	{
+		"id" : "multi_suitedtie",
+		"src" : "/img/common/multi_suitedtie.png"
+	},
+	{
+		"id" :"multi-paigow",
+		"src" :"/img/multibet/3.0/pai-gow.png"
+	},
+	{
+		"id" : "paigow-small_tiles",
+		"src" : "/img/multibet/3.0/tiles/small_tiles.png"
+	},
+	{
+		"_comment" : "------------------------------TEMP SUITE------------------------------",
+		"id" : "dragon_clubs",
+		"src" : "/img/card-suite/temp/dragon_clubs.png"
+	},
+	{
+		"id" : "dragon_heart",
+		"src" : "/img/card-suite/temp/dragon_heart.png"
+	},
+	{
+		"id" : "dragon_spade",
+		"src" : "/img/card-suite/temp/dragon_spade.png"
+	},
+	{
+		"id" : "dragon_diamond",
+		"src" : "/img/card-suite/temp/dragon_diamond.png"
+	},
+
+	{
+		"_comment" : "------------------------------TEMP SUITE------------------------------",
+		"id" : "tiger_clubs",
+		"src" : "/img/card-suite/temp/tiger_clubs.png"
+	},
+	{
+		"id" : "tiger_heart",
+		"src" : "/img/card-suite/temp/tiger_heart.png"
+	},
+	{
+		"id" : "tiger_spade",
+		"src" : "/img/card-suite/temp/tiger_spade.png"
+	},
+	{
+		"id" : "tiger_diamond",
+		"src" : "/img/card-suite/temp/tiger_diamond.png"
+	},
+
+	{
+		"comment" : "***---------cards-------****",
+		"id" : "cards",
+		"src": "/img/cards/web_sprite_cards.png"
+	},
+	{
+		"comment" : "***---------cards-------****",
+		"id" : "multi-bet-cards",
+		"src" : "/img/cards/multibet-cards.png"
+	},
+	{
+		"id" : "cards_sprite",
+		"src" : "/img/cards/lobby_sprite_cards.png"
+	},
+	{
+		"id" : "cards_sprite_small",
+		"src" : "/img/cards/lobby_sprite_cards_small.png"
+	},
+	{
+		"comment" : "**-----------winning result -----------**",
+		"id" : "dragon_win",
+		"src" : "/img/win_dragon_tiger/Dragon_Wins.png"
+	},
+	{
+		"id" : "tiger_win",
+		"src" : "/img/win_dragon_tiger/Tiger_Wins.png"
+	},
+	{
+		"id" : "dragon_tiger_tie",
+		"src" : "/img/win_dragon_tiger/Dragon_Tiger_Ties.png"
+	},
+	{
+		"comment" : "**---------------win fx----------------**",
+		"id" : "win_clubs",
+		"src" : "/img/win_animation_suits/clubs.png"
+	},
+	{
+		"id" : "win_diamond",
+		"src" : "/img/win_animation_suits/diamond.png"
+	},
+	{
+		"id" : "win_heart",
+		"src" : "/img/win_animation_suits/heart.png"
+	},
+	{
+		"id" : "win_spade",
+		"src" : "/img/win_animation_suits/spade.png"
+	},
+	{
+		"comment" : "**----------------user avatar-----------------**",
+		"id" : "black_jack",
+		"src" : "/img/avatar/3.0/black_jack.png"
+	},
+	{
+		"id" : "black_joker",
+		"src" : "/img/avatar/3.0/black_joker.png"
+	},
+	{
+		"id" : "black_king",
+		"src" : "/img/avatar/3.0/black_king.png"
+	},
+	{
+		"id" : "black_queen",
+		"src" : "/img/avatar/3.0/black_queen.png"
+	},
+	{
+		"id" : "red_jack",
+		"src" : "/img/avatar/3.0/red_jack.png"
+	},
+	{
+		"id" : "red_joker",
+		"src" : "/img/avatar/3.0/red_joker.png"
+	},
+	{
+		"id" : "red_king",
+		"src" : "/img/avatar/3.0/red_king.png"
+	},
+	{
+		"id" : "red_queen",
+		"src" : "/img/avatar/3.0/red_queen.png"
+	},
+
+	{
+		"comment" : "**----- new chip icon --WHITE THEME ----------**",
+		"id": "white-theme-chip_icon-dollar",
+		"src" : "/img/icons/chips/light/dollar.png"
+	},
+	{
+		"id": "white-theme-chip_icon-yen-yuan",
+		"src" : "/img/icons/chips/light/yen-yuan.png"
+	},
+	{
+		"id": "white-theme-chip_icon-won",
+		"src" : "/img/icons/chips/light/won.png"
+	},
+	{
+		"id": "white-theme-chip_icon-baht",
+		"src" : "/img/icons/chips/light/baht.png"
+	},
+	{
+		"id": "white-theme-chip_icon-ringgit",
+		"src" : "/img/icons/chips/light/ringgit.png"
+	},
+	{
+		"id": "white-theme-chip_icon-rupiah",
+		"src" : "/img/icons/chips/light/rupiah.png"
+	},
+	{
+		"comment" : "**----- new chip icon --DARK THEME ----------**",
+		"id": "black-theme-chip_icon-dollar",
+		"src" : "/img/icons/chips/dark/dollar.png"
+	},
+	{
+		"id": "black-theme-chip_icon-yen-yuan",
+		"src" : "/img/icons/chips/dark/yen-yuan.png"
+	},
+	{
+		"id": "black-theme-chip_icon-won",
+		"src" : "/img/icons/chips/dark/won.png"
+	},
+	{
+		"id": "black-theme-chip_icon-baht",
+		"src" : "/img/icons/chips/dark/baht.png"
+	},
+	{
+		"id": "black-theme-chip_icon-ringgit",
+		"src" : "/img/icons/chips/dark/ringgit.png"
+	},
+	{
+		"id": "black-theme-chip_icon-rupiah",
+		"src" : "/img/icons/chips/dark/rupiah.png"
+	},
+
+	{
+		"id" : "chip1",
+		"src" : "/sound/chip1.mp3"
+	},
+	{
+		"id" : "chip2",
+		"src" : "/sound/chip2.mp3"
+	},
+	{
+		"id" : "chip3",
+		"src" : "/sound/chip3.mp3"
+	},
+	{
+		"id" : "click",
+		"src" : "/sound/click.mp3"
+	},
+	{
+		"id" : "card-deal",
+		"src" : "/sound/cardDeal.mp3"
+	},
+	{
+		"id" : "card-show",
+		"src" : "/sound/getCard.mp3"
+	},
+	{
+		"comment" : "***---------notice/announcement-------****",
+		"id" : "notice_ico",
+		"src" : "/img/icons/notice/notice_icon.png"
+	},
+	{
+		"id" : "black_eye_icon",
+		"src" : "/img/multibet/dark/show_default.png"
+	},
+	{
+		"id" : "white_eye_icon",
+		"src" : "/img/multibet/light/show_default.png"
+	},
+	{
+		"comment" : "***--------- Room Info -------****",
+		"id" : "money_ico",
+		"src" : "/img/icons/room_info/total_bet.png"
+	},
+	{
+		"id" : "user_ico",
+		"src" : "/img/icons/room_info/user.png"
+	},
+	{
+		"id" : "total_user_ico",
+		"src" : "/img/icons/room_info/total_users.png"
+	},
+	{
+		"comment" : "**----------- chips v3 ----------------**",
+		"id" : "chip_1",
+		"src" : "/img/chips/1k.png"
+	},
+	{
+		"id" : "chip_3",
+		"src" : "/img/chips/3k.png"
+	},
+	{
+		"id" : "chip_5",
+		"src" : "/img/chips/5k.png"
+	},
+	{
+		"id" : "chip_10",
+		"src" : "/img/chips/10k.png"
+	},
+	{
+		"id" : "chip_30",
+		"src" : "/img/chips/30k.png"
+	},
+	{
+		"id" : "chip_50",
+		"src" : "/img/chips/50k.png"
+	},
+	{
+		"id" : "chip_100",
+		"src" : "/img/chips/100k.png"
+	},
+	{
+		"id" : "chip_200",
+		"src" : "/img/chips/200k.png"
+	},
+	{
+		"id" : "chip_300",
+		"src" : "/img/chips/300k.png"
+	},
+	{
+		"id" : "chip_500",
+		"src" : "/img/chips/500k.png"
+	},
+	{
+		"id" : "chip_1000",
+		"src" : "/img/chips/1m.png"
+	},
+	{
+		"id" : "chip_max",
+		"src" : "/img/chips/max.png"
+	},
+	{
+		"id" : "mod-chip_cont",
+		"src" : "/img/chips/modifychips/mod-chip_cont.png"
+	},
+	{
+		"id" : "mod-chip_state",
+		"src" : "/img/chips/modifychips/mod-chip_state.png"
+	},
+	{
+		"id" : "multi-unavailable",
+		"src" : "/img/multibet/maintenance_symbol.png"
+	}
+
+]

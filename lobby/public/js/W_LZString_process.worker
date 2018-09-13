@@ -1,0 +1,39 @@
+String.prototype.left = function(length){
+  if(this.length <= length){
+	 return this;
+  }
+  else{
+	 return this.substring(0, length);
+  }
+}
+
+String.prototype.right = function(length){
+  if(this.length <= length){
+	 return this;
+  }
+  else{
+	 return this.substring(this.length - length, this.length);
+  }
+}
+self.importScripts('lz-string.min.js');  
+onmessage = function(e){
+	var respones = e.data;
+	switch(respones.cmd){
+		case 'LZString':{	
+			var start = new Date();
+			var packet = respones.data;
+			var originSize = packet.length;
+			var buffer = LZString.decompressFromUTF16(packet);
+			packet = "data:image/jpeg;base64," +buffer;
+			var end = new Date();		
+			var bench=(end-start);						
+			var bench_data =  'Time: '+bench+'ms<br />compress: '+originSize+'byte<br />decompress: '+packet.length+'byte<br />';	
+			var obj={cmd:'stream',data:packet,bench:bench_data};
+			self.postMessage(obj);
+			break
+		}
+		case 'LZStringCompress': {
+			
+		}
+	}
+}

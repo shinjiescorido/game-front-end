@@ -1,0 +1,133 @@
+/* common */
+.tutorials-wrap {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 144px);
+  /*background: rgba(22, 22, 22, 0.9);*/
+  z-index: 99;
+}
+
+.tutorials-wrap:before {
+  content: '';
+  background: rgba(22, 22, 22, 0.9);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.tutorials-wrap .prompt_wrap { top: 5%; }
+.tutorials-wrap .prompt-body { padding: 20px 40px 25px 40px; }
+
+.btn-nevershow {
+  float: right;
+  color: #000;
+  background: #c4b96a;
+}
+.btn-startgame {
+  float: left;
+  color: #fff;
+  background: #68a12e;
+}
+
+
+.tutorials-con {
+  width: 100%;
+  display: block;
+  position: absolute;
+  bottom: 60px;
+  padding: 0 80px;
+}
+.tutorials__items {
+  width: 500px;
+  height: 115px;
+  float:  left;
+  position: relative;
+  border-bottom: 2px solid #9a8e54;
+}
+.tutorials__items h4 {
+  color: #f0e183;
+  display: block;
+  font: bold 28px lato-bold;
+  text-transform: uppercase;
+  margin-bottom: 10px
+}
+.tutorials__items.-gameinfo h4 { text-align: right; }
+.tutorials__items p {
+  color: #fff;
+  display: block;
+  font: normal 26px lato-regular;
+  text-align: right;
+  line-height: 1.2
+}
+.tutorials__items:nth-child(2) {
+  float: right;
+}
+.tutorials__items:nth-child(2)  p { text-align: left; }
+
+.tutorials-wrap .tutorials__items.-gameinfo:before {
+  background:  #9a8e54;
+  content: '';
+  width: 1.5px;
+  height: 63px;
+  position: absolute;
+  bottom: -63px;
+  left: 0;
+}
+
+.tutorials-wrap .tutorials__items.-placebets:before {
+  background:  #9a8e54;
+  content: '';
+  width: 1.5px;
+  height: 63px;
+  position: absolute;
+  bottom: -63px;
+  left: 100%;
+}
+
+
+/************************** ICONS **********************/
+.ico-questionmark {
+  background: url(/img/alert/tuts_icon.png) no-repeat;
+  background-size: contain;
+  display: block;
+  height: 80px;
+  margin: 0 auto 15px;
+  width: 80px;
+}
+
+
+.tutorials-wrap.-portrait .prompt_wrap { top: 10%; }
+
+.tutorials-wrap.-portrait .prompt-body { padding: 40px 40px 35px 40px; }
+.tutorials-wrap.-portrait:before {
+  height: 83%;
+}
+
+.tutorials-wrap.-portrait {
+  height: calc(100% - 377px);
+}
+
+.tutorials-wrap.-portrait .tutorials-con {
+  bottom: 240px;
+  padding: 0 20px;
+}
+
+.tutorials-wrap.-portrait .tutorials__items {
+  width: 300px;
+  height: 150px;
+  border-bottom: 2px solid #9a8e54;
+}
+
+.tutorials-wrap.-portrait .tutorials__items.-gameinfo:before {
+  height: 240px;
+  bottom: -240px;
+  left: 120px;
+}
+
+.tutorials-wrap.-portrait .tutorials__items.-placebets:before {
+  height: 110px;
+  bottom: -110px;
+  left: 85px;
+}

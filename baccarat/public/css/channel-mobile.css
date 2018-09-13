@@ -1,0 +1,337 @@
+.channel-wrap {
+  display: block;
+  height: 100%;
+  position: absolute;
+  pointer-events: none;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.channel-con {
+  background: rgba(22, 22, 22, 0.9);
+  display: block;
+  float: left;
+  height: 85px;
+  pointer-events: auto;
+  width: 480px;
+  position: relative;
+}
+.channel-inner {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.channel-exit {
+  display: block;
+  width: 75px;
+  height: inherit;
+  position: relative;
+  float: left;
+}
+
+.channel-exit:before {
+  background: #5e5a57;
+  width: 3px;
+  height: 70%;
+  content: '';
+  position: absolute;
+  top: 15%;
+  right: 2px;
+}
+.exit-ico {
+  background-image: url('/img/channel/3.0/exit-to-lobby.png');
+  background-size: contain;
+  display: block;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
+  margin-left: 10px;
+}
+
+.channel-detail {
+  display: block;
+  float: left;
+  height: inherit;
+  position: relative;
+  padding: 10px 15px;
+  width: calc(100% - 75px);
+}
+.channel__items {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+.channel__items:not(:last-child) { margin-bottom: 10px; }
+
+.channel__items span {
+  color: #fff;
+  font: normal 23px lato-regular;
+  display: block;
+  position: relative;
+}
+
+.channel__items span.channel--gamename {
+  font: normal 24px lato-bold;
+  line-height: 1;
+  padding-left: 0;
+}
+.channel__items span.channel--betrange {
+  float: right;
+  margin-bottom: 5px;
+  text-align: right;
+  padding-right: 65px;
+}
+.channel__items span.channel--betrange:before {
+  background-image: url('/img/channel/3.0/mobile/arrow-down.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: '';
+  display: block;
+  height: 21px;
+  position: absolute;
+  width: 40px;
+  right: 0;
+  top: 6px;
+}
+.channel__items span.channel--roundnum {
+  float: left;
+  font: normal 25px bebas-regular;
+}
+.channel-rangelist {
+  background: rgba(22, 22, 22, 0.9);
+  position: absolute;
+  top: 84px;
+  width: 100%;
+  height: 0;
+}
+.channel-rangelist ul {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.channel-rangelist ul li {
+  border-top: 1px solid #42403e;
+  display: block;
+  height: 60px;
+  position: relative;
+}
+.channel-rangelist ul li span {
+  display: block;
+  color: #fff;
+  font: normal 21px lato-regular;
+  text-align: center;
+  float: left;
+  top: 50%;
+  position: relative;
+  transform: translateY(-50%);
+}
+.channel-rangelist  ul li.selected span{
+  font-family: lato-black;
+  color: #eadd7f;
+}
+.channel-rangelist ul li span.range-min {
+  text-align: right;
+  width: 40%;
+}
+.channel-rangelist ul li span.range-dash {
+  width: 10%;
+}
+.channel-rangelist ul li span.range-max {
+  text-align: left;
+  width: 40%;
+}
+
+.channel-box {
+  display: block;
+  float: left;
+  height: inherit;
+  width: calc(100% - 60px);
+  padding-left: 15px;
+}
+
+.modal--betlimit .modal-con__body {
+  padding: 0;
+}
+.betlimit-con {
+  display: block;
+  width: 100%;
+  position: relative;
+  padding-top: 20px;
+}
+.betlimit-con:not(:last-child) { margin-bottom: 20px; }
+
+.betlimit-con h3 {
+  color: #eee181;
+  display: block;
+  font: bold 24px lato-black;
+  padding-left: 30px;
+  margin-bottom: 20px;
+}
+
+.betlimit-table {
+  display: table;
+  border-collapse: collapse;
+  width: 100%;
+}
+.betlimit-table-tr { display: table-row; }
+.betlimit-table-td {
+  display: table-cell;
+  color: #f4f4f4;
+  font: normal 25px lato-regular;
+  padding: 10px 20px;
+}
+.betlimit-table-td.-bettype {
+  text-align: left;
+  padding-left: 30px;
+  width: 30%
+}
+.betlimit-table-td.-min {
+  text-align: right;
+  width: 23%
+}
+.betlimit-table-td.-max {
+  text-align: right;
+  width: 23%
+}
+.betlimit-table-td.-payout {
+  text-align: right;
+  padding-right: 30px;
+  width: 24%;
+}
+.betlimit-table.tbl--head .betlimit-table-tr { background: #5e5e5e; }
+.betlimit-table.tbl--head .betlimit-table-td {
+  background: #5e5e5e;
+  color: #fff;
+  font: bold 25px lato-black;
+}
+
+.betlimit-con.-livebets .betlimit-table-td.-bettype { width: 50% }
+.betlimit-table-td.-bets { text-align: right; width: 24%; }
+.betlimit-table-td.-players { text-align: right; width: 25%; }
+
+.betlimit-table-tr.-total .betlimit-table-td {
+  color: #eee080;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+.ico-dragon, .bar--dragon .bar-inner { background: #1464c0; }
+.ico-tiger, .bar--tiger .bar-inner { background: #d22e2e; }
+.ico-tie, .bar--tie .bar-inner,
+.ico-suitedtie, .bar--suitedtie .bar-inner { background: #6aa03b; }
+
+.bar-percentage {
+  display: block;
+  width: 134px;
+  height: 5px;
+  position: absolute;
+  bottom: 0px;
+  left: 51px;
+}
+
+.bar-inner {
+  display: block;
+  position: relative;
+  height: inherit;
+  width: 0;
+}
+
+/************************** ICONS **********************/
+.ico-channel--info {
+  background-image: url('/img/channel/3.0/mobile/info.png');
+  background-size: contain;
+  display: block;
+  position: relative;
+  float: left;
+  top: 2px;
+  left: 0;
+  width: 60px;
+  height: 60px;
+}
+
+.ico-livebets {
+  border-radius: 50%;
+  border: 1px solid #fff;
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-top: -3px;
+  margin-right: 7px;
+
+  color: #fff;
+  font-size: 14px;
+  font-family: lato-black;
+  text-align: center;
+  padding-top: 1px;
+}
+
+.ico-users, .ico-users-total{
+  background-image: url(/img/channel/3.0/user_ico.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: inline-block;
+  margin-left: 9px;
+  width: 16px;
+  height: 17px;
+  vertical-align: middle;
+  margin-top: -2px;
+}
+
+.ico-users-total {
+  background-image: url(/img/channel/3.0/players_ico.png);
+  width: 18px;
+  height: 16px;
+  margin-left: 7px;
+}
+
+
+/************************** PORTRAIT **********************/
+.channel-wrap.-portrait .channel-detail {
+  padding: 12px 10px;
+  width: 210px;
+}
+.channel-wrap.-portrait .channel-con {
+  height: 113px;
+  width: 290px;
+}
+.channel-wrap.-portrait .ico-channel--info {
+  float: none;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: -2px;
+  top: -3px;
+}
+.channel-wrap.-portrait .channel__items span.channel--gamename { padding-left: 36px; }
+.channel-wrap.-portrait .channel__items:not(:last-child) { margin-bottom: 17px; }
+.channel-wrap.-portrait .channel--roundnum,
+.channel-wrap.-portrait .channel--betrange {
+  float: none;
+  width: 100%;
+  text-align: left;
+}
+.channel-wrap.-portrait .channel--roundnum { font: normal 22px bebas-regular; }
+
+.channel-wrap.-portrait .channel__items span.channel--gamename{
+  font-size: 19px;
+}
+.channel-wrap.-portrait .channel__items span.channel--betrange:before {
+  height: 30px;
+  width: 51px;
+}
+.channel-wrap.-portrait .channel-rangelist  { top: 112px; }
+
+/**/
+#range-disp.disabled {
+  padding-right: 0px
+}
+#range-disp.disabled::before{
+  background:none;
+}

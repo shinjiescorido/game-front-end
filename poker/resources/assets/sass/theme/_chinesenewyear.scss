@@ -1,0 +1,43 @@
+.loading-fireworks-con {
+  @include wh(100%, 100%);
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+
+  span {
+    @include opacity(0);
+    @include animation(fireworks 2s infinite);
+    position: absolute;
+  //   top: 10%;
+  //   left: 10%;
+  &.blue-fw {
+    @include bgs('/img/seasonal_theme/chinese_newyear_theme/fw_blue02.png', contain);
+  }
+  &.green-fw {
+    @include bgs('/img/seasonal_theme/chinese_newyear_theme/fw_green02.png', contain);
+  }
+  &.yellow-fw {
+    @include bgs('/img/seasonal_theme/chinese_newyear_theme/fw_yellow02.png', contain);
+  }
+  &.grey-fw {
+    @include bgs('/img/seasonal_theme/chinese_newyear_theme/fw_grey.png', contain);
+  }
+    @at-root {
+      @include keyframes(fireworks) {
+        0% {
+          @include transform(scale(0));
+          @include opacity(0);
+        }
+        70% {
+          @include opacity(1);
+        }
+        100% {
+          @include transform(scale(1));
+          @include opacity(0);
+        }
+      }
+    }
+  }
+} //loading-fireworks-con

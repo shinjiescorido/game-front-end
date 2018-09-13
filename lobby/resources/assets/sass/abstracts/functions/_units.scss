@@ -1,0 +1,35 @@
+/*====================================*\
+  >> Functions
+/*====================================*/
+
+@function convert($value, $currentUnit, $convertUnit){
+  @if $currentUnit == px {
+    @if $convertUnit == em  { @return $value / 16 + 0em; }
+    @else if $convertUnit == percent { @return percentage($value / 16); }
+  }
+
+  @else if $currentUnit == em {
+    @if $convertUnit == px { @return $value * 16 + 0px; }
+    @else if $convertUnit == percent { @return percentage($value); }
+  }
+
+  @else if $currentUnit == percent {
+    @if $convertUnit == px { @return $value * 16 / 100 + 0px; }
+    @else if $convertUnit == em { @return $value / 100 + 0em; }
+  }
+
+  @else if $currentUnit == pts {
+    @if $convertUnit == px { @return $value * 1.3333 +0px; }
+    @else if $convertUnit == em { @return $value / 12 + 0em; }
+    @else if $convertUnit == percent { @return percentage($value / 12); }
+  }
+}
+
+@function em($value, $base: 16px) {
+  @return ($value / $base) * 1em;
+}
+
+@function rem($value, $base: 16px) {
+  $remSize: $value / 16px;
+  @return #{$remSize}rem;
+}

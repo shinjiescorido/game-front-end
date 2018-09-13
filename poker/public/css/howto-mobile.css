@@ -1,0 +1,607 @@
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  position: relative;
+  width: 5px;
+  z-index: 10;
+}
+::-webkit-scrollbar-track {   background: #231f20; }
+::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+  background-color: #ff9a28;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+.container {}
+
+.dom-resizable {
+	-webkit-transform-origin: right top;
+	-moz-transform-origin: right top;
+	-ms-transform-origin: right top;
+	-o-transform-origin: right top;
+	transform-origin: right top;
+}
+
+.mb30 { margin-bottom: 30px !important; }
+.howto-wrap {
+	background-color: #2b2b2b;
+	height: 647px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: absolute;
+	right: 6.4%;
+	top: 20.5%;
+	width: 534px;
+	z-index: 99;
+	padding-bottom: 30px;
+	display: none;
+}
+
+.howto-wrap--accent {
+	display: none;
+	width: 478px;
+	height: 30px;
+	background: -moz-linear-gradient(top,  rgba(255, 154, 40, 0.44) 0%, transparent 100%);
+	background: -webkit-linear-gradient(top,  rgba(255, 154, 40, 0.44) 0%,transparent 100%);
+	background-color: transparent;
+	background: linear-gradient(to bottom,  rgba(255, 154, 40, 0.44) 0%,transparent 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(255, 154, 40, 0.44)', endColorstr='transparent',GradientType=0 );
+	position: fixed;
+	top: 196px;
+}
+.mb30 { margin-bottom: 30px; }
+.howto--layers { display: block; margin: 0 auto 22px; }
+.-gamerules .howto--layers { width: 87%; }
+.-gameplay .howto--layers { width: 95%; }
+
+img.multibetimg {
+	width: 30px !important;
+	display: inline-block !important;
+}
+.multibetinfoimg {
+	width: 100%;
+}
+
+.howto--layers:last-child { margin-bottom: 0; }
+
+.howto--layers.-two .howto--layers__items {
+	width: calc((100% - 30px) / 2);
+	display: inline-block;
+	vertical-align: middle;
+}
+.howto--layers.-two .howto--layers__items:not(:last-child) { margin-right: 25px; }
+
+.howto--layers__items p { color: #fff; font-size: 14px; }
+
+.gamerules-menu {
+ margin: 0 0 48px 0;
+ padding: 0;
+ position: relative;
+ width: 100%;
+}
+
+.gamerules-menu:after {
+ background-color: #6b93a7;
+ bottom: -20px;
+ content: '';
+ display: block;
+ height: 1px;
+ margin: 0 auto;
+ position: relative;
+ width: 95%;
+}
+
+.gamerules-menu__items {
+ color: #ff9a28;
+ height: 35px;
+ text-align: center;
+ list-style-type: none;
+ width: 100%;
+}
+
+.gamerules-menu__items:hover {
+ background-color: #7f572a;
+ color: #fff;
+}
+.gamerules-menu__items span {
+ font: normal 14px/37px 'lato-regular';
+ text-align: center;
+}
+
+tbody tr:hover {
+	background: transparent !important;
+	cursor: default !important;
+}
+tr { cursor: default !important; }
+
+.gamerules-menu__items a {
+ bottom: 0;
+ left: 0;
+ position: absolute;
+ right: 0;
+ top: 0;
+ z-index: 2;
+}
+
+.howto-wrap h3, .howto-wrap h4 {
+ font: bold 16px 'lato-bold';
+ margin: 0 0 16px 0;
+ padding: 0;
+}
+
+.howto-wrap h3 {
+  color: #6b93a7;
+  text-transform: capitalize;
+}
+.howto-wrap h4 {
+ color: #ff9a28;
+}
+.howto-wrap h4 span {  text-transform: initial; }
+
+.howto-wrap h5 {
+ color: #fff;
+ font: normal 18px 'lato-regular';
+ margin: 0 0 16px 0;
+ padding: 0;
+}
+
+
+.howto-wrap h4 {
+	color: #ff9a28;
+	font: normal 19px 'lato-regular';
+	margin: 0 0 16px 0;
+	padding: 0;
+}
+
+.howto-wrap p {
+	color: #6b93a7;
+	font: normal 18px 'lato-regular';
+	margin: 0 0 16px 0;
+	padding: 0;
+}
+
+.howto-wrap p:not(:last-child) { margin-bottom: 22px; }
+
+.howto-wrap p img {
+  position: relative;
+  top: -3px;
+}
+.howto--layers.multibet-info  p img,
+.howto--layers__items.-desc p img {
+  top: 0px;
+}
+
+.howto--layers.-two img  { width: 100%; }
+
+
+.gamerules-menu {
+	margin: 0 0 48px 0;
+	padding: 0;
+	position: relative;
+	width: 100%;
+	list-style-type: none;
+}
+
+.gamerules-menu:after {
+	background-color: #6f6f6f;
+	bottom: -20px;
+	content: '';
+	display: block;
+	height: 1px;
+	margin: 0 auto;
+	position: relative;
+	width: 95%;
+}
+
+.gamerules-menu__items {
+	color: #ff9a28;
+	height: 35px;
+	text-align: center;
+	width: 100%;
+	position: relative;
+}
+
+.gamerules-menu__items:hover {
+	background-color: #7f572a;
+	color: #fff;
+}
+
+.gamerules-menu__items a {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 2;
+}
+
+.gamerules-menu__items span {
+	font: normal 18px/37px 'lato-regular';
+	text-align: center;
+}
+
+.pokerhand-wrap {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.pokerhand-wrap p { margin-bottom: 10px !important; }
+
+.pokerhand-con {
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+.pokerhand-con__items {
+  display: inline-block;
+  vertical-align: middle;
+}
+.pokerhand-con__items:first-child { margin-right: 15px; width: 33%; }
+.pokerhand-con__items:last-child { width: 60%; }
+.pokerhand-con span {
+  color: #fff;
+	display: inline-block;
+  font: normal 18px 'lato-regular';
+  margin: 0 0 10px 0;
+  padding: 0
+}
+
+/* .pokerhand-con span:first-child { margin: 0 0 35px 0; } */
+
+.pokerhand-con img { display: block; margin: 0 0 10px 0; width: 75%;}
+
+.tbl--rules {
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-family: 'lato-regular';
+	font-size: 16px;
+	table-layout: fixed;
+	width: 100%;
+}
+.tbl--rules .bet { width: 95px; }
+.tbl--rules .payout { width: 80px; }
+.tbl--rules .condition {}
+
+.tbl--rules thead {}
+.tbl--rules thead tr {}
+.tbl--rules thead tr th {
+	background-color: #808080;
+	border: solid 1px #808080;
+	color: #000;
+	font-family: 'lato-regular';
+	font-weight: normal;
+	padding: 3px;
+	text-transform: uppercase;
+}
+.tbl--rules tbody {}
+.tbl--rules tbody tr {}
+.tbl--rules tbody tr td {
+	color: #fff;
+	text-align: center;
+	border: solid 1px #808080;
+	font-size: 18px;
+	padding: 5px;
+	line-height: 1.4;
+}
+.tbl--rules tbody tr td.bet { text-transform: capitalize; }
+
+
+.gameplay--list, .antebet--list, .handranking--list, .cards--list {
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+.gameplay--list li, .antebet--list li {
+  list-style-type: disc;
+  color: #fff;
+	font: normal 18px 'lato-regular';
+  margin: 0 0 5px 20px;
+  padding: 0;
+}
+
+/*.antebet--list li span {
+	font-size: 16px;
+}*/
+
+.gameplay--list li span, .antebet--list li span{
+	color: #6b93a7;
+}
+
+.hand-rank img {
+	max-width: 400px;
+	width: 100%;
+}
+
+.hand-rank .bad_beat {
+	max-width: 460px;
+}
+
+.handranking--list {
+  list-style-type: decimal;
+  color: #fff;
+  margin: 0;
+	padding: 0 0 0 19px;
+}
+.handranking--list img {
+	display: block;
+	margin: 0 auto;
+}
+.handranking--list span {
+  font: normal 18px 'lato-regular';
+  display: block;
+	margin-bottom: 15px;
+}
+
+.handranking-sub--list {
+  list-style-type: none;
+  color: #6b93a7;
+  margin: 0;
+  padding: 0;
+}
+.handranking-sub--list li {
+  margin-bottom: 20px;
+}
+
+.handranking-sub--list span {
+  font: normal 18px 'lato-regular';
+  display: block;
+}
+.handranking-sub--list p { margin-bottom: 5px !important; }
+.handranking-sub--list .dealer span, .handranking-sub--list .player span {
+   display: inline-block;
+   text-transform: uppercase;
+   font: normal 14px 'lato-regular';
+ }
+ .handranking--sub--text {
+	 position: relative;
+	 bottom: 10px;
+	 width: 100%;
+	 display: inline-block;
+	 margin-top: 10px;
+ }
+ .handranking--sub--text div {
+	 height: 100%;
+	 display: inline-block;
+	 width: 27%;
+	 position: absolute;
+ }
+ .handranking--sub--text p {
+	 text-align: right;
+	 margin-bottom: 32px !important;
+	 text-transform: uppercase;
+	 color: #a3a3a3;
+	 font-weight: 600;
+	 font-size: 17px;
+ }
+ .handranking--sub--text img {
+	 display: inline-block;
+	 margin-left: 130px;
+	 max-width: 290px;
+ }
+
+.handranking--list-m .handranking--sub--text div { padding-top: 35px; }
+.handranking--list-m .handranking--sub--text p {
+	font-size: 19px;
+	margin-bottom: 50px !important;
+}
+.handranking--list-m .handranking--sub--text p:last-child { padding-top: 45px; }
+.handranking--list-m .handranking--sub--text p:nth-child(2) { padding-top: 30px; }
+.handranking--list-m .handranking--sub--text img { margin-left: 215px; }
+
+.game-stats img { margin: 0 10px; vertical-align: bottom; }
+.game-stats .roadmap {
+	position: relative;
+	left: -29px;
+	width: 110%;
+}
+
+.card--list {
+	width: 100%;
+	padding: 0;
+	height: 30px;
+	text-align: center;
+}
+
+.card--list  li {
+	list-style: none;
+	width:33.333333%;
+	float:left;
+	color: #fff;
+	font: normal 14px 'lato-regular';
+	text-transform: capitalize;
+}
+
+.card-display {
+	margin-top: 36px;
+	color: #d3d3d3;
+	font: bold 12px 'lato-bold';
+}
+.card-display img { width: 100%; }
+.card--list li { margin-bottom: 5px; }
+.card--list li span { font: normal 17px 'lato-regular'; }
+
+.card_results { display: block; margin: 0 auto; }
+
+.betting-wrap .betting-btn { display: block; margin: 0 auto 15px; width: 500px; }
+.betting-wrap img {
+	display: inline-block;
+	margin: 0 2px;
+	vertical-align: bottom;
+	position: relative;
+	bottom: -6px;
+}
+
+.chipsrack-wrap {}
+.chipsrack-wrap img {
+	display: block;
+	margin: 10px auto;
+	width: 386px;
+}
+
+.menu_toggle {
+	display: inline-block;
+}
+
+.modifychips-wrap {}
+.modifychips-wrap img {
+	display: inline-block;
+	margin: 0 2px;
+	vertical-align: bottom;
+	position: relative;
+}
+.modifychips-wrap .modify_chip { width: 95%; display: block; margin: 0 auto; max-width: 600px; }
+
+.arrow-up {
+ background-color: #95632a;
+ bottom: 195px;
+ height: 28px;
+ display: none;
+ position: absolute;
+ right: 222px;
+ width: 28px;
+ z-index: 99;
+
+ -webkit-border-radius: 100%;
+ -moz-border-radius: 100%;
+ -ms-border-radius: 100%;
+ -o-border-radius: 100%;
+ border-radius: 100%;
+ top: 77%;
+ right: 7%;
+}
+
+.arrow-up:hover { background-color: #ff9a28; }
+.arrow-up:hover:before {
+ -webkit-opacity: 1;
+ -moz-opacity: 1;
+ -ms-opacity: 1;
+ -o-opacity: 1;
+ opacity: 1;
+}
+
+.arrow-up:before {
+ background-image: url('/img/rules/arrow_up.png');
+ content: '';
+ display: block;
+ height: 9px;
+ margin: 0 auto;
+ position: relative;
+ top: 50%;
+ width: 15px;
+ z-index: 3;
+
+ -webkit-opacity: 0.5;
+ -moz-opacity: 0.5;
+ -ms-opacity: 0.5;
+ -o-opacity: 0.5;
+ opacity: 0.5;
+
+ -webkit-transform: translateY(-50%);
+ -ms-transform: translateY(-50%);
+ transform: translateY(-50%);
+}
+
+.bonus_plus_note { margin-top: 20px !important; }
+.bonus_plus_note span { color: #fff; }
+.howto-wrap.white-theme .bonus_plus_note span { color: #000; }
+.howto-wrap.white-theme { background: #dfe0e2; }
+.howto-wrap.white-theme p, .howto-wrap.white-theme .gameplay--list li span, .howto-wrap.white-theme .antebet--list li span,
+.howto-wrap.white-theme .pokerhand-con span, .howto-wrap.white-theme .tbl--rules tbody tr td { color: #2b2b2b; }
+.howto-wrap.white-theme .gameplay--list li, .howto-wrap.white-theme .antebet--list li, .howto-wrap.white-theme h5, .howto-wrap.white-theme .handranking--list span, .howto-wrap.white-theme .handranking--list { color: #000; }
+.howto-wrap.white-theme h4, .howto-wrap.white-theme .tx-card-duringdeal, .howto-wrap.white-theme .tx-card-resultsshow,
+.howto-wrap.white-theme .handranking-sub--list, .howto-wrap.white-theme .card--list  li { color: #ff6828; }
+.howto-wrap.white-theme .gameplay-list li { color: #000; }
+.howto-wrap.white-theme .tbl--typeofbets tbody tr td, .howto-wrap.white-theme .gameplay-list li span, .howto-wrap.white-theme .handranking-sub--list span { color: #2b2b2b; }
+.howto-wrap.white-theme .card-display, .howto-wrap.white-theme .game-stats-tx { color: #000; }
+.howto-wrap.white-theme .gamerules-menu__items { color: #ff6828; }
+.howto-wrap.white-theme .gamerules-menu__items:hover { color: #fff; background-color: #a6a6a6; }
+.howto-wrap.white-theme .gamerules-menu:after { background-color: #888888; }
+.howto-wrap.white-theme .tbl--rules thead tr th { color: #fff; }
+/*/ *** ovreride for mobile*/
+
+
+
+.howto-wrap-m  h3 {  font-size: 30px; }
+.howto-wrap-m  h4 { font-size: 30px; font-weight: bold; }
+.howto-wrap-m  h5 {  font-size: 24px; font-weight: bold; }
+.howto-wrap-m .tbl--rules thead tr th, .howto-wrap-m .handranking--list span, .howto-wrap-m .handranking--list { font-weight: bold; }
+
+.howto-wrap-m p { font-size: 24px; }
+.howto-wrap-m span { font-size: 30px; }
+.howto-wrap-m .gamerules-menu__items { height: 60px; }
+.howto-wrap-m .gamerules-menu__items span { line-height: 60px; font-weight: bold; }
+
+.howto-wrap-m .gameplay--list li span, .howto-wrap-m .antebet--list li span { font-size: 24px; }
+
+.howto-wrap-m p.dealer span,
+.howto-wrap-m p.player span { font-size: 25px; }
+
+.howto-wrap-m .antebet--list li { font-size: 26px; }
+
+.howto-wrap-m .pokerhand-con span,
+.howto-wrap-m .handranking--list,
+.howto-wrap-m .handranking--list span,
+.howto-wrap-m .handranking-sub--list span,
+.howto-wrap-m .card--list span { font-size: 24px; }
+.howto-wrap-m .card-display img { width: 89%; }
+
+.howto-wrap-m .hand-rank img { max-width: 350px; }
+
+.howto-wrap-m table tr,
+.howto-wrap-m table td,
+.howto-wrap-m table th { font-size: 22px }
+.howto-wrap-m .tbl--rules tbody tr td {  font-size: 22px; }
+.howto-wrap-m .tbl--rules .round  {  width: 100px; }
+
+.howto-wrap-m .arrow-up{
+    position: fixed;
+    right: 180px;
+    top: 600px;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+}
+
+.howto-wrap-m {
+  width: 868px;
+  height: 415px;
+  right: 12.2%;
+  top: 35%;
+}
+
+.howto-wrap--accent {
+	display: none;
+	width: inherit;
+	height: 30px;
+	background: -moz-linear-gradient(top,  rgba(255, 154, 40, 0.44) 0%, transparent 100%);
+	background: -webkit-linear-gradient(top,  rgba(255, 154, 40, 0.44) 0%,transparent 100%);
+	background-color: transparent;
+	background: linear-gradient(to bottom,  rgba(255, 154, 40, 0.44) 0%,transparent 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(255, 154, 40, 0.44)', endColorstr='transparent',GradientType=0 );
+	position: fixed;
+	z-index: 999;
+}
+
+.howto-wrap--accent-mb {
+	width: 900px;
+	top: 30.77%;
+	right: 10.15%;
+}

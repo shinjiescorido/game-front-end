@@ -1,0 +1,64 @@
+/*====================================*\
+>> arvo
+/*====================================*/
+@font-face {
+  font-family: ArvoBold;
+  src: url("/fonts/lobby/Arvo-Bold.ttf") format("truetype"); /* IE9 Compat Modes */;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: ArvoBoldItalic;
+  src: url("/fonts/lobby/Arvo-BoldItalic.ttf") format("truetype"); /* IE9 Compat Modes */;
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: ArvoItalic;
+  src: url("/fonts/lobby/Arvo-Italic.ttf") format("truetype"); /* IE9 Compat Modes */;
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: ArvoRegular;
+  src: url("/fonts/lobby/Arvo-Regular.ttf") format("truetype"); /* IE9 Compat Modes */;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*====================================*\
+>> BebasNeue
+/*====================================*/
+@font-face {
+  font-family: BebasNeue;
+  src: url("/fonts/BebasNeue-Regular.ttf") format('truetype');
+  // url("/fonts/BebasNeueRegular.eot"); /* IE9 Compat Modes */
+  src: url("/fonts/BebasNeue-Regular.ttf") format('truetype'),
+  // url("/fonts/BebasNeueRegular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("/fonts/BebasNeue.otf") format("opentype"); /* Open Type Font */
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*====================================*\
+>> lato
+/*====================================*/
+@font-face {
+  font-family: LatoBlack;
+  src: url("/fonts/lobby/Lato-Black.ttf") format("truetype"); /* IE9 Compat Modes */;
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: LatoRegular;
+  src: url("/fonts/lobby/Lato-Regular.ttf") format("truetype"); /* IE9 Compat Modes */;
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: LatoBold;
+  src: url("/fonts/lobby/Lato-Bold.ttf") format("truetype"); /* IE9 Compat Modes */;
+  font-weight: normal;
+  font-style: normal;
+}

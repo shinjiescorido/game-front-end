@@ -1,0 +1,29 @@
+<IfModule mod_headers.c>
+        SetEnvIf Origin "http(s)?://(www\.)?(cxz777.com|baccarat.cxz777.com|sicbo.cxz777.com|dragon-tiger.cxz777.com|poker.cxz777.com|paigow.cxz777.com)$" AccessControlAllowOrigin=$0
+        Header add Access-Control-Allow-Origin %{AccessControlAllowOrigin}e env=AccessControlAllowOrigin
+        Header set Access-Control-Allow-Credentials "true"
+</IfModule>
+
+
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+
+    RewriteEngine On
+    RewriteBase /dragon-tiger
+
+    # Redirect Trailing Slashes If Not A Folder...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+
+    # Handle Authorization Header
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>
+

@@ -1,0 +1,494 @@
+* {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  position: relative;
+  width: 5px;
+  z-index: 10;
+}
+::-webkit-scrollbar-track {   background: #231f20; }
+::-webkit-scrollbar-thumb {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	-ms-border-radius: 5px;
+	-o-border-radius: 5px;
+	border-radius: 5px;
+  background-color: #ff9a28;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+.container {}
+
+.dom-resizable {
+	-webkit-transform-origin: right top;
+	-moz-transform-origin: right top;
+	-ms-transform-origin: right top;
+	-o-transform-origin: right top;
+	transform-origin: right top;
+}
+
+.howto-wrap {
+	background-color: #2b2b2b;
+	/* display: none; */
+	height: 647px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	position: relative;
+	float: right;
+	/* right: 6.4%; */
+	top: 20.5%;
+	/* width: 534px; */
+	width: 480px;
+	float: right;
+	z-index: 99;
+	padding-bottom: 30px;
+}
+
+.howto-wrap--accent {
+	display: none;
+	width: 420px;
+	height: 30px;
+	background: -moz-linear-gradient(top,  rgba(255, 154, 40, 0.44) 0%, transparent 100%);
+	background: -webkit-linear-gradient(top,  rgba(255, 154, 40, 0.44) 0%,transparent 100%);
+	background-color: transparent;
+	background: linear-gradient(to bottom,  rgba(255, 154, 40, 0.44) 0%,transparent 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(255, 154, 40, 0.44)', endColorstr='transparent',GradientType=0 );
+	position: fixed;
+	top: 18.1%;
+	right: 5.6%;
+	z-index: 999;
+}
+.howto-wrap--accent-mb {
+	width: 900px;
+	top: 30.77%;
+	right: 10.15%;
+}
+
+.-gameplay { padding-top: 30px; }
+
+.howto--layers { display: block; margin: 0 auto 22px; }
+.-gamerules .howto--layers { width: 87%; }
+.-gameplay .howto--layers { width: 91%; }
+
+.multibetinfoimg {
+	width: 100%;
+}
+
+.howto--layers:last-child { margin-bottom: 0; }
+
+.howto--layers.-two .howto--layers__items {
+	width: calc((100% - 10px) / 2);
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.howto--layers.-two .howto--layers__items:not(:last-child) { margin-right: 5px; }
+.howto--layers__items h4 { text-transform: capitalize; }
+.howto--layers__items p { color: #fff; font-size: 14px; }
+.howto--layers__items img {
+	-webkit-perspective: 1000;
+	-webkit-backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+	display: inline-block;
+}
+.-thumb img, .img-res { display: block; margin: 0 auto; }
+.-thumb { text-align: center; }
+.-thumb img { max-width: 100%; }
+.img-res {  width: 100%; }
+
+
+.howto-wrap h4 {
+	color: #ff9a28;
+	font: normal 19px 'lato-regular';
+	margin: 0 0 16px 0;
+	padding: 0;
+	text-transform: capitalize;
+}
+
+.howto-wrap p {
+	color: #fff;
+	font: normal 18px 'lato-regular';
+	text-transform: none;
+	margin: 0 0 16px 0;
+	padding: 0;
+}
+
+.howto-wrap p:not(:last-child) { margin-bottom: 22px; }
+
+.gamerules-menu {
+	margin: 0 0 48px 0;
+	padding: 0;
+	position: relative;
+	width: 100%;
+}
+
+.gamerules-menu:after {
+	background-color: #d3d3d3;
+	bottom: -20px;
+	content: '';
+	display: block;
+	height: 1px;
+	margin: 0 auto;
+	position: relative;
+	width: 95%;
+}
+
+.gamerules-menu__items {
+	color: #ff9a28;
+	/* height: 35px; */
+	text-align: center;
+	width: 100%;
+	position: relative;
+	list-style-type: none;
+	padding: 7px 0;
+}
+
+.gamerules-menu__items:hover {
+	background-color: #7f572a;
+	color: #fff;
+}
+
+
+.gamerules-menu__items a {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	z-index: 2;
+}
+
+.gamerules-menu__items span {
+	font: normal 18px/37px 'lato-regular';
+	text-align: center;
+}
+
+.gameplay-list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.gameplay-list li { color: #fff; }
+.gameplay-list li:not(:last-child) { margin-bottom: 3px; }
+.gameplay-list li {
+	color: #fff;
+	font: normal 18px 'lato-regular';
+	position: relative;
+	padding-left: 18px;
+}
+.gameplay-list li::before {
+  content: "\2022";
+  color: #fff;
+  position: absolute;
+  left: 0;
+}
+
+.tbl--typeofbets {
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-family: 'lato-regular';
+	font-size: 16px;
+	table-layout: fixed;
+	width: 100%;
+}
+.tbl--typeofbets .bet { width: 120px; }
+.tbl--typeofbets .payout { width: 120px; }
+.tbl--typeofbets .condition {}
+
+.tbl--typeofbets thead {}
+.tbl--typeofbets thead tr {}
+.tbl--typeofbets thead tr th {
+	-webkit-border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	-ms-border-radius: 0 !important;
+	-o-border-radius: 0 !important;
+	border-radius: 0 !important;
+	background-color: #808080;
+	border: solid 1px #808080;
+	color: #fff;
+	font-family: 'lato-regular';
+	font-size: 20px;
+	font-weight: normal;
+	padding: 3px;
+	text-transform: capitalize;
+}
+.tbl--typeofbets tbody {}
+.tbl--typeofbets tbody tr {}
+.tbl--typeofbets tbody tr td {
+	color: #fff;
+	text-align: center;
+	border: solid 1px #808080;
+	font-size: 18px;
+	padding: 5px;
+	line-height: 1.4;
+}
+.tbl--typeofbets tbody tr td.bet { text-transform: capitalize; }
+
+#suit { }
+.suit__items {
+	float: left;
+	width: calc((100% - 40px) / 2);
+}
+.suit__items:not(:last-child) { margin-right: 38px; }
+.suit__items h4 { text-transform: capitalize; }
+/*.suit__items p { color: #6b93a7;  }*/
+.suit__items img { display: block; margin: 0 auto; }
+
+.-suit img { width: 196px; }
+.-suited-tie img {
+	position: relative;
+	/*top: 9px;*/
+	/*width: 185px;*/
+	width: 191px;
+}
+
+.game-stats { }
+.game-stats img { margin: 0 2px; vertical-align: bottom; }
+.game-stats .roadmap {
+	position: relative;
+	left: -29px;
+	width: 110%;
+}
+.game-stats-tx {
+	font: normal 12px 'lato-regular';
+	color: #d3d3d3;
+	float: right;
+	position: relative;
+	right: 57px;
+}
+
+
+.card-display {
+	margin-top: 36px;
+	color: #d3d3d3;
+	font: normal 12px 'lato-regular';
+	text-transform: capitalize;
+}
+.card-display img {
+	margin-top: -27px;
+	width: 100%;
+}
+
+.tx-card-values, .tx-card-dragon1, .tx-card-dragon2, .tx-card-tiger1, .tx-card-tiger2, .tx-card-duringdeal, .tx-card-resultsshow {
+	display: inline-block;
+	position: relative;
+}
+.tx-card-values {
+	top: -19px;
+	left: 337px;
+	width: 77px;
+	text-align: center;
+}
+
+.tx-card-dragon1, .tx-card-dragon2, .tx-card-tiger1, .tx-card-tiger2 {
+	float: left;
+	text-align: center;
+	top: 5px;
+	width: 98px;
+}
+.tx-card-dragon1 { left: 0; }
+.tx-card-dragon2 { left: 64px; }
+.tx-card-tiger1 { left: 31px; }
+.tx-card-tiger2 { left: 93px; }
+
+.tx-card-duringdeal, .tx-card-resultsshow {
+	margin-top: 22px;
+	width: calc((100% - 25px) / 2);
+	color: #8c8c8c;
+	font-size: 17px;
+	text-align: center;
+}
+.tx-card-duringdeal { margin-right: 20px; }
+
+.betting-wrap .betting-btn { display: block; margin: 0 auto 15px; width: 450px; }
+.betting-wrap img {
+	display: inline-block;
+	margin: 0 2px;
+	vertical-align: bottom;
+	position: relative;
+	bottom: -6px;
+}
+
+.chipsrack-wrap {}
+.chipsrack-wrap img {
+	display: block;
+	margin: 10px auto;
+	width: 386px;
+}
+
+
+.modifychips-wrap {}
+.modifychips-wrap img {
+	display: inline-block;
+	margin: 0 2px;
+	vertical-align: bottom;
+	position: relative;
+}
+.modifychips {
+	display: block !important;
+	margin: 0 auto !important;
+	width: 95%;
+	max-width: 600px;
+}
+
+.arrow-up {
+	display: none;
+	background-color: #95632a;
+	bottom: 195px;
+	height: 28px;
+	position: absolute;
+	right: 222px;
+	width: 28px;
+	z-index: 99;
+
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	-ms-border-radius: 100%;
+	-o-border-radius: 100%;
+	border-radius: 100%;
+
+	 top: 77%;
+	 right: 7%;
+}
+
+.arrow-up:hover { background-color: #ff9a28; }
+.arrow-up:hover:before {
+	-webkit-opacity: 1;
+	-moz-opacity: 1;
+	-ms-opacity: 1;
+	-o-opacity: 1;
+	opacity: 1;
+}
+
+.arrow-up:before {
+	background-image: url('/img/howtoplay/arrow_up.png');
+	content: '';
+	display: block;
+	height: 9px;
+	margin: 0 auto;
+	position: relative;
+	top: 50%;
+	width: 15px;
+	z-index: 3;
+
+	-webkit-opacity: 0.5;
+	-moz-opacity: 0.5;
+	-ms-opacity: 0.5;
+	-o-opacity: 0.5;
+	opacity: 0.5;
+
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.arrow-up.-mb {
+		position: fixed;
+    right: 180px;
+    top: 600px;
+    width: 60px;
+    height: 60px;
+    font-size: 30px;
+ }
+
+.card-display-mb { display: block; margin: 0 auto; width: 83%; }
+
+.howto-wrap.white-theme { background: #dfe0e2; }
+.howto-wrap.white-theme p { color: #2b2b2b; }
+.howto-wrap.white-theme h4, .howto-wrap.white-theme .tx-card-duringdeal, .howto-wrap.white-theme .tx-card-resultsshow { color: #ff6828; }
+.howto-wrap.white-theme .gameplay-list li { color: #000; }
+.howto-wrap.white-theme .tbl--typeofbets tbody tr td, .howto-wrap.white-theme .gameplay-list li span { color: #2b2b2b; }
+.howto-wrap.white-theme .card-display, .howto-wrap.white-theme .game-stats-tx { color: #000; }
+.howto-wrap.white-theme .gamerules-menu__items { color: #ff6828; }
+.howto-wrap.white-theme .gamerules-menu__items:hover { color: #fff; background-color: #a6a6a6; }
+.howto-wrap.white-theme .gamerules-menu:after { background-color: #888888; }
+.howto-wrap.white-theme .tbl--typeofbets thead tr th { color: #fff; }
+.howto-wrap.white-theme ul.gameplay-list li span.yellow-text { color: #bc140c }
+.howto-wrap ul.gameplay-list li span.yellow-text { color: #f0cf85 }
+
+.howto-wrap-pc .apply, .howto-wrap-pc .clear { width: 80px; }
+.howto-wrap-pc .modify { width: 55px; }
+.howto-wrap-pc .repeat, .howto-wrap-pc .undo { width: 55px; }
+.howto-wrap-pc {}
+.howto-wrap-pc {}
+.howto-wrap-pc {}
+.howto-wrap-pc {}
+
+.howto-wrap-m .modify { width: 50px; }
+.howto-wrap-m .card-display img { display: block; margin: 0 auto; width: 73%; }
+
+.howto-wrap-m {
+	display: none;
+	height: 415px;
+	right: 12.2%;
+	top: 35%;
+	width: 868px;
+}
+
+.howto-wrap-m h4,
+.howto-wrap-m h5 { font-size: 28px; font-weight: bold; }
+.howto-wrap-m h3 { font-size: 28px; }
+.howto-wrap-m p { font-size: 24px; }
+.howto-wrap-m span { font-size: 24px; }
+.howto-wrap-m .gameplay-list li { font-size: 24px; }
+.howto-wrap-m .tbl--typeofbets thead tr th { font-weight: bold; }
+.howto-wrap-m .gamerules-menu__items { height: 75px }
+.howto-wrap-m .gamerules-menu__items span {
+	font-size: 30px;
+	line-height: 75px;
+	font-weight: bold;
+}
+
+.howto-wrap-m .tx-card-values { top: 176px; left: 662px; font-size: 19px; width: auto; }
+
+.howto-wrap-m .dragon-tiger {
+	position: relative;
+	top: -392px;
+	margin-bottom: -138px;
+}
+.howto-wrap-m  .tx-card-dragon1,
+.howto-wrap-m  .tx-card-dragon2,
+.howto-wrap-m  .tx-card-tiger1,
+.howto-wrap-m .tx-card-tiger2 {
+	float: initial;
+	display: block;
+	left: 0;
+}
+.howto-wrap-m .tx-card-tiger1 { top: 182px; }
+
+.howto-wrap-m p.dealer span,
+.howto-wrap-m p.player span { font-size: 24px }
+
+.howto-wrap-m .antebet--list li { font-size: 24px; }
+
+.howto-wrap-m table tr,
+.howto-wrap-m table td,
+.howto-wrap-m table th {
+  font-size: 20px
+}
+.howto-wrap-m table tbody tr td { font-size: px }
+.howto-wrap-m table .round  { width: 100px }
+
+.howto-wrap-m .arrow-up {
+	font-size: 30px;
+	height: 60px;
+	position: fixed;
+	right: 180px;
+	top: 600px;
+	width: 60px;
+}
+
+.howto-wrap-m .btn--toggle { width: 30px; }

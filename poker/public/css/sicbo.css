@@ -1,0 +1,85 @@
+.dom-resizable {
+    transform-origin: right top !important
+}
+
+.last-150-res {
+    width: 140px;
+    height: 189px;
+    position: absolute;
+    top: 82.5%;
+    z-index: 1;
+    display: none;
+    right: 81.5%;
+    background: rgba(255,255,255,0.2);
+}
+
+.last-150-res.m {
+    width: 137px;
+    height: 189px;
+    position: absolute;
+    top: 79.1%;
+    z-index: 2;
+    right: 83.96%;
+}
+
+.last-150-res .dice-res-overall-container {
+    overflow-y: scroll;
+    height: 166px;
+    overflow-x: hidden;
+	margin-top: 14px
+}
+
+.last-150-res label {
+	color:#fff;
+	font-family: lato;
+	font-size: 15px;
+	text-transform: uppercase;
+	text-align: center;
+	width: 100%;
+	display: block;
+	padding-top:4px;
+}
+
+.last-150-res .dice-res-container {
+	display: inline-block;
+	padding-left:5px;
+	padding-right:5px;
+    text-align: center;
+    padding-top: 4px;
+}
+
+.last-150-res .result-total {
+    font-family: BebasNeue;
+    font-weight: bold;
+    font-size: 25px;
+    width: 40px;
+    display: inline-block;
+}
+
+.last-150-res.m .dice-res-container > .dice-res {
+	width: 19px;
+}
+.last-150-res .dice-res-container > .dice-res {
+    width: 19px;
+    margin-left: 4px;
+}
+
+.result-total.small {
+	color: #267dc0;
+}
+
+.result-total.big {
+	color: #cf2f2f;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+ 
+::-webkit-scrollbar-track {
+    border-radius: 4px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+}

@@ -1,0 +1,18 @@
+.env
+.log
+node_modules
+/public/dist
+/public/css
+/vendor
+.idea
+.sass-cache/
+.env.example
+package-lock.json
+public/img/Lobby-MOBILE_v2.1-update/christmas - Copy/spinnwin-mb.png
+public/img/Lobby-MOBILE_v2.1-update/christmas - Copy/sicbo-mb.png
+public/img/Lobby-MOBILE_v2.1-update/christmas - Copy/redwhite-mb.png
+public/img/Lobby-MOBILE_v2.1-update/christmas - Copy/poker-mb.png
+public/img/Lobby-MOBILE_v2.1-update/christmas - Copy/kagaming-mb.png
+public/img/Lobby-MOBILE_v2.1-update/christmas - Copy/dragontiger-mb.png
+public/img/Lobby-MOBILE_v2.1-update/christmas - Copy/betsoft-mb.png
+public/img/Lobby-MOBILE_v2.1-update/christmas - Copy/baccarat-mb.png

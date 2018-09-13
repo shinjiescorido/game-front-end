@@ -1,0 +1,408 @@
+.createroom-wrap, .verification-wrap {
+  @include transform(translate(0,0));
+  @include bradius(t, 10px);
+  // @include wh(436px, 337px);
+  background: #333333;
+  position: absolute;
+  top: 32%;
+  display : none;
+  left : 83%;
+  overflow: hidden;
+  width: 480px;
+
+  &.-mb {
+    top: 0;
+    left: 39%;
+  }
+}
+.verification-wrap {
+  width: 360px;
+
+  &.-mb {
+    top: 0;
+    left: 39%;
+  }
+}
+
+.createroom__head, .verification__head {
+  @include wh(100%, 35px);
+  @include background-image(linear-gradient(to right, #980001, #660000, #2a0001));
+  border-bottom: 1px solid #581819;
+
+  span {
+    @include transform(translateY(-50%));
+    color: #f0e383;
+    display: block;
+    font: normal 20px ArvoItalic;
+    padding-left: 40px;
+    position: relative;
+    top: 50%;
+  }
+} //createroom__head
+
+.verification__head {
+  span {
+    text-align: center;
+    padding-left: 0;
+    width: 100%;
+  }
+}
+
+.createroom__body, .verification__body{
+  // @include wh(100%, calc(100% - 35px));
+  @extend %cf;
+  display: block;
+  padding: 25px 30px;
+  width: 100%;
+
+  .error {
+    @include box-shadow(0px 0px 5px 0px rgba(245,8,8,1));
+  }
+
+} //.createroom__body
+
+.createroom__items {
+  @include cols(2, 0);
+
+  &:last-child {
+    padding-left: 25px;
+  }
+  h4 {
+    color: #fff;
+    font: normal 20px LatoRegular;
+    padding: 0;
+    margin-bottom: 12px;
+  }
+  p {
+    color: #7a7878;
+    display: block;
+    font: italic normal 15px LatoRegular;
+    padding: 2px 0;
+  }
+} //createroom__items
+
+.createroom-con, .popup-con {
+  @extend %cf;
+  display: block;
+  margin-bottom: 20px;
+  position: relative;
+
+  input {
+    @include bradius(all, 4px);
+    display: block;
+    color: #333333;
+    font: normal 18px LatoRegular;
+    background: #fff;
+    border: 0;
+    line-height: 1;
+    padding: 5px 10px;
+    outline: 0;
+    width: 208px;
+  }
+} //createroom-con
+
+.popup-con {
+  @extend %cf;
+  display: block;
+  position: relative;
+  width: 100%;
+  &:last-child { margin-bottom: 0; }
+  h4 {
+    color: #b3b3b3;
+    font: normal 20px LatoRegular;
+    padding: 0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  p {
+    color: #d53535;
+    font: normal 18px LatoRegular;
+    display: none;
+    margin-top: 2px;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+
+  }
+
+  input {
+    margin: 0 auto;
+    padding: 7px 10px;
+    text-align: center;
+  }
+}
+
+.createroom-input-con {
+  display: block;
+  position: relative;
+  // display: none;
+  // position: absolute;
+  // top: 35px;
+  // left: 0;
+
+  &.-password { position: relative; top: 0; width: 200px;}
+}
+
+.button-con {
+  margin-top: 25px;
+  padding: 0 15px;
+}
+
+#checkname { display: none; }
+.dropdown-con {
+  @include wh(200px, 30px);
+  @include bradius(all, 5px);
+  @include transition(all 0.15s linear);
+  background-color: #fff;
+  display: block;
+  padding: 0 5px;
+  position: relative;
+  cursor: pointer;
+
+  &.open {
+    i { @include transform(rotate(180deg)); }
+  }
+
+  > span {
+    @include transform(translateY(-50%));
+    display: block;
+    color: #333333;
+    font: normal 18px LatoRegular;
+    top: 50%;
+    position: relative;
+  }
+
+  ul {
+    background-color: #fff;
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding-top: 5px;
+    position: absolute;;
+    top: 30px;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+
+    li {
+      display: block;
+      position: relative;
+      cursor: pointer;
+      padding: 5px 10px;
+      color: #333333;
+      font: normal 18px LatoRegular;
+
+      &:last-child {
+        padding: 5px 10px 10px;
+      }
+      @include breakpoint(hoverable) {
+        &:hover { background-color: #e5e3e3; }
+      } // hoverable
+    }
+  }
+} //.dropdown-con
+
+.createroom__boxcon {
+  @extend %cf;
+  display: block;
+  position: relative;
+  width: 100%;
+
+  i { cursor: pointer; }
+  label, span {
+    color: #b3b3b3;
+    font: normal 18px LatoRegular;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  label {
+    text-align: center;
+    width: 55px;
+  }
+
+  input[type="password"] {
+    @include bradius(all, 5px);
+    outline: 0;
+    border: 0;
+    font: normal 18px LatoRegular;
+    padding: 7px 10px;
+    width: 200px;
+  }
+  &.-password {
+    display: none;
+
+  }
+} //createroom__boxcon
+
+.radio-btn input[type="radio"], .check-box input[type="checkbox"] {
+    visibility: hidden;
+}
+.radio-con {
+  @extend %cf;
+  display: block;
+  position: relative;
+
+  &.-makeprivate {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  &.-capital { margin-bottom: 12px; }
+  span { padding: 0 5px; }
+}
+.radio-btn {
+  @include wh(20px, 20px);
+  @include bradius(all, 50%);
+  @include box-shadow(0 0 1px #ccc);
+  @include background-image(linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(246, 246, 246, 1) 47%, rgba(237, 237, 237, 1) 100%));
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  position: relative;
+
+  &.disabled {
+    background: #9f9d9d;
+    cursor: default;
+    i { cursor: default; }
+  }
+
+  i {
+    @include wh(12px, 12px);
+    @include bradius(all, 50%);
+    border: 1px solid #9f9d9d;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+  }
+}//.radio-btn
+.checkedRadio {
+  @include box-shadow(inset 0 0 5px 1px #ccc);
+  i {
+    @include box-shadow(0px 2px 5px 0px rgba(163,163,165,1));
+    background: #57d309;
+  }
+} //checkedRadio
+
+#targetuser { display: none; }
+
+.popup-error-wrap {
+  @include transform(translate(0,0));
+  @include bradius(all, 10px);
+  @include wh(560px, 300px);
+  background: #e6e6e6;
+  position: absolute;
+  top: 30%;
+  display : none;
+  left : 81%;
+  overflow: hidden;
+
+  &.-mb {
+    top: 30%;
+    left: 30%;
+  }
+
+  h4 {
+    color: #514843;
+    display: block;
+    font: normal 22px LatoRegular;
+    margin-top: 35px;
+    text-align: center;
+    width: 100%;
+  }
+} //.popup-error-wrap
+
+.popup-error-con {
+  @include wh(100%, calc(100% - 70px));
+  display: block;
+  position: relative;
+  padding: 35px 0;
+  //
+}
+.pop-failed-btn {
+  @include wh(100%, 70px);
+  background: #af0001;
+  display: block;
+  position: relative;
+}
+
+
+.btn-createroom {
+  @include wh(175px, 55px);
+  @include bradius(all, 5px);
+  display: block;
+  cursor: pointer;
+
+  span {
+    color: #472f03;
+    display: block;
+    font: normal 20px LatoBold;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    top: 50%;
+    width: 100%;
+  }
+  &.btn--cancel { height: 40px; }
+}
+.btn--create {
+  margin-bottom: 15px;
+}
+.btn--create, .btn--join {
+  @include background-image(linear-gradient(to bottom, #ffd579, #ebb845, #b68916));
+  border: 1px solid #906d19;
+
+  span { @include text-shadow(0px 2px 0px #FFFF69); }
+
+  @include breakpoint(hoverable) {
+    &:hover {
+      @include background-image(linear-gradient(to bottom, darken(#ffd579, 10%), darken(#ebb845, 10%), darken(#b68916, 10%)));
+    }
+  } // hoverable
+}
+
+.btn--cancel {
+  @include background-image(linear-gradient(to bottom, #dbdcde, #c2c3c5, #9b9c9e));
+  border: 1px solid #7e7f81;
+  span { @include text-shadow(0px 2px 0px #fffeff); }
+
+  @include breakpoint(hoverable) {
+    &:hover {
+      @include background-image(linear-gradient(to bottom, darken(#dbdcde, 10%), darken(#c2c3c5, 10%), darken(#9b9c9e, 10%)));
+    }
+  } // hoverable
+}
+
+.btn-verification {
+  @include cols(2, 10%);
+  @include bradius(all, 5px);
+  display: block;
+  cursor: pointer;
+  height: 50px;
+
+  span {
+    color: #472f03;
+    display: block;
+    font: normal 20px LatoBold;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    top: 50%;
+    width: 100%;
+  }
+} //.btn-verification
+
+.btn-failed {
+  @include wh(100%, 100%);
+  background: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+
+  span {
+    color: #fff;
+    display: block;
+    font: normal 30px LatoRegular;
+    text-align: center;
+    width: 100%;
+  }
+}

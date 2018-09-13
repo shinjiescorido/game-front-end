@@ -1,0 +1,381 @@
+/* CSS file for Junket */
+.junket-con {
+  position: absolute;
+  /* top: 7.3%; */
+  top: 8.8%;
+  width: 412px;
+  /*right: 100%;*/
+  pointer-events: auto;
+}
+
+#junketHeader {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 0 10px;
+}
+#junketRoomName {
+  float: left;
+  font: 24px lato-black;
+  text-align: left;
+}
+
+.menu-timer {
+  float: right;
+  font: 24px lato-black;
+  text-align: right;
+  display: none;
+}
+.timer-ico {
+  background-image: url('/img/menu/3.0/sub/timer.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -ms-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  display: block;
+  float: right;
+  height: 20px;
+  margin: 8px;
+  width: 20px;
+}
+
+.junket-body-info {
+  background: rgba(22, 22, 22, 0.9);
+  float: left;
+  width: 100%;
+  height: 175px;
+  padding: 10px;
+}
+.junket-info-list {
+  width: 100%;
+  height: 37px;
+  padding-top: 8px;
+  position: relative;
+}
+.info-list-left {
+  position: relative;
+  float: left;
+  color: #fff;
+  font: 18px lato-regular;
+}
+.info-list-right {
+  position: relative;
+  float: right;
+  color: #fff;
+  font: 21px bebas-regular;
+}
+.btn-junket {
+  cursor: pointer;
+  font: bold 18px lato-regular;
+  height: 40px;
+  margin-top: 6px;
+  width: 190px;
+  float: left;
+}
+.btn-junket:not(:last-child) { margin-right: 12px; }
+.btn-junket span {
+  display: block;
+  text-align: center;
+  transform: translateY(-50%);
+  top: 50%;
+  position: relative;
+}
+
+.disband-room {
+  background: #d32f2e;
+  color: #fff;
+}
+.change-password {
+  background: #171717;
+  border: 1px solid #f0e385;
+  color: #f0e385;
+}
+
+#agentMoney { top: -2px; }
+.agent-ico {
+  position: absolute;
+  top: -2px;
+  width: 14px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-image: url('/img/channel/3.0/user_ico.png');
+}
+.agent-name {
+  position: relative;
+  top: -3px;
+  left: 20px;
+  color: #ede382;
+  font-weight: bold;
+}
+
+.junket-player-con {
+  float: left;
+  width: 100%;
+  height: auto;
+}
+.junket-player-header {
+  height: 28px;
+  background: #5f5f5f;
+  padding-top: 3px;
+  text-transform: capitalize;
+}
+.player-header-list {
+  color: #fff;
+  float: left;
+  font: bold 18px lato-regular;
+}
+.header-username { text-align: center; width: 114px; }
+.header-credit { text-align: right; width: 95px; } /*55px*/
+.header-bets { text-align: right; width: 85px; } /*103px*/
+.header-winlose { text-align: right; width: 90px; padding-right: 5px; }
+
+.table--junket .table-td { display: inline-block; padding: 4px 0 0 5px; }
+.junket-player-bg {
+  display: block;
+  width: 100%;
+  height: 280px;
+  padding: 5px 10px;
+  background: rgba(22, 22, 22, 0.9);
+}
+.player-tbl-con {
+  display: block;
+  width: 100%;
+  height: 265px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.player-list-tr { cursor: pointer; }
+.player-list-tr:hover .table-td.-hover { background: #f1e382; }
+.player-list-tr:hover .table-td { color: #000; }
+.table--junket .table-td:not(:last-child) { padding-right: 1px; margin-right: -1px; }
+
+.table--junket { width: 98.3%; }
+.table--junket .table-td.-text { width: 60px; padding-top: 3px; font: normal 19px lato-regular; }
+.table--junket .table-td.-credit,
+.table--junket .table-td.-bets,
+.table--junket .table-td.-winlose { font: normal 20px bebas-regular; text-align: right; width: 100px; }
+.table--junket .table-td.-winlose { width: 90px; padding-right: 5px; }
+.table--junket .table-td.-winlose.--win { color: #63a524; }
+.table--junket .table-td.-winlose.--lose { color: #d2302e; }
+.table--junket .table-td.-chat { width: 30px; }
+
+.chat-notif {
+  border-radius: 50%;
+  color: #fff;
+  height: 18px;
+  margin-left: 5px;
+  width: 18px;
+}
+.chat-notif.-inactive { background: transparent; }
+.chat-notif.-active { background: #d32f2e; }
+
+.chat-notif.chatactive {
+  -webkit-animation: chatAnimPM 2s ease-in-out infinite; /* Safari 4.0 - 8.0 */
+  animation: chatAnimPM 2s ease-in-out infinite;
+}
+@keyframes chatAnimPM {
+  0% { background: #d32f2e }
+  50% { background: rgba(22, 22, 22, 0.9) }
+  100% { background: #d32f2e }
+}
+
+.chat-ico {
+  background-size: contain;
+  height: 20px;
+  font: 15px bebas-regular;
+  left: -1px;
+  text-align: center;
+  top: -1px;
+  padding-top: 1px;
+  position: relative;
+  width: 20px;
+}
+.chat-ico.-inactive { background-image: url('/img/menu/3.0/sub/chat_inactive.png'); }
+.chat-ico.-active { background-image: url('/img/menu/3.0/sub/chat_active.png'); }
+
+.circle-con { margin: 9px 0 0 3px; }
+.extra-circle {
+  display: block;
+  width: 5px;
+  height: 5px;
+  float: left;
+  margin-right: 2px;
+  border-radius: 50%;
+  background: #dd752e;
+}
+
+/* Chat */
+.junket-chat-con {
+  /*background: grey;*/
+  height: 1080px;
+  right: 0%;
+  top: 8.2%;
+  width: 1920px;
+  position: absolute;
+  pointer-events: none;
+}
+
+/*Confirmation Modal*/
+.junket-confirm {
+  display: none;
+}
+
+.mdl_overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.75);
+  width: 1920px;
+  height: 1080px;
+  right: 0;
+}
+
+#mdl_click-con, #mdl_password-con {
+  display: none;
+}
+
+.mdl_bg {
+  position: absolute;
+  width: 410px;
+  background: rgba(22, 22, 22, 0.9);
+  border-radius: 4px;
+  top: 28%;
+  right: 39.5%;
+  display: none;
+}
+.mdl_bg.-closeroom { height: 300px; }
+.mdl_bg.-password { height: 405px; top: 25%; }
+.mdl_bg.-success { height: 230px; }
+
+.mdl_warning_ico {
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -ms-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  background-image: url("/img/alert/alert.png");
+  width: 65px;
+  height: 60px;
+  display: block;
+  margin: 10% 0 0 43%;
+}
+.mdl_alert_txt {
+  color: #f1e382;
+  font: bold 25px lato-regular;
+  text-align: center;
+  padding-top: 11px;
+  margin-bottom: 35px;
+}
+.mdl_message {
+  text-align: center;
+  font: 20px lato-regular;
+  color: #fff;
+  margin-bottom: 10px;
+  display: block;
+  white-space: pre-wrap;
+  padding: 0 10px;
+}
+.mdl_message.-password:not(:first-child) { margin-top: 25px; }
+.reset_pass { padding-top: 20px; }
+.mdl_message-error {
+  color: #d32f2e;
+  font: bold 13px lato-regular;
+  text-align: center;
+  padding-top: 0px;
+  display: none;
+}
+/*.mdl_input {
+  border: none;
+  border-radius: 3px;
+  height: 40px;
+  width: 285px;
+  margin: 10px 0 0 135px;
+  text-align: center;
+  font-size: 25px;
+}*/
+.mdl_input {
+  border: none;
+  border-radius: 2px;
+  height: 40px;
+  width: 205px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 25px;
+  display: block;
+}
+.mdl_btn {
+  width: 50%;
+  height: 60px;
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+}
+.mdl_btn.-no {
+  background: #c9bc6e;
+  border-radius: 0 0 0 4px;
+}
+.mdl_btn.-yes {
+  right: 0;
+  background: #68a12e;
+  border-radius: 0 0 4px 0;
+}
+.mdl_btn.-confirm {
+  background: #68a12e;
+  border-radius: 0 0 4px 4px;
+  width: 100%;
+}
+
+.mdl_btn span {
+  color: #fffffd;
+  font: bold 19px lato-regular;
+  display: block;
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.mdl_btn.-no span { color: #000; }
+
+.mdl_msg_bet {
+  font: bold 30px lato-regular;
+  color: #343434;
+  text-align: center;
+  margin-top: 10px;
+  display: none;
+}
+.mdl_lobby {
+  position: absolute;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  background: #cbbb6e;
+  border-radius: 0 0 4px 4px;
+  cursor: pointer;
+  text-align: center;
+  display: none;
+}
+.mdl_lobby span {
+  font: 24px lato-black;
+  color: #000;
+  display: block;
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.password-con {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: block;
+  padding: 40px 40px;
+}
+.password-btn-con {
+  width: 100%;
+  height: 60px;
+  position: relative;
+  display: block;
+}

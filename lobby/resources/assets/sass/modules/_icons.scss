@@ -1,0 +1,466 @@
+/***************************************************************
+****************************************************************
+  ICONS
+****************************************************************/
+.ico-nihtan {
+	@include bgs("/img/icons/notice_icon.png", contain);
+	@include wh(40px, 40px);
+	@include transform(translateY(-50%));
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	top: 50%;
+}
+
+.ico-nihtan-logo {
+	@include bgs("/img/icons/nihtan_logo_mobile.png", contain);
+	@include wh(72px, 80px);
+	@include transform(translateY(-50%));
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	top: 50%;
+}
+
+.ico-games {
+	@include transform(translateY(-50%));
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	top: 50%;
+}
+.ico-club {
+  @include wh(30px, 30px);
+  @include bgs("/img/card-suite/club.png", contain);
+}
+
+.ico-reel {
+  @include wh(30px, 30px);
+  @include bgs("/img/icons/ico_reel.png", contain);
+}
+
+.ico-theme {
+  @include wh(30px, 30px);
+  @include bgs("/img/icons/ico_theme.png", contain);
+}
+
+
+.ico-baccarat-lobby, .ico-othergames, .ico-reelgames, .ico-multibet {
+  @include wh(52px, 44px);
+	background-repeat: no-repeat;
+	background-position: 0;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.ico-baccarat-lobby {
+	background-image: url("/img/header/baccarat_logo.png");
+}
+
+.ico-othergames {
+	background-image: url("/img/header/other-games_logo.png");
+}
+
+.ico-reelgames {
+	background-image: url("/img/header/reelgames_ico.png");
+}
+
+.ico-multibet {
+	background-image: url("/img/header/multibet_logo.png");
+}
+
+.ico-bethistory, .ico-transactions, .ico-howtoplay, .ico-settings, .ico-logout, .ico-language  {
+  @include wh(52px, 44px);
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: 0;
+	cursor: pointer;
+}
+
+.ico-bethistory:hover , .ico-transactions:hover , .ico-howtoplay:hover , .ico-settings:hover  {
+	@include transition();
+	opacity: 0.5;
+}
+.ico-bethistory {
+	background-image: url("/img/header/bethistory_ico.png");
+}
+.ico-transactions {
+	background-image: url("/img/header/transactionhistory_ico.png");
+}
+.ico-howtoplay {
+	background-image: url("/img/header/gamerules_ico.png");
+}
+.ico-settings {
+	background-image: url("/img/header/settings_ico.png");
+}
+.ico-language {
+	background-image: url("/img/v2_1/icons/language/en.png");
+}
+.ico-logout {
+  @include transform(translateY(-50%));
+	background-image: url("/img/header/logout_ico.png");
+	position: relative;
+	top: 52%;
+
+	&.-mb {
+		@include transform(scale(1.3));
+		top: 27%;
+		margin-left: 23px;
+	}
+}
+.language-con {
+	display: inline-block;
+	cursor: pointer;
+}
+#language {
+	.ico-language {
+		@include wh(50px, 50px);
+		border-radius: 50%;
+		border: 2px solid #f0e282;
+		background-position: 2px 2px;
+		right: 6px;
+		bottom: -3px;
+		position: relative;
+	}
+}
+
+.language-outline {
+  	@include wh(50px, 50px);
+    border-radius: 50%;
+    border: 2px solid #f0e282;
+    position: absolute;
+    right: 23px;
+    bottom: 0px;
+		display: none;
+}
+.language-arrow {
+  	@include wh(20px, 13px);
+	background-image: url("/img/v2_1/icons/language/arrow.png");
+    position: absolute;
+    bottom: 0px;
+    right: 23px;
+    background-repeat: no-repeat;
+}
+
+.ico-baccarat, .ico-poker, .ico-sicbo, .ico-dragontiger, .ico-supersix, .ico-bonus, .ico-roulette, .ico-paigow  {
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: 0;
+
+	background-size: contain;
+}
+.ico-baccarat {
+  @include wh(58px, 44px);
+	background-image: url("/img/header/baccarat_ico.png");
+}
+.ico-poker {
+  @include wh(58px, 44px);
+	background-image: url("/img/header/poker_ico.png");
+}
+.ico-sicbo {
+  @include wh(47px, 44px);
+	background-image: url("/img/header/sicbo_ico.png");
+}
+.ico-dragontiger {
+  @include wh(50px, 44px);
+	background-image: url("/img/header/dragontiger_ico.png");
+}
+.ico-supersix {
+  @include wh(50px, 44px);
+	background-image: url("/img/header/super6_ico.png");
+}
+.ico-bonus {
+  @include wh(50px, 44px);
+	background-image: url("/img/header/bonus_ico.png");
+}
+.ico-roulette {
+  @include wh(44px, 44px);
+	background-image: url("/img/header/roulette_ico.png");
+}
+.ico-paigow {
+  @include wh(44px, 44px);
+	background-image: url("/img/header/pai-gow_themed_ico.png");
+}
+
+.ico-listview, .ico-thumbview {
+  @include wh(28px, 29px);
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: 0;
+	cursor: pointer;
+}
+.ico-listview { background-image: url("/img/header/list_ico.png"); }
+.ico-thumbview { background-image: url("/img/header/grid_ico.png"); }
+
+.ico-lang {
+  @include wh(28px, 28px);
+	display: inline-block;
+	background-size: contain;
+	border-radius: 50%;
+}
+.ico-lang.active { border: 2px solid #f0e282; }
+.ico-lang:not(:last-child) { margin-right: 6px; }
+
+.ico-lang--en { background-image: url("/img/sidebar/language/en.png"); }
+.ico-lang--jp { background-image: url("/img/sidebar/language/jp.png"); }
+.ico-lang--kr { background-image: url("/img/sidebar/language/kr.png"); }
+.ico-lang--zh { background-image: url("/img/sidebar/language/zh.png"); }
+.ico-lang--th { background-image: url("/img/sidebar/language/th.png"); }
+
+.ico-pagcor {
+  @include wh(35px, 35px);
+  @include bradius(all, 50%);
+  @include transform(translateY(-50%));
+	background-image: url("/img/pagcor_logo.jpg");
+	background-repeat: no-repeat;
+	display: inline-block;
+	background-size: contain;
+	position: relative;
+	margin-left: 7px;
+	z-index: 1;
+	top: 50%;
+}
+
+.sidebar--game .ico-pagcor {  @include wh(60px, 60px); margin-left: 12px;}
+
+.ico-close {
+  @include transform(translateY(-50%));
+  @include wh(24px, 24px);
+  @include bgs('/img/reel-tutorial/ico_close.png', cover);
+	cursor: pointer;
+  display: block;
+	position: absolute;
+  right: 20px;
+  top: 50%;
+
+}
+.ico-mb {
+	@include wh(52px, 44px);
+	@include transform(scale(1.2));
+	background-repeat: no-repeat;
+	background-position: 0;
+	display: block;
+	margin: 0 auto;
+}
+
+.ico-livegames-mb{
+	background-image: url("/img/icons/ico_livegames_mb.png");
+}
+.ico-baccarat-mb{
+	@include wh(71px, 56px);
+	@include transform(scale(1));
+	background-image: url("/img/icons/ico_baccarat_mb.png");
+}
+.ico-othergames-mb{
+	@include wh(71px, 56px);
+	@include transform(scale(1));
+	background-image: url("/img/icons/ico_othergames_mb.png");
+}
+.ico-reelgamesnew-mb{
+	@include wh(71px, 56px);
+	@include transform(scale(1));
+	background-image: url("/img/icons/ico_reelgamesnew_mb.png");
+}
+.ico-menu-mb{
+	@include wh(71px, 56px);
+	@include transform(scale(1));
+	background-image: url("/img/icons/ico_menu_mb.png");
+}
+.ico-themedgames-mb {
+	background-image: url("/img/icons/ico_themedgames_mb.png");
+}
+.ico-reelgames-mb {
+	background-image: url("/img/icons/ico_reelgames_mb.png");
+}
+.ico-history-mb {
+	background-image: url("/img/icons/ico_bethistory_mb.png");
+	@include transform(scale(1.1));
+}
+.ico-transaction-mb {
+	background-image: url("/img/icons/ico_transaction_mb.png");
+	@include transform(scale(1.1));
+}
+.ico-howtoplay-mb {
+	background-image: url("/img/icons/ico_howtoplay_mb.png");
+	@include transform(scale(1.1));
+}
+
+.ico-setting-mb {
+	@include wh(52px, 44px);
+	@include transform(scale(0.7));
+	background-repeat: no-repeat;
+	background-position: 0;
+	display: block;
+	margin-top: -20px;
+	margin-left: -12px;
+	background-image: url("/img/icons/ico_settings_mb.png");
+}
+
+.ico-minus, .ico-plus {
+	@include wh(20px, 20px);
+	@include bradius(all, 50%);
+	background-color: #e4b241;
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	position: relative;
+	cursor: pointer;
+
+	&:before, &:after {
+		@include vm();
+		content: "";
+		position: absolute;
+		display: block;
+		background-color: #000;
+	}
+}
+
+.ico-minus {
+	&:before {
+		@include wh(10px, 2px);
+	}
+}
+
+.ico-plus {
+	&:before {
+		@include wh(10px, 2px);
+	}
+
+	&:after {
+		@include wh(2px, 10px);
+	}
+} //.ico-plus
+
+.ico-arrow {
+	border-top: 8px solid #232323;
+	border-left: 8px solid transparent;
+	border-right: 8px solid transparent;
+
+	position: absolute;
+	right: 7px;
+	top: 13px;
+}
+
+.ico-check {
+	@include wh(20px, 20px);
+	@include bgs('/img/icons/ico_check.png', contain);
+	position: absolute;
+	bottom: 2px;
+	right: 7px;
+	z-index: 10;
+}
+.ico-not {
+	@include wh(16px, 16px);
+	@include bgs('/img/icons/ico_close.png', contain);
+	position: absolute;
+	bottom: 6px;
+	right: 7px;
+	z-index: 10;
+}
+
+.ico-error {
+	@include wh(72px, 72px);
+	@include bgs('/img/icons/ico_error.png', contain);
+	display: block;
+	margin: 0 auto;
+	position: relative;
+}
+
+.ico-roundnum {
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	@include wh(20px, 20px);
+
+	&.ico-dice--junket {
+		@include bgs('/img/icons/3.0/sicbo_rounds.png', contain);
+	}
+	&.ico-card--junket {
+		@include bgs('/img/icons/3.0/baccarat_rounds.png', contain);
+	}
+	&.ico-tile--junket {
+		@include bgs('/img/icons/3.0/pai-gow_rounds.png', contain);
+	}
+}
+
+.ico-player {
+	@include bgs('/img/icons/3.0/players_ico.png', contain);
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+
+	&.ico-player--junket {
+		@include wh(18px, 16px);
+	}
+}
+
+.ico-arrowright {
+	@include bgs('/img/icons/3.0/arrow_right.png', contain);
+	@include wh(22px, 40px);
+	display: inline-block;
+	position: relative;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.ico-alert {
+	@include wh(60px, 60px);
+	@include bgs('/img/icons/3.0/alert.png', contain);
+	display: block;
+	position: relative;
+	margin: 0 auto;
+}
+.ico-success {
+	@include wh(60px, 60px);
+	@include bgs('/img/icons/3.0/success_prompt.png', contain);
+	display: block;
+	position: relative;
+	margin: 0 auto;
+}
+.ico-room-close {
+  @include transform(translateY(-50%));
+  @include wh(18px, 18px);
+  background-image: url('/img/icons/3.0/close-room.png');
+  background-size: contain;
+  display: none;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  @include breakpoint(hoverable) {
+    &:hover { opacity :  0.8 }
+  } // hoverable
+
+  &.junketagent { display: block; }
+}
+.ico-calendar {
+	@include bgs('/img/icons/3.0/date.png', contain);
+	@include wh(20px, 20px);
+	display: block;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+	cursor: pointer;
+	pointer-events: none;
+}
+.ico-search {
+	@include bgs('/img/icons/3.0/search.png', contain);
+	@include wh(27px, 26px);
+	display: block;
+	position: relative;
+	top: 2px;
+	cursor: pointer;
+}
+.ico-reload {
+	@include bgs('/img/icons/3.0/reload.png', contain);
+	@include wh(24px, 24px);
+	display: block;
+	position: relative;
+	top: 3px;
+	cursor: pointer;
+}
+.ico-room-supersix {
+	@include bgs('/img/icons/3.0/supersix_ico.png', contain);
+	@include wh(24px, 29px);
+	display: block;
+	position: absolute;
+	top: 3px;
+}

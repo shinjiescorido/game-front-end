@@ -1,0 +1,262 @@
+
+/* line 1, C:/Users/BFJOHDES/Documents/card-flip-laravel/card-flip-laravel/resources/assets/sass/6-pages/_index-page.scss */
+.wrapper {
+  height: 100%;
+  width: 100%;
+  background-image: url("/img/loading/bg_pattern.jpg");
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 6, C:/Users/BFJOHDES/Documents/card-flip-laravel/card-flip-laravel/resources/assets/sass/6-pages/_index-page.scss */
+.wrapper:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: -webkit-radial-gradient(center, transparent, rgba(0, 0, 0, 0.9));
+  background-image: radial-gradient(  at center, transparent, rgba(0, 0, 0, 0.9));
+}
+
+/* line 14, C:/Users/BFJOHDES/Documents/card-flip-laravel/card-flip-laravel/resources/assets/sass/6-pages/_index-page.scss */
+.wrapper--outer {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+/* line 19, C:/Users/BFJOHDES/Documents/card-flip-laravel/card-flip-laravel/resources/assets/sass/6-pages/_index-page.scss */
+.wrapper--inner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+  -webkit-transform-origin: center;
+  -moz-transform-origin: center;
+  -ms-transform-origin: center;
+  -o-transform-origin: center;
+  transform-origin: center;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* line 28, C:/Users/BFJOHDES/Documents/card-flip-laravel/card-flip-laravel/resources/assets/sass/6-pages/_index-page.scss */
+.card--wrapper {
+  height: inherit;
+  position: relative;
+  -webkit-transform-origin: center;
+  -moz-transform-origin: center;
+  -ms-transform-origin: center;
+  -o-transform-origin: center;
+  transform-origin: center;
+  width: 327px;
+  height: 457px;
+  -webkit-animation: rotate-x forwards infinite 8s cubic-bezier(0.68, -0.55, 0.265, 1.55) 5s;
+  -moz-animation: rotate-x forwards infinite 8s cubic-bezier(0.68, -0.55, 0.265, 1.55) 5s;
+  animation: rotate-x forwards infinite 8s cubic-bezier(0.68, -0.55, 0.265, 1.55) 5s;
+}
+
+/* line 36, C:/Users/BFJOHDES/Documents/card-flip-laravel/card-flip-laravel/resources/assets/sass/6-pages/_index-page.scss */
+.card {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: url("/img/loading/full-card.png") center no-repeat;
+  /* background: url("/img/seasonal_theme/lantern_theme/full-card.png") center no-repeat; */
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 300ms ease-out;
+  -moz-transition: -moz-transform 300ms ease-out;
+  transition: transform 300ms ease-out;
+  display: none;
+}
+
+/* line 46, C:/Users/BFJOHDES/Documents/card-flip-laravel/card-flip-laravel/resources/assets/sass/6-pages/_index-page.scss */
+.card:before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%) translateZ(0);
+  -moz-transform: translate(-50%, -50%) translateZ(0);
+  -ms-transform: translate(-50%, -50%) translateZ(0);
+  -o-transform: translate(-50%, -50%) translateZ(0);
+  transform: translate(-50%, -50%) translateZ(0);
+  width: calc(100% - 1px);
+  height: calc(100% - 3px);
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  border-radius: 15px;
+  -webkit-box-shadow: #f0cf85 0px 0px 35px 0px;
+  -moz-box-shadow: #f0cf85 0px 0px 35px 0px;
+  box-shadow: #f0cf85 0px 0px 35px 0px;
+  -webkit-animation: glow forwards infinite 2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -moz-animation: glow forwards infinite 2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  animation: glow forwards infinite 2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* line 57, C:/Users/BFJOHDES/Documents/card-flip-laravel/card-flip-laravel/resources/assets/sass/6-pages/_index-page.scss */
+.card--percent {
+  /* color: #f0cf85; */
+  color: #d22e21;
+  font: bold 1.25em bebas-regular;
+  display: inline-block;
+  position: absolute;
+  right: auto;
+  bottom: auto;
+  left: 10px;
+  top: 10px;
+  /* left: 45%;
+  top: 15px; */
+}
+
+/* line 63, C:/Users/BFJOHDES/Documents/card-flip-laravel/card-flip-laravel/resources/assets/sass/6-pages/_index-page.scss */
+.card--percent:last-child {
+  color: #f0cf85;
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+  position: absolute;
+  top: auto;
+  left: auto;
+  right: 10px;
+  bottom: 10px;
+  /* right: 46%;
+  bottom: 15px; */
+}
+
+@-webkit-keyframes rotate-x {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  15%, 50% {
+    -webkit-transform: rotate(180deg);
+  }
+  65%, 100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes rotate-x {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  15%, 50% {
+    -moz-transform: rotate(180deg);
+  }
+  65%, 100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-x {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  15%, 50% {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  65%, 100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes glow {
+  0% {
+    -webkit-box-shadow: #f0cf85 0px 0px 35px -5px;
+    -moz-box-shadow: #f0cf85 0px 0px 35px -5px;
+    box-shadow: #f0cf85 0px 0px 35px -5px;
+  }
+  50% {
+    -webkit-box-shadow: #f0cf85 0px 0px 35px 0px;
+    -moz-box-shadow: #f0cf85 0px 0px 35px 0px;
+    box-shadow: #f0cf85 0px 0px 35px 0px;
+  }
+  100% {
+    -webkit-box-shadow: #f0cf85 0px 0px 35px -5px;
+    -moz-box-shadow: #f0cf85 0px 0px 35px -5px;
+    box-shadow: #f0cf85 0px 0px 35px -5px;
+  }
+}
+
+@-moz-keyframes glow {
+  0% {
+    -webkit-box-shadow: #f0cf85 0px 0px 35px -5px;
+    -moz-box-shadow: #f0cf85 0px 0px 35px -5px;
+    box-shadow: #f0cf85 0px 0px 35px -5px;
+  }
+  50% {
+    -webkit-box-shadow: #f0cf85 0px 0px 35px 0px;
+    -moz-box-shadow: #f0cf85 0px 0px 35px 0px;
+    box-shadow: #f0cf85 0px 0px 35px 0px;
+  }
+  100% {
+    -webkit-box-shadow: #f0cf85 0px 0px 35px -5px;
+    -moz-box-shadow: #f0cf85 0px 0px 35px -5px;
+    box-shadow: #f0cf85 0px 0px 35px -5px;
+  }
+}
+
+@keyframes glow {
+  0% {
+    -webkit-box-shadow: #f0cf85 0px 0px 35px -5px;
+    -moz-box-shadow: #f0cf85 0px 0px 35px -5px;
+    box-shadow: #f0cf85 0px 0px 35px -5px;
+  }
+  50% {
+    -webkit-box-shadow: #f0cf85 0px 0px 35px 0px;
+    -moz-box-shadow: #f0cf85 0px 0px 35px 0px;
+    box-shadow: #f0cf85 0px 0px 35px 0px;
+  }
+  100% {
+    -webkit-box-shadow: #f0cf85 0px 0px 35px -5px;
+    -moz-box-shadow: #f0cf85 0px 0px 35px -5px;
+    box-shadow: #f0cf85 0px 0px 35px -5px;
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  /* line 101, C:/Users/BFJOHDES/Documents/card-flip-laravel/card-flip-laravel/resources/assets/sass/6-pages/_index-page.scss */
+  .wrapper--inner {
+    -ms-transition: none;
+    transition: none;
+  }
+  /* line 105, C:/Users/BFJOHDES/Documents/card-flip-laravel/card-flip-laravel/resources/assets/sass/6-pages/_index-page.scss */
+  .card:before {
+    -ms-animation: none;
+    animation: none;
+  }
+}
+
+/*# sourceMappingURL=../../../public/css/main.map */

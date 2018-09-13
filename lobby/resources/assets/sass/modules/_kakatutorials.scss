@@ -1,0 +1,185 @@
+.ka-wrap {
+  @include wh(100%, 100%);
+  @include position(absolute, 0, 0);
+  @include transition(all 1s ease);
+  background-color: rgba(#000, 0.7);
+  display: none;
+  z-index: 99999;
+
+  &.active { display: block; }
+
+  .prev-button, .next-button {
+    @include wh(35px, 83px);
+    @include transform(translateY(-50%));
+    display: block;
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+  }
+  .prev-button {
+    @include bgs('/img/reel-tutorial/prev.png', cover);
+    left: 20px;
+  }
+
+  .next-button {
+    @include bgs('/img/reel-tutorial/next.png', cover);
+    right: 20px;
+  }
+
+  &.reel {
+    .ka-con { width: 760px; }
+    .ka__body p { text-align: center; }
+  }
+} //ka=wrap
+
+.ka-inner {
+  @include wh(100%, 100%);
+  display: block;
+  position: relative;
+} // ka-inner
+
+.ka-prompt, .ka-prompt-reel {
+  @include bradius(all, 8px);
+  @include wh(635px, 300px);
+  background-color: #e6e6e6;
+  display: none;
+  right: 33%;
+  top: 30%;
+  position: absolute;
+  overflow: hidden;
+} //ka-prompt
+
+body.mb .ka-prompt-reel { right: 25.3%; }
+
+.ka-prompt.active, .ka-prompt-reel.active {
+  display: block;
+}
+
+.ka-prompt-btn, .ka-prompt-btn-reel {
+  @include wh(100%, 70px);
+  background-color: #d8961e;
+  display: block;
+  cursor: pointer;
+
+  span {
+    @include transform(translateY(-50%));
+    color: #fff;
+    display: block;
+    font: bold 32px LatoBold;
+    position: relative;
+    top: 50%;
+    text-align: center;
+  }
+} //ka-prompt-btn
+.ka-prompt-con {
+  @include wh(100%, calc(100% - 70px));
+  display: block;
+  padding: 30px;
+  p {
+    color: #514640;
+    display: block;
+    font: normal 22px LatoRegular;
+    line-height: 1.3;
+    padding-top: 25px;
+    margin: 0;
+    text-align: center;;
+  }
+  img {
+    @include wh(81px, 71px);
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.ka-con {
+  // @include wh(833px, 657px);
+  display: none;
+  @include bradius(t, 5px);
+  @include bradius(b, 10px);
+  background-color: #e6e6e6;
+  margin: 0 auto;
+  position: absolute;
+  overflow: hidden;
+  right: 29%;
+  top: 18%;
+  width: 833px;
+  z-index: 999999;
+  &.active { display: block; }
+}
+.ka__head {
+  @include wh(100%, 60px);
+  background-color: #d8961e;
+  display: block;
+  position: relative;
+
+  h4 {
+    @include transform(translateY(-50%));
+    font: normal 22px ArvoRegular;
+    padding: 0;
+    position: relative;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+    top: 50%;
+  }
+} //ka-header
+
+.ka__body {
+  @include wh(100%, calc(100% - 60px));
+    padding: 25px;
+  display: block;
+  position: relative;
+
+  > p {
+    padding: 0 20px;
+
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  p {
+    font: normal 22px LatoRegular;
+    margin-bottom: 30px;
+
+    img { display: inline-block; margin: 0 1px;}
+  }
+}
+.ka-slider-con {
+  @include bradius(b, 8px);
+  border: 1px solid #919191;
+  padding: 20px 0;
+  overflow: hidden;
+  position: relative;
+
+  ul {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    transition: 1.3s ease-in-out;
+
+    &.active { display: block; }
+    &.slider-chrome { width: 400%; }
+    &.slider-firefox { width: 300%; }
+    &.slider-ie { width: 300%; }
+
+    li {
+      width: 780px;
+      float: left;
+      position: relative;
+      padding: 0 30px;
+    }
+  }
+} // ka-slider-con
+
+.ka-closeBtn {
+  font: bold 30px LatoRegular;
+  cursor: pointer;
+  background: #d89628;
+  height: 70px;
+  text-align: center;
+  color: #fff;
+  padding: 15px;
+} // ka-closeBtn

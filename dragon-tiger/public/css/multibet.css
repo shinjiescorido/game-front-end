@@ -1,0 +1,842 @@
+#multibet {
+	display: none
+}
+.game-range-sel {
+	width: 355px;
+	height: 30px;
+	background: #5f5f5f;
+	position: absolute;
+	right: 100%;
+	display: table;
+	/*padding-left:12px;*/
+}
+.game-range-sel-2 {
+	top:42%;
+	right: 100%;
+
+}
+.game-range-sel-3 {
+	top:0%;
+	right: 0;
+	right: -100%;
+}
+.game-range-sel-4 {
+	top:42%;
+	right: -20%;
+}
+
+.multi-game-name.flippy::before {
+  /*background: url(/img/multibet/3.0/flippy.png) no-repeat;*/
+  /*width: 40px;*/
+  /*height: 35px;*/
+  /*background-position: center;*/
+  background: url(/img/multibet/3.0/flippy_move2.png) no-repeat;
+  content: '';
+  position: relative;
+  display: block;
+  top: 0;
+  float: right;
+  background-size: 150px 180px;
+  background-position: -4px -2px;
+  content: '';
+  width: 30px;
+  height: 22px;
+  animation: 2.5s flippy steps(1) infinite;
+  -webkit-animation: 2.5s flippy steps(1) infinite;
+  -moz-animation: 2.5s flippy steps(1) infinite;
+  -o-animation: 2.5s flippy steps(1) infinite;
+  transition: none !important;
+  top:8px;
+}
+
+.multi-game-name, .multi-range  {
+	color: #fff;
+	display: inline-block;
+	height: 35px;
+	vertical-align: middle;
+	font-family: lato-black;
+	font-size: 18px;
+	/*min-width: 42%;*/
+}
+
+.multi-range {
+  font-family: lato-regular;
+  width: 45%;
+  text-align: right;
+  float: right;
+  /* position: fixed; */
+  margin-right: 38px;
+  /* right: 11%; */
+}
+.multi-range >span {
+}
+
+.link-go {
+  display: block;
+  /* float: right; */
+  width: 20px;
+  height: inherit;
+  position: absolute;
+  top: 8px;
+  right: 0;
+  margin-right: 7px;
+}
+.link-go  > span{
+  display: block;
+  background-image: url(/img/multibet/go.png);
+  width: 20px;
+  height: 20px;
+  background-size: 100% 100%;
+  opacity: 0.5;
+}
+.link-go:hover{
+	cursor: pointer;
+}
+.multi-game-name:hover i,
+.multi-range:hover i,
+.link-go:hover span {
+	opacity: 1;
+}
+
+.link-go::before {
+	content : '';
+	position: absolute;
+	height: 25px;
+	width: 1px;
+	background: #4b4b4b;
+	left: -12px;
+	top: -2px;
+}
+
+.win-close-icon{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 8px;
+	right: 10px;
+	background-repeat: no-repeat;
+	background-image: url(/img/menu/3.0/sub/close.png);
+	display: block;
+	cursor: pointer;
+}
+.multibet-win-notif {
+	transform: scale(0.794271);
+	top: 28.2%;
+	right: 81.9%;
+	position: absolute;
+	width: 336px;
+	height: 118px;
+	overflow: hidden;
+	display: none;
+}
+
+.multibet-win-notif .win-wrap {
+	background: red;
+	height: 100%;
+	padding-top: 10px;
+	position: relative;
+	top: -21px;
+	background: rgba(224, 200, 114,0.9);
+	right: -360px;
+	opacity: 0
+}
+
+.multibet-win-notif .win-wrap::before {
+	position: absolute;
+	width: 10px;
+	height: 118px;
+	left: 0;
+	background: #728c2a;
+	top: 0px;
+	content: '';
+}
+
+.multibet-win-notif.show-win .win-wrap{
+	right: 0;
+	transition: right 0.2s ease;
+}
+.multibet-win-notif div {
+	width: 100%;
+	text-align: center;
+	margin: : 15px 15px 0 0px;
+	margin: 10px 0px;
+	margin-top: 20px;
+	color: #000;
+	font-size: 25px;
+	font-family: lato-black;
+}
+.multibet-win-notif .win-amt {
+	color: #728c2a;
+	font-family: bebas-regular;
+	font-size: 30px;
+	margin-top: 5px;
+}
+.multibet-win-notif-2{
+	top:69.8%;
+}
+.multibet-win-notif-3{
+	right: 0.4%;
+}
+
+.multibet-win-notif-4{
+	top:69.8%;
+	right: 0.4%;
+}
+
+.multi-game-name.zh {
+	font-family: noto-zh-regular,'Arial Unicode Ms', 'Arial Unicode Ms Regular';
+	font-weight: bold
+}
+.multi-game-name.th {
+	font-family: 'Leelawadee UI', 'Thonburi', 'Arial Unicode Ms', 'Arial Unicode Ms Regular';
+	font-weight: bold;
+}
+.multi-game-name.jp {
+	font-family: noto-jp-regular,'Kozuka Gothic Pr6N ', 'Hiragino Sans', 'Arial Unicode Ms', 'Arial Unicode Ms Regular';
+	font-weight: bold
+}
+
+.multi-game-name span, .multi-range span {
+	display: inline-block;
+	transform: translateY(-50%);
+	top: 50%;
+	position: relative;
+	margin-left: 10px;
+}
+
+.multi-game-name i, .multi-range i {
+	background-image: url(/img/channel/3.0/arrow-down.png);
+	width: 19px;
+	height: 10px;
+	background-size: cover;
+	float: right;
+	position: relative;
+	background-repeat: no-repeat;
+	display: inline-block;
+	top: 40%;
+	margin-right: 5px;
+	margin-left: 5px;
+	opacity: 0.5;
+}
+
+.multi-game-name i.up,
+.multi-range i.up {
+	background-image: url(/img/channel/3.0/arrow-up.png);
+}
+.game-list, .range-list {
+	position: absolute;
+	left: 0;
+	color: #fff;
+	font-family: 'lato';
+	width: 354px;
+	background: rgba(0,0,0,0.8);
+	top:35px;
+	max-height: 210px;
+	overflow-y: auto;
+	display: none;
+	font-size: 18px;
+}
+.game-list .game.flippy > span::after {
+	content: '';
+	width: 33px;
+	height: 22px;
+	background: red;
+	position:relative;
+	float: right;
+	margin-left: 10px;
+/*	background: url(/img/multibet/3.0/flippy.png) no-repeat;
+	background-position: center;
+	background-size: 100% 100%;*/
+  background: url(/img/multibet/3.0/flippy_move2.png) no-repeat;
+  background-size: 150px 180px;
+  background-position: -1px -2px;
+  width: 30px;
+  height: 22px;
+  animation: 2s flippy steps(1) infinite;
+  -webkit-animation: 2s flippy steps(1) infinite;
+  -moz-animation: 2s flippy steps(1) infinite;
+  -o-animation: 2s flippy steps(1) infinite;
+  transition: none !important;
+}
+
+.multi-game-name.zh + .game-list {
+	font-family: noto-zh-regular,'Arial Unicode Ms', 'Arial Unicode Ms Regular';
+	font-weight: bold
+}
+.multi-game-name.th + .game-list {
+	font-family: 'Leelawadee UI', 'Thonburi', 'Arial Unicode Ms', 'Arial Unicode Ms Regular';
+	font-weight: bold;
+}
+.multi-game-name.jp + .game-list {
+	font-family: noto-jp-regular,'Kozuka Gothic Pr6N ', 'Hiragino Sans', 'Arial Unicode Ms', 'Arial Unicode Ms Regular';
+	font-weight: bold
+}
+
+.range-list {
+  width: 200px;
+  display: none;
+  left: 155px;
+}
+.game-list > div, .range-list > div{
+	height: 35px;
+	border-top:1px solid rgba(255,255,255,0.5);
+	vertical-align: middle;
+	padding-left: 10px;
+}
+.game-list > div:nth-child(1), .range-list > div:nth-child(1){
+	border:none;
+}
+
+.game-list > div > span, .range-list > div > span {
+	display: block;
+	transform: translateY(-50%);
+	top: 50%;
+	position: relative;
+	/*width: 50%;*/
+	float: left;
+	padding-left: 10px;
+}
+
+.range-list > div > span{
+	width: 100%;
+	text-align: center;
+	padding-left: 0px;
+}
+
+.range-list > div:hover{
+	cursor: pointer;
+	color: #eadd7f;
+	transition: all 0.3s
+}
+
+.game-list > div >  i {
+	float: right;
+	margin-right: 10px;
+	font-style: normal;
+	text-align: right;
+	transform: translateY(-50%);
+	top: 50%;
+	position: relative;
+	text-transform: capitalize
+}
+
+.game-list > div > i.winner {
+	transition: opacity 1s;
+	opacity: 1;
+	-webkit-animation: example 2s;
+  -moz-animation:    example 2s;
+  -o-animation:      example 2s;
+  animation:         example 2s;
+  font-family: 'lato-black';
+}
+
+@-webkit-keyframes example {
+	0% {opacity: 1;}
+	25% {opacity: 0.2;}
+	50% {opacity: 1;}
+	75% {opacity: 0.2;}
+}
+
+@-moz-keyframes example {
+	0% {opacity: 1;}
+	25% {opacity: 0.2;}
+	50% {opacity: 1;}
+	75% {opacity: 0.2;}
+}
+
+@-o-keyframes example {
+	0% {opacity: 1;}
+	25% {opacity: 0.2;}
+	50% {opacity: 1;}
+	75% {opacity: 0.2;}
+}
+
+@keyframes example {
+  0% {opacity: 1;}
+  25% {opacity: 0.2;}
+  50% {opacity: 1;}
+  75% {opacity: 0.2;}
+}
+
+.game-list > div > i.result-red {
+	color: #d32f2f
+}
+
+.game-list > div > i.result-green {
+	color: #689f38
+}
+
+.game-list > div > i.result-blue {
+	color: #1565c0
+}
+.game-list > div > i.result-gold {
+	color: #d9bf6c
+}
+
+.game-list > div > i.inputitem {
+	color: #666666;
+}
+
+.game-list > div > span:hover {
+	color: #e0c870;
+	/*font-family: 'latoblack';*/
+	cursor: pointer;
+	transition: all 0.3s;
+}
+
+.eye-cion {
+	width: 40px !important;
+	height: 35px;
+	/*background: #fff;*/
+	float:left;
+	padding-left: 10px;
+	background-image:url('/img/multibet/preview_inactive.png');
+	background-size: 70% 50%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border: none !important;
+}
+
+.eye-cion:hover {
+	background-image:url('/img/multibet/preview_active.png');
+	cursor: pointer;
+}
+
+.eye-cion.active {
+	background-image:url('/img/multibet/preview_active.png');
+}
+
+#roadmap-container,
+#roadmap-list-container {
+	position: absolute;
+	z-index: 999;
+	right: 30%;
+	top: 0%;
+	display: none;
+	width: 650px;
+	height: 205px;
+}
+#roadmap-list-container {
+	width: 505px;
+	height: 145px;
+	right: 10.45%
+}
+
+#roadmap-container::after{
+	content: '';
+	background: rgba(15, 15, 15, 0.8);
+	width: 650px;
+	height: 205px;
+	position: absolute;
+	/*left: 50px;*/
+	z-index: -1
+}
+
+#roadmap-list-container::after {
+	content: '';
+	background: rgba(15, 15, 15, 0.8);
+	width: 505px;
+	height: 145px;
+	position: absolute;
+	/*left: 50px;*/
+	z-index: -1
+}
+
+#roadmap-container>canvas,
+#roadmap-list-container>canvas {
+	background: none !important
+}
+#link {
+  background-image: url(/img/multibet/go.png);
+  width: 20px;
+  height: 20px;
+  background-size: 100% 100%;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: transparent;
+  border: 0;
+  z-index: 1;
+}
+
+#link::before {
+	content: '';
+	width: 1px;
+	position: absolute;
+	right: 30px;
+	top: -2px;
+	height: 24px;
+	background: rgba(255,255,255,0.5);
+}
+#link:hover{
+	cursor: pointer;
+  opacity: 0.6
+}
+
+/**************/
+#table-redirect-list{
+	display: block;
+	position: absolute;
+	top: 20%;
+	right: -10.45%;
+	transition: right 0.5s ease;
+	height: 560px;
+
+}
+#table-redirect-list.show {
+	right: 0px !important
+	}
+.button-container {
+
+}
+.button-list:focus{
+	outline: none
+}
+.button-list:hover{
+	cursor: pointer;
+	opacity: 1;
+}
+.button-list {
+	height: 160px;
+	width: 36px;
+	background: rgba(25,25,25,0.9);
+	border:2px solid #867647;
+	border-radius: 10px 0px 0px 10px;
+	background-image: url('/img/multibet/3.0/show_table.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	left: -36px;
+	opacity: 0.5;
+}
+.button-list.hide {
+	background-image: url('/img/multibet/3.0/hide_table.png');
+	/* opacity: 1; */
+}
+.all-table-list {
+	height: auto;
+	width: 200px;
+	background: rgba(25,25,25,0.9);
+}
+.all-table-list .game-table {
+	height: 40px;
+	width: 100%;
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+	padding: 10px;
+}
+.game-table.flippy > .game-name::after {
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+  position: absolute;
+  margin-top: 0;
+
+  background: url(/img/multibet/3.0/flippy_move2.png) no-repeat;
+  /*background-size: 100% 100%;*/
+  background-size: 150px 180px;
+  background-position: -1px -2px;
+  content: '';
+  width: 30px;
+  height: 25px;
+		/*background-color: red;*/
+  animation: 2.5s flippy steps(1) infinite;
+  -webkit-animation: 2.5s flippy steps(1) infinite;
+  -moz-animation: 2.5s flippy steps(1) infinite;
+  -o-animation: 2.5s flippy steps(1) infinite;
+  transition: none !important;
+}
+
+.game-table.flippy.maintenance > .game-name::after,
+.game-table.flippy.disabled > .game-name::after,
+.game-table.flippy.rooms > .game-name::after {
+	content: none;
+}
+
+@keyframes flippy {
+	2% { background-position: -39px -2px; }
+	4% { background-position: -76px -2px;	}
+	6% { background-position: -114px -2px; }
+	/**/
+	8%{ background-position: -1px -27.5px; }
+	10%{ background-position: -39px -27.5px; }
+	12%{ background-position: -76px -27.5px; }
+	14%{ background-position: -114px -27.5px; }
+
+	/**/
+	16%{ background-position: -1px -53.5px; }
+	18%{ background-position: -39px -53.5px; }
+	20%{ background-position: -76px -53.5px; }
+	22%{ background-position: -114px -53.5px; }
+	/**/
+	24% { background-position: -1px -79px; }
+	26% { background-position: -39px -79px; }
+	28% { background-position: -76px -79px; }
+	30% { background-position: -114px -79px; }
+	/**/
+	32%{ background-position: -1px -104px }
+	34%{ background-position: -39px -104px }
+	36%{ background-position: -76px -104px }
+	38%{ background-position: -114px -104px }
+	/**/
+	40%{ background-position: -1px -130px }
+	42%{ background-position: -39px -130px }
+
+	85%{ background-position: -76px -130px }
+	88%{ background-position: -114px -130px }
+	/**/
+	91%{ background-position: -1px -156px }
+	94%{ background-position: -39px -156px }
+	97%{ background-position: -76px -156px }
+	100%{ background-position: -114px -156px }
+}
+@-webkit-keyframes flippy {
+	2% { background-position: -39px -2px; }
+	4% { background-position: -76px -2px;	}
+	6% { background-position: -114px -2px; }
+	/**/
+	8%{ background-position: -1px -27.5px; }
+	10%{ background-position: -39px -27.5px; }
+	12%{ background-position: -76px -27.5px; }
+	14%{ background-position: -114px -27.5px; }
+
+	/**/
+	16%{ background-position: -1px -53.5px; }
+	18%{ background-position: -39px -53.5px; }
+	20%{ background-position: -76px -53.5px; }
+	22%{ background-position: -114px -53.5px; }
+	/**/
+	24% { background-position: -1px -79px; }
+	26% { background-position: -39px -79px; }
+	28% { background-position: -76px -79px; }
+	30% { background-position: -114px -79px; }
+	/**/
+	32%{ background-position: -1px -104px }
+	34%{ background-position: -39px -104px }
+	36%{ background-position: -76px -104px }
+	38%{ background-position: -114px -104px }
+	/**/
+	40%{ background-position: -1px -130px }
+	42%{ background-position: -39px -130px }
+
+	85%{ background-position: -76px -130px }
+	88%{ background-position: -114px -130px }
+	/**/
+	91%{ background-position: -1px -156px }
+	94%{ background-position: -39px -156px }
+	97%{ background-position: -76px -156px }
+	100%{ background-position: -114px -156px }
+}
+@-moz-keyframes flippy {
+	2% { background-position: -39px -2px; }
+	4% { background-position: -76px -2px;	}
+	6% { background-position: -114px -2px; }
+	/**/
+	8%{ background-position: -1px -27.5px; }
+	10%{ background-position: -39px -27.5px; }
+	12%{ background-position: -76px -27.5px; }
+	14%{ background-position: -114px -27.5px; }
+
+	/**/
+	16%{ background-position: -1px -53.5px; }
+	18%{ background-position: -39px -53.5px; }
+	20%{ background-position: -76px -53.5px; }
+	22%{ background-position: -114px -53.5px; }
+	/**/
+	24% { background-position: -1px -79px; }
+	26% { background-position: -39px -79px; }
+	28% { background-position: -76px -79px; }
+	30% { background-position: -114px -79px; }
+	/**/
+	32%{ background-position: -1px -104px }
+	34%{ background-position: -39px -104px }
+	36%{ background-position: -76px -104px }
+	38%{ background-position: -114px -104px }
+	/**/
+	40%{ background-position: -1px -130px }
+	42%{ background-position: -39px -130px }
+
+	85%{ background-position: -76px -130px }
+	88%{ background-position: -114px -130px }
+	/**/
+	91%{ background-position: -1px -156px }
+	94%{ background-position: -39px -156px }
+	97%{ background-position: -76px -156px }
+	100%{ background-position: -114px -156px }
+}
+@-o-keyframes flippy {
+	2% { background-position: -39px -2px; }
+	4% { background-position: -76px -2px;	}
+	6% { background-position: -114px -2px; }
+	/**/
+	8%{ background-position: -1px -27.5px; }
+	10%{ background-position: -39px -27.5px; }
+	12%{ background-position: -76px -27.5px; }
+	14%{ background-position: -114px -27.5px; }
+
+	/**/
+	16%{ background-position: -1px -53.5px; }
+	18%{ background-position: -39px -53.5px; }
+	20%{ background-position: -76px -53.5px; }
+	22%{ background-position: -114px -53.5px; }
+	/**/
+	24% { background-position: -1px -79px; }
+	26% { background-position: -39px -79px; }
+	28% { background-position: -76px -79px; }
+	30% { background-position: -114px -79px; }
+	/**/
+	32%{ background-position: -1px -104px }
+	34%{ background-position: -39px -104px }
+	36%{ background-position: -76px -104px }
+	38%{ background-position: -114px -104px }
+	/**/
+	40%{ background-position: -1px -130px }
+	42%{ background-position: -39px -130px }
+
+	85%{ background-position: -76px -130px }
+	88%{ background-position: -114px -130px }
+	/**/
+	91%{ background-position: -1px -156px }
+	94%{ background-position: -39px -156px }
+	97%{ background-position: -76px -156px }
+	100%{ background-position: -114px -156px }
+}
+.game-table:hover{
+	cursor: pointer;
+	background: rgba(255,255,255,0.5);
+}
+.game-table:hover > .game-name,
+.game-table:hover > .game-status,
+.game-table:hover > .game-status-maintenance,
+.game-table:hover > .game-status-disabled,
+.game-table:hover > .game-status-rooms {
+	color: #000
+}
+
+.game-table.maintenance:hover,
+.game-table.disabled:hover,
+.game-table.rooms:hover {
+	cursor: default !important;
+	background: none !important
+}
+.game-table.maintenance:hover > .game-name,
+.game-table.disabled:hover > .game-name,
+.game-table.rooms:hover > .game-name{
+	color: #fff !important;
+}
+
+.game-table.maintenance > .game-status,
+.game-table.disabled > .game-status,
+.game-table.rooms > .game-status {
+	display: none;
+}
+
+.game-table.maintenance > .game-status-maintenance,
+.game-table.disabled > .game-status-disabled,
+.game-table.rooms > .game-status-rooms {
+	display: block !important;
+}
+.game-table.active {
+	background: rgba(66, 63, 62, 0.9);
+}
+.game-table.maintenance,
+.game-table.disabled,
+.game-table.rooms {
+	opacity: 0.2
+}
+.game-table.active > .game-status,
+.game-table > .game-link {
+	display: none;
+}
+
+.game-table > .game-status,
+.game-table.active > .game-link{
+	display: block;
+}
+
+.game-table.active > .game-link:hover{
+	opacity:  0.6
+}
+
+.game-link {
+	width: 20px;
+  height: 20px;
+  float: right;
+  background: url(/img/multibet/3.0/go_white.png);
+}
+.game-link > a{
+	width: 20px;
+  height: 20px;
+  display: block;
+}
+
+.all-table-list .game-table:nth-last-child(1) {
+	border-bottom: 0px
+}
+.all-table-list .game-table > .game-name {
+	text-transform: uppercase;
+	color: #fff;
+	font-family: lato-black;
+}
+
+.all-table-list .game-table > .game-status,
+.all-table-list .game-table > .game-status-maintenance,
+.all-table-list .game-table > .game-status-disabled,
+.all-table-list .game-table > .game-status-rooms {
+	color: #fff;
+	font-family: lato-regular;
+	float: right;
+	font-weight: bold;
+}
+
+.all-table-list .game-table > .game-status-maintenance,
+.all-table-list .game-table > .game-status-disabled,
+.all-table-list .game-table > .game-status-rooms{
+	display: none;
+	font-size: 14px;
+}
+
+.all-table-list .game-table > .game-status.inputitem {
+	/*color: #666666;*/
+}
+.all-table-list .game-table > .game-status.result-gold {
+	color: #d9bf6c
+}
+.all-table-list .game-table > .game-status.result-blue {
+	color: #1565c0
+}
+.all-table-list .game-table > .game-status.result-green {
+	color: #689f38
+}
+.all-table-list .game-table > .game-status.result-red {
+	color: #d32f2f
+}
+.all-table-list .game-table > .game-status.winner {
+	transition: opacity 1s;
+	opacity: 1;
+	-webkit-animation: example 2s;
+  -moz-animation:    example 2s;
+  -o-animation:      example 2s;
+  animation:         example 2s;
+  font-family: 'lato-black';
+}
+
+
+/*unavailable*/
+.unavailable-stat {
+	width: 100%;
+	text-align: center;
+	display: none;
+	position: relative;
+	top: 5px;
+}
+
+.unavailable-stat span {
+	color: #fff;
+	font-family: lato-black;
+}
+
+.unavailable-stat.active {display: block;}
+.unavailable-stat.active ~ div {display: none;}

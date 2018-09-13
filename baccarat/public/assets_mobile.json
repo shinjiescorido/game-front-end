@@ -1,0 +1,569 @@
+[
+	{
+		"id" : "user_icon",
+		"src" : "/img/v2_1/user_icon.png"
+	},
+	{
+		"id" : "void",
+		"src" : "/img/multibet/void/void_web.png"
+	},
+	{
+		"id" : "cards_sprite",
+		"src" : "/img/cards/lobby_sprite_cards.png"
+	},
+	{
+		"id" : "cards_sprite_small",
+		"src" : "/img/cards/lobby_sprite_cards_small.png"
+	},
+	{
+		"comment": "/*----------table----------*/",
+		"id":"the_betboard",
+		"src": "/img/dt_betBoard/singleplayer_table.png"
+	},
+	{
+		"id":"the_betboard_dragonbonus",
+		"src": "/img/dt_betBoard/singleplayer_table_dragonbonus.png"
+	},
+	{
+		"id":"the_betboard_dragonbonus_mobile",
+		"src": "/img/dt_betBoard/singleplayer_table_dragonbonus_mobile.png"
+	},
+	{
+		"id":"the_betboard_dragonbonus_mobile_zh",
+		"src": "/img/dt_betBoard/singleplayer_table_dragonbonus_mobile_zh.png"
+	},
+	{
+		"id":"single_player_flat",
+		"src": "/img/dt_betBoard/single_player_flat.png"
+	},
+	{
+		"id":"single_player_flat_zh",
+		"src": "/img/dt_betBoard/single_player_flat_zh.png"
+	},
+	{
+		"id":"the_betboard_supersix",
+		"src": "/img/dt_betBoard/singleplayer_table_supersix.png"
+	},
+	{
+		"id":"the_betboard_supersix_zh",
+		"src": "/img/dt_betBoard/singleplayer_table_supersix_zh.png"
+	},
+	{
+		"id":"the_betboard_dragonbonus_zh",
+		"src": "/img/dt_betBoard/singleplayer_table_dragonbonus_zh.png"
+	},
+	{
+		"id" : "multiplayer_table_dragonbonus",
+		"src" : "/img/v2_1/full_bet_dragonbonus_multiplayer.png"
+	},
+	{
+		"id" : "multiplayer_table_dragonbonus_chinese",
+		"src" : "/img/v2_1/full_bet_dragonbonus_multiplayer_zh.png"
+	},
+	{
+		"id":"bac_betboard_chinese",
+		"src": "/img/dt_betBoard/bac_singleplayer.png"
+	},
+	{
+		"id" : "multiplayer_table_supersix",
+		"src" : "/img/v2_1/full_bet_multiplayer.png"
+	},
+	{
+		"id" : "multiplayer_table_supersix_zh",
+		"src" : "/img/v2_1/full_bet_multiplayer_zh.png"
+	},
+	{
+		"id" : "supersix_flat",
+		"src" : "/img/v2_1/supersix_flat.png"
+	},
+	{
+		"id" : "supersix_flat_zh",
+		"src" : "/img/v2_1/supersix_flat_zh.png"
+	},
+	{
+		"id" : "dragonbonus_flat",
+		"src" : "/img/v2_1/dragonbonus_flat.png"
+	},
+	{
+		"id" : "dragonbonus_flat_zh",
+		"src" : "/img/v2_1/dragonbonus_flat_zh.png"
+	},
+	{
+		"id" : "supersix_multi_flat",
+		"src" : "/img/v2_1/supersix_multi_flat.png"
+	},
+	{
+		"id" : "supersix_multi_flat_zh",
+		"src" : "/img/v2_1/supersix_multi_flat_zh.png"
+	},
+	{
+		"id" : "multiplayer_flat",
+		"src" : "/img/v2_1/multiplayer_flat.png"
+	},
+	{
+		"id" : "multiplayer_flat_zh",
+		"src" : "/img/v2_1/multiplayer_flat_zh.png"
+	},
+	{
+		"comment" : "**-------- menu button -----------**",
+		"id" : "exit-menu-black",
+		"src" : "/img/v2_1/menu-mobile/dark/exit.png"
+	},
+	{
+		"id" : "howto-menu-black",
+		"src" : "/img/v2_1/menu-mobile/dark/howto_button.png"
+	},
+	{
+		"id" : "videoRefresh-menu-black",
+		"src" : "/img/v2_1/menu-mobile/dark/refresh_button.png"
+	},
+	{
+		"id" : "refreshVideo-menu-black",
+		"src" : "/img/v2_1/menu-mobile/dark/refresh-vid_button.png"
+	},
+	{
+		"id" : "hdVideo-menu-black",
+		"src" : "/img/v2_1/menu-mobile/dark/hd-vid_button.png"
+	},
+	{
+		"id" : "sdVideo-menu-black",
+		"src" : "/img/v2_1/menu-mobile/dark/sd-vid_button.png"
+	},
+	{
+		"id" : "playerInfo-menu-black",
+		"src" : "/img/v2_1/menu-mobile/dark/playerinfo_button.png"
+	},
+	{
+		"id" : "roomInfo-menu-black",
+		"src" : "/img/v2_1/menu-mobile/dark/roominfo_button.png"
+	},
+	{
+		"id" : "betRecords-menu-black",
+		"src" : "/img/v2_1/menu-mobile/dark/betrecords_button.png"
+	},
+	{
+		"id" : "transfer-menu-black",
+		"src" : "/img/v2_1/menu-mobile/dark/transfer_button.png"
+	},
+	{
+		"id" : "modifyChips-menu-black",
+		"src" : "/img/v2_1/menu-mobile/dark/modchips_button.png"
+	},
+	{
+		"id" : "settings-menu-black",
+		"src" : "/img/v2_1/menu-mobile/dark/settings_button.png"
+	},
+	{
+		"id" : "toggle-menu",
+		"src" : "/img/v2_1/menu-mobile/dark/toggle_button.png"
+	},
+	{
+		"id" : "multiplayer-menu-black",
+		"src" : "/img/v2_1/menu-mobile/dark/multibet_button.png"
+	},
+	{
+		"id" : "volume-mute-black",
+		"src" : "/img/v2_1/icons/menu/dark/mute_icon.png"
+	},
+	{
+		"id" : "volume-max-black",
+		"src" : "/img/v2_1/icons/menu/dark/loud_icon.png"
+	},
+	{
+		"id" : "bet-logs-black",
+		"src" : "/img/v2_1/icons/menu/dark/betlogs_icon.png"
+	},
+	{
+		"id" : "game-history-black",
+		"src" : "/img/v2_1/icons/menu/dark/gamehistory_icon.png"
+	},
+	{
+		"id" : "transfer-black",
+		"src" : "/img/v2_1/icons/menu/dark/transfer_icon.png"
+	},
+	{
+		"id" : "next-arrow-black",
+		"src" : "/img/v2_1/icons/menu/dark/next_arrow.png"
+	},
+	{
+		"id" : "prev-arrow-black",
+		"src" : "/img/v2_1/icons/menu/dark/previous_arrow.png"
+	},
+	{
+		"id" : "gameplay-black",
+		"src" : "/img/v2_1/icons/menu/dark/gameplay_icon.png"
+	},
+	{
+		"id" : "game-rules-black",
+		"src" : "/img/v2_1/icons/menu/dark/gamerules_icon.png"
+	},
+	{
+		"comment" : "**-menu button LIGHT-**",
+		"id" : "exit-menu-white",
+		"src" : "/img/v2_1/menu-mobile/light/exit.png"
+	},
+	{
+		"id" : "howto-menu-white",
+		"src" : "/img/v2_1/menu-mobile/light/howto_button.png"
+	},
+	{
+		"id" : "videoRefresh-menu-white",
+		"src" : "/img/v2_1/menu-mobile/light/refresh_button.png"
+	},
+	{
+		"id" : "refreshVideo-menu-white",
+		"src" : "/img/v2_1/menu-mobile/light/refresh-vid_button.png"
+	},
+	{
+		"id" : "hdVideo-menu-white",
+		"src" : "/img/v2_1/menu-mobile/light/hd-vid_button.png"
+	},
+	{
+		"id" : "sdVideo-menu-white",
+		"src" : "/img/v2_1/menu-mobile/light/sd-vid_button.png"
+	},
+	{
+		"id" : "playerInfo-menu-white",
+		"src" : "/img/v2_1/menu-mobile/light/playerinfo_button.png"
+	},
+	{
+		"id" : "roomInfo-menu-white",
+		"src" : "/img/v2_1/menu-mobile/light/roominfo_button.png"
+	},
+	{
+		"id" : "betRecords-menu-white",
+		"src" : "/img/v2_1/menu-mobile/light/betrecords_button.png"
+	},
+	{
+		"id" : "transfer-menu-white",
+		"src" : "/img/v2_1/menu-mobile/light/transfer_button.png"
+	},
+	{
+		"id" : "modifyChips-menu-white",
+		"src" : "/img/v2_1/menu-mobile/light/modchips_button.png"
+	},
+	{
+		"id" : "settings-menu-white",
+		"src" : "/img/v2_1/menu-mobile/light/settings_button.png"
+	},
+	{
+		"id" : "multiplayer-menu-white",
+		"src" : "/img/v2_1/menu-mobile/light/multibet_button.png"
+	},
+	{
+		"id" : "volume-mute-white",
+		"src" : "/img/v2_1/icons/menu/light/mute_icon.png"
+	},
+	{
+		"id" : "volume-max-white",
+		"src" : "/img/v2_1/icons/menu/light/loud_icon.png"
+	},
+	{
+		"id" : "bet-logs-white",
+		"src" : "/img/v2_1/icons/menu/light/betlogs_icon.png"
+	},
+	{
+		"id" : "game-history-white",
+		"src" : "/img/v2_1/icons/menu/light/gamehistory_icon.png"
+	},
+	{
+		"id" : "transfer-white",
+		"src" : "/img/v2_1/icons/menu/light/transfer_icon.png"
+	},
+	{
+		"id" : "next-arrow-white",
+		"src" : "/img/v2_1/icons/menu/light/next_arrow.png"
+	},
+	{
+		"id" : "prev-arrow-white",
+		"src" : "/img/v2_1/icons/menu/light/previous_arrow.png"
+	},
+	{
+		"id" : "gameplay-white",
+		"src" : "/img/v2_1/icons/menu/light/gameplay_icon.png"
+	},
+	{
+		"id" : "game-rules-white",
+		"src" : "/img/v2_1/icons/menu/light/gamerules_icon.png"
+	},
+	{
+		"comment" : "**-----------winning result -----------**",
+		"id" : "supersix_img",
+		"src" : "/img/v2_1/winning_asset/supersix_img.png"
+	},
+	{
+		"id" : "supersix_win",
+		"src" : "/img/v2_1/winning_asset/supersix_win.png"
+	},
+	{
+		"id" : "dragonbonus_win",
+		"src" : "/img/v2_1/winning_asset/dragonbonus_win.png"
+	},
+	{
+		"id" : "dragonbonus_win_glow",
+		"src" : "/img/v2_1/winning_asset/dragonbonus_win_glow.png"
+	},
+	{
+		"comment" : "**---------------win fx----------------**",
+		"id" : "win_clubs",
+		"src" : "/img/v2_1/win_animation_suits/clubs.png"
+	},
+	{
+		"id" : "win_diamond",
+		"src" : "/img/v2_1/win_animation_suits/diamond.png"
+	},
+	{
+		"id" : "win_heart",
+		"src" : "/img/v2_1/win_animation_suits/heart.png"
+	},
+	{
+		"id" : "win_spade",
+		"src" : "/img/v2_1/win_animation_suits/spade.png"
+	},
+	{
+		"comment" : "**----------------user avatar-----------------**",
+		"id" : "black_jack",
+		"src" : "/img/avatar/3.0/black_jack.png"
+	},
+	{
+		"id" : "black_joker",
+		"src" : "/img/avatar/3.0/black_joker.png"
+	},
+	{
+		"id" : "black_king",
+		"src" : "/img/avatar/3.0/black_king.png"
+	},
+	{
+		"id" : "black_queen",
+		"src" : "/img/avatar/3.0/black_queen.png"
+	},
+	{
+		"id" : "red_jack",
+		"src" : "/img/avatar/3.0/red_jack.png"
+	},
+	{
+		"id" : "red_joker",
+		"src" : "/img/avatar/3.0/red_joker.png"
+	},
+	{
+		"id" : "red_king",
+		"src" : "/img/avatar/3.0/red_king.png"
+	},
+	{
+		"id" : "red_queen",
+		"src" : "/img/avatar/3.0/red_queen.png"
+	},
+	{
+		"comment": "**----- chip icon ----------**",
+		"id": "black-theme-chip_icon",
+		"src" : "/img/v2_1/light-chip.png"
+	},
+	{
+		"id": "white-theme-chip_icon",
+		"src" : "/img/v2_1/dark-chip.png"
+	},
+	{
+		"comment" : "**----- new chip icon --WHITE THEME ----------**",
+		"id": "white-theme-chip_icon-dollar",
+		"src" : "/img/v2_1/icons/chips/light/dollar.png"
+	},
+	{
+		"id": "white-theme-chip_icon-yen-yuan",
+		"src" : "/img/v2_1/icons/chips/light/yen-yuan.png"
+	},
+	{
+		"id": "white-theme-chip_icon-won",
+		"src" : "/img/v2_1/icons/chips/light/won.png"
+	},
+	{
+		"id": "white-theme-chip_icon-baht",
+		"src" : "/img/v2_1/icons/chips/light/baht.png"
+	},
+	{
+		"id": "white-theme-chip_icon-ringgit",
+		"src" : "/img/v2_1/icons/chips/light/ringgit.png"
+	},
+	{
+		"id": "white-theme-chip_icon-rupiah",
+		"src" : "/img/v2_1/icons/chips/light/rupiah.png"
+	},
+	{
+		"comment" : "**----- new chip icon --DARK THEME ----------**",
+		"id": "black-theme-chip_icon-dollar",
+		"src" : "/img/v2_1/icons/chips/dark/dollar.png"
+	},
+	{
+		"id": "black-theme-chip_icon-yen-yuan",
+		"src" : "/img/v2_1/icons/chips/dark/yen-yuan.png"
+	},
+	{
+		"id": "black-theme-chip_icon-won",
+		"src" : "/img/v2_1/icons/chips/dark/won.png"
+	},
+	{
+		"id": "black-theme-chip_icon-baht",
+		"src" : "/img/v2_1/icons/chips/dark/baht.png"
+	},
+	{
+		"id": "black-theme-chip_icon-ringgit",
+		"src" : "/img/v2_1/icons/chips/dark/ringgit.png"
+	},
+	{
+		"id": "black-theme-chip_icon-rupiah",
+		"src" : "/img/v2_1/icons/chips/dark/rupiah.png"
+	},
+	{
+		"comment": "**----- channel icon ----------**",
+		"id": "channel-black",
+		"src" : "/img/v2_1/channel/dark/channel_ico.png"
+	},
+	{
+		"id": "channel-white",
+		"src" : "/img/v2_1/channel/light/channel_ico.png"
+	},
+	{
+		"id" : "bet_indicator",
+		"src" : "/img/v2_1/bet_indicator2.png"
+	},
+	{
+		"comment" : "**---------------- scoreboard ------------------**",
+		"id" : "numeric_stats",
+		"src" : "/img/v2_1/scoreboard/numeric_stats.png"
+	},
+	{
+		"comment" : "**---------------- sounds ------------------**",
+		"id" : "chip1",
+		"src" : "/sound/chip1.mp3"
+	},
+	{
+		"id" : "chip2",
+		"src" : "/sound/chip2.mp3"
+	},
+	{
+		"id" : "chip3",
+		"src" : "/sound/chip3.mp3"
+	},
+	{
+		"id" : "click",
+		"src" : "/sound/click.mp3"
+	},
+	{
+		"id" : "card-deal",
+		"src" : "/sound/cardDeal.mp3"
+	},
+	{
+		"id" : "card-show",
+		"src" : "/sound/getCard.mp3"
+	},
+	{
+		"id": "cards",
+		"src" : "/img/cards/3.0/mobile-cards_75x100.png"
+	},
+	{
+		"id" : "new_cards",
+		"src" : "/img/cards/mobile_sprite_cards.png"
+	},
+	{
+		"id" : "all_scoreboard",
+		"src" : "/img/scoreboard/all_scoreboard.png"
+	},
+	{
+		"id" : "all_scoreboard_zh",
+		"src" : "/img/scoreboard/all_scoreboard_zh.png"
+	},
+	{
+		"id" : "multiplayer_table",
+		"src" : "/img/v2_1/full_bet.png"
+	},
+	{
+		"id" : "multiplayer_table_chinese",
+		"src" : "/img/v2_1/bac_multiplayer.png"
+	},
+	{
+		"id" : "latoBlack",
+		"src": "/fonts/Lato-Black.ttf"
+	},
+	{
+		"id" : "LatoRegular",
+		"src": "/fonts/Lato-Regular.ttf"
+	},
+	{
+		"id" : "LatoBold",
+		"src": "/fonts/Lato-Bold.ttf"
+	},
+	{
+		"id" : "BebasNeue",
+		"src": "/fonts/BebasNeue.otf"
+	},
+	{
+		"id" : "Arvo",
+		"src": "/fonts/Arvo-Regular.ttf"
+	},
+	{
+		"comment" : "***---------notice/announcement-------****",
+		"id" : "notice_ico",
+		"src" : "/img/v2_1/icons/notice/notice_icon.png"
+	},
+	{
+		"comment" : "***--------- Room Info -------****",
+		"id" : "money_ico",
+		"src" : "/img/v2_1/icons/room_info/total_bet.png"
+	},
+	{
+		"id" : "user_ico",
+		"src" : "/img/v2_1/icons/room_info/user.png"
+	},
+	{
+		"id" : "total_user_ico",
+		"src" : "/img/v2_1/icons/room_info/total_users.png"
+	},
+	{
+		"comment" : "**----------- chips v3 ----------------**",
+		"id" : "chip_1",
+		"src" : "/img/3.0/chips/1k.png"
+	},
+	{
+		"id" : "chip_3",
+		"src" : "/img/3.0/chips/3k.png"
+	},
+	{
+		"id" : "chip_5",
+		"src" : "/img/3.0/chips/5k.png"
+	},
+	{
+		"id" : "chip_10",
+		"src" : "/img/3.0/chips/10k.png"
+	},
+	{
+		"id" : "chip_30",
+		"src" : "/img/3.0/chips/30k.png"
+	},
+	{
+		"id" : "chip_50",
+		"src" : "/img/3.0/chips/50k.png"
+	},
+	{
+		"id" : "chip_100",
+		"src" : "/img/3.0/chips/100k.png"
+	},
+	{
+		"id" : "chip_200",
+		"src" : "/img/3.0/chips/200k.png"
+	},
+	{
+		"id" : "chip_300",
+		"src" : "/img/3.0/chips/300k.png"
+	},
+	{
+		"id" : "chip_500",
+		"src" : "/img/3.0/chips/500k.png"
+	},
+	{
+		"id" : "chip_1000",
+		"src" : "/img/3.0/chips/1m.png"
+	},
+	{
+		"id" : "chip_max",
+		"src" : "/img/3.0/chips/max.png"
+	}
+]

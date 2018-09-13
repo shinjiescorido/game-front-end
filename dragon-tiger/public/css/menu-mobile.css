@@ -1,0 +1,388 @@
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+/*************** BETLOGS ***************/
+.betlog-result {
+  background: #d5d5d5;
+  border: 2px solid #000;
+  border-radius: 6px;
+  display: none;
+  position: absolute;
+  height: auto;
+  width: 635px;
+  overflow: hidden;
+  top: 16%;
+  right: 27.3%;
+  padding-bottom: 10px;
+  z-index: 99;
+}
+.betlog-result__head {
+  background: #ff9b28;
+  display: block;
+  position: relative;
+  height: 35px;
+  width: 100%;
+}
+.betlog-result__head span {
+  color: #2b2b2b;
+  display: block;
+  text-align: center;
+  font-family: lato-bold;
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  top: 50%;
+  -webkit-transform : translateY(-50%) translate3d(0,0,0);
+  -ms-transform : translateY(-50%) translate3d(0,0,0);
+  transform : translateY(-50%) translate3d(0,0,0);
+}
+.betlog-result__head .ico-close {
+  background: url('/img/icons/close_ico.png');
+  background-size: contain;
+  display: block;
+  height: 16px;
+  width: 16px;
+  position: absolute;
+  right: 13px;
+  top: 50%;
+  -webkit-transform : translateY(-50%) translate3d(0,0,0);
+  -ms-transform : translateY(-50%) translate3d(0,0,0);
+  transform : translateY(-50%) translate3d(0,0,0);
+}
+.betlog-result__body {
+  display: block;
+  position: relative;
+}
+.betlog-result-con {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.betlog-result__info {
+  background: #bcbcbc;
+  display: block;
+  height: 36px;
+  position: relative;
+  width: 100%;
+}
+.betlog-info__items {
+  display: block;
+  float: left;
+  height: inherit;
+  width: 50%;
+  padding: 0 10px;
+}
+.betlog-info__items span {
+  font-size: 16px;
+  font-weight: bold;
+  font-family: lato-bold;
+  display: block;
+  margin-top: 9px;
+  line-height: 1;
+}
+.betlog-info__items.betlog-info--date span { text-align: right; }
+.betlog-result-holder {
+  background: #e5e5e5;
+  border: 1px solid #b3b3b3;
+  border-radius: 3px;
+  display: block;
+  height: 55px;
+  margin: 0 auto 0;
+  position: relative;
+  width: 255px;
+  overflow: hidden;
+  top: -28px;
+}
+.betlog-result--dragontiger {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: inherit;
+  padding: 0 42px;
+}
+.betlog-result--dragontiger span.dt-suite-club:before ,
+.result-club:before{ background-image: url('/img/card-suite/club.png')}
+.betlog-result--dragontiger span.dt-suite-heart:before,
+.result-heart:before { background-image: url('/img/card-suite/heart.png')}
+.betlog-result--dragontiger span.dt-suite-diamond:before,
+.result-diamond:before { background-image: url('/img/card-suite/diamond.png')}
+.betlog-result--dragontiger span.dt-suite-spade:before,
+.result-spade:before { background-image: url('/img/card-suite/spade.png')}
+.betlog-result--dragontiger span:before {
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 25px;
+  width: 25px;
+  -webkit-transform : translate(-50%, -50%);
+  -ms-transform : translate(-50%, -50%);
+  transform : translate(-50%, -50%);
+}
+.betlog-result--dragontiger span {
+  background-size: contain;
+  background: #b71d1d;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  vertical-align: middle;
+  margin: 0 auto;
+  /* float: left; */
+
+  line-height: 1;
+  color: #fff;
+  font-weight: bold;
+  font-family: lato-bold;
+  font-size: 18px;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  top: 12px;
+  padding-top: 5px;
+}
+.betlog-result--dragontiger span:not(:first-child) { margin-left: 12px; }
+
+.betlog-result--dragontiger span.no-sidebets { display: block; }
+
+.betlog-result-cardholder {
+  display: block;
+  width: 100%;
+  height: 125px;
+  margin-top: -17px;
+  margin-bottom: 20px;
+}
+.betlog-result-card__items {
+  display: block;
+  float: left;
+  position: relative;
+  width: 50%;
+  height: inherit;
+}
+.cardholder-con {
+  background: #c9c9c9;
+  border-radius: 3px;
+  display: block;
+  height: inherit;
+  width: 127px;
+
+}
+.betlog-result-card__items.-dragon .cardholder-con {
+  float: right;
+  margin-right: 20px;
+}
+.betlog-result-card__items.-tiger .cardholder-con {
+  float: left;
+  margin-left: 20px;
+}
+.cardresult--value {
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  top: 39px;
+
+  color: #fff;
+  text-align: center;
+  font-size: 33px;
+  font-family: bebas-regular;
+  padding-top: 3px;
+}
+.cardresult--value.-dragon {
+  background: #1976d3;
+  right: 123px;
+}
+.cardresult--value.-tiger {
+  background: #b71b1c;
+  right: 146px;
+}
+
+.cardholder-con span {
+  background-image: url("/img/cards/sprite_cards_mobile.png");
+  /* background-position: 0 0; */
+  display: block;
+  width: 72px;
+  height: 96.75px;
+  top: 13px;
+  position: relative;
+}
+
+.cardholder-con.-dragon span { float: right; margin-right: 15px; }
+.cardholder-con.-tiger span { float: left; margin-left: 15px; }
+
+
+.betlog-table-con {
+  display: block;
+  position: relative;
+  width: 580px;
+  /* height: auto; */
+  overflow-x: hidden;
+  /* height: 242px; */
+  max-height: 242px;
+  margin: 0 auto;
+  webkit-overflow-scrolling: auto;
+  /* -webkit-transform : translate3d(0,0,0);
+  -ms-transform : translate3d(0,0,0);
+  transform : translate3d(0,0,0); */
+}
+.betlog-table {
+  border-collapse: collapse;
+  display: table;
+  position: relative;
+  width: 580px;
+  margin: 0 auto;
+  /* -webkit-transform : translate3d(0,0,0);
+  -ms-transform : translate3d(0,0,0);
+  transform : translate3d(0,0,0); */
+
+}
+.betlog-tr {
+  display: table-row-group;
+  /* -webkit-transform : translate3d(0,0,0);
+  -ms-transform : translate3d(0,0,0);
+  transform : translate3d(0,0,0); */
+}
+.betlog-td {
+  display: table-cell;
+  border-bottom: 1px solid #abaaaa;
+  border-right: 1px solid #abaaaa;
+  height: 30px;
+  /* -webkit-transform : translate3d(0,0,0);
+  -ms-transform : translate3d(0,0,0);
+  transform : translate3d(0,0,0); */
+}
+.betlog-td span {
+  display: block;
+  text-align: center;
+  font-size: 16px;
+  font-family: lato-bold;
+  font-weight: bold;
+  color: #242021;
+  text-align: right;
+  padding: 7px 10px;
+
+  position: relative;
+
+  /* -webkit-transform : translate3d(0,0,0);
+  -ms-transform : translate3d(0,0,0);
+  transform : translate3d(0,0,0); */
+}
+.betlog-td:first-child { border-left: 1px solid #abaaaa; }
+
+.tbl--head .betlog-tr { background: #c9c9c9 }
+.table--betlog .betlog-td.-bettype span {text-align: left;}
+.tbl--head .betlog-td { border:0;}
+.tbl--head .betlog-td span {text-align: center; }
+.table--betlog.tbl--head .betlog-td.-bettype span {text-align: center;}
+.table--betlog .betlog-td.-bettype { width: 187px; }
+.table--betlog .betlog-td.-bets { width: 185px; }
+
+.table--betlog.tbl--body .betlog-td.-bettype span {
+  border-radius: 50%;
+  display: block;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  margin: 0 auto;
+
+  color: #fff;
+  text-align: center;
+  line-height: 1;
+  padding: 4px 0 0;
+}
+.table--betlog.tbl--body .betlog-tr.-total .betlog-td span {
+  font-weight: bold;
+  font-size: 18px;
+}
+.table--betlog.tbl--body .betlog-td.-bettype.-total span {
+  border-radius: 0;
+  width: 100%;
+  height: auto;
+  color: #242021;
+
+
+}
+
+.table--betlog.tbl--body .betlog-td.-bettype span:before {
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  height: 20px;
+  width: 20px;
+  /* -webkit-transform : translate(-50%, -50%);
+  -ms-transform : translate(-50%, -50%);
+  transform : translate(-50%, -50%); */
+}
+
+/*clubs*/
+.card-0000 { background-position: 0 0;}
+.card-0001 { background-position: -72px 0;}
+.card-0002 { background-position: -144px 0;}
+.card-0003 { background-position: -216px 0;}
+.card-0004 { background-position: -288px 0;}
+.card-0005 { background-position: -360px 0;}
+.card-0006 { background-position: -432px 0;}
+.card-0007 { background-position: -504px 0; }
+.card-0008 { background-position: -576px 0; }
+.card-0009 { background-position: -648px 0; }
+.card-0010 { background-position: -720px 0; }
+.card-0011 { background-position: -792px 0; }
+.card-0012 { background-position: -864px 0; }
+
+/* hearts */
+.card-0013 { background-position: 0 -193.5px; }
+.card-0014 { background-position: -72px -193.5px; }
+.card-0015 { background-position: -144px -193.5px; }
+.card-0016 { background-position: -216px -193.5px; }
+.card-0017 { background-position: -288px -193.5px; }
+.card-0018 { background-position: -360px -193.5px; }
+.card-0019 { background-position: -432px -193.5px; }
+.card-0020 { background-position: -504px -193.5px; }
+.card-0021 { background-position: -576px -193.5px; }
+.card-0022 { background-position: -648px -193.5px; }
+.card-0023 { background-position: -720px -193.5px; }
+.card-0024 { background-position: -792px -193.5px; }
+.card-0025 { background-position: -864px -193.5px; }
+
+/* diamonds */
+.card-0026 { background-position: 0 -96.75px; }
+.card-0027 { background-position: -72px -96.75px; }
+.card-0028 { background-position: -144px -96.75px; }
+.card-0029 { background-position: -216px -96.75px; }
+.card-0030 { background-position: -288px -96.75px; }
+.card-0031 { background-position: -360px -96.75px; }
+.card-0032 { background-position: -432px -96.75px; }
+.card-0033 { background-position: -504px -96.75px; }
+.card-0034 { background-position: -576px -96.75px; }
+.card-0035 { background-position: -648px -96.75px; }
+.card-0036 { background-position: -720px -96.75px; }
+.card-0037 { background-position: -792px -96.75px; }
+.card-0038 { background-position: -864px -96.75px; }
+
+/* spades */
+.card-0039 { background-position: 0 -290.25px; }
+.card-0040 { background-position: -72px -290.25px; }
+.card-0041 { background-position: -144px -290.25px; }
+.card-0042 { background-position: -216px -290.25px; }
+.card-0043 { background-position: -288px -290.25px; }
+.card-0044 { background-position: -360px -290.25px; }
+.card-0045 { background-position: -432px -290.25px; }
+.card-0046 { background-position: -504px -290.25px; }
+.card-0047 { background-position: -576px -290.25px; }
+.card-0048 { background-position: -648px -290.25px; }
+.card-0049 { background-position: -720px -290.25px; }
+.card-0050 { background-position: -792px -290.25px; }
+.card-0051 { background-position: -864px -290.25px; }

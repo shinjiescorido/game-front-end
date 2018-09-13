@@ -1,0 +1,621 @@
+* {
+  outline: none !important;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently	supported by Chrome and Opera */
+  /*cursor: default;*/
+  margin: 0;
+  padding: 0;
+
+  -webkit-box-sizing: border-box;
+	box-sizing: border-box;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+*, *:before, *:after { @include prefix(box-sizing, border-box); }
+
+input, textarea {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+}
+
+body, * {
+  outline: none !important;
+  -webkit-print-color-adjust: exact;
+}
+
+html {
+  @include prefix(user-select, none);
+  @include prefix(box-sizing, border-box);
+  -webkit-touch-callout: none;
+  position: relative;
+  font-size: 13px;
+  height: 100%;
+  // display: block;
+  // overflow: hidden;
+}
+
+html, body {
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #000;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  min-height: 100%;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  // height: 100%;
+  // position: relative;
+  // width: 100%;
+  // overflow: hidden;
+} // body
+
+.canvas-container , .container {
+    left: 0;
+    right: 0;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.canvas-container, .super-container {
+
+  &.baccarat {
+    background: #3f0102;
+  }
+  &.othergames {
+    background: #3d0123;
+  }
+  &.junket {
+    background: #062818;
+  }
+  &.reelgames {
+    background: #8d3607;
+  }
+  // background: url('/img/main_bg.jpg');
+  // background-size: cover;
+  // &.black-theme { background: #4d4d4d }
+  &.kaga { background: url('/img/reelgames/bg_orange_pattern.jpg') }
+}//canvas-container
+
+.banner-container {
+  @include wh(1920px, 200px);
+  top: 11%;
+  right: 10%;
+  position: absolute;
+  display: none;
+} //banner-container
+
+
+.popup-mb-container {
+  @include wh(100%, 103%);
+  @include transform(translate3d(0,0,0));
+  @include transition(all 1s ease);
+  background-color: rgba(#000, 0.7);
+  position: absolute;
+  z-index: 999;
+  right:0;
+  top: 0;
+} //popup-container
+
+#reelgames-container {
+  // background: url('/img/reelgames/bg_orange_pattern.jpg');
+  width: 1920px;
+  height: 962px;
+  top: 7%;
+  right: 0;
+  position: absolute;
+  display: none;
+
+  ::-webkit-scrollbar {
+    position: relative;
+    width: 7px;
+    z-index: 10;
+  }
+  ::-webkit-scrollbar-track {   background: #231f20; }
+  ::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #d4d4d4;
+  }
+
+  .reelgames-list.all {
+    // position: relative;
+    // padding: 10em 20em;
+  }
+
+  .reelgames-list.kagaming {
+    overflow-y: scroll;
+    height: 980px;
+    padding: 0 0 1em 1.5em;
+    margin-right: 1.9%;
+    margin-top: 1%;
+
+    // ie
+    scrollbar-highlight-color: #d4d4d4;
+    scrollbar-highlight-color: #231f20;
+    scrollbar-track-color: #231f20;
+    scrollbar-arrow-color: #d4d4d4;
+    scrollbar-shadow-color: #d4d4d4;
+    scrollbar-dark-shadow-color: #231f20;
+  }
+}//reelgames-container
+
+.table-list { display: none;}
+
+.main-container {
+  @include wh(1893px, 960px);
+  overflow-y: auto;
+  position: absolute;
+  overflow-x: hidden;
+  top:9%;
+  right: 1%;
+  display: none;
+  &.fixed { height: 1020px !important }
+} //main-container
+
+.hot-container {
+  @include wh(1920px, 1080px);
+  overflow: hidden;
+  position: absolute;
+  right: 0%;
+  top: 0%;
+  display: none
+} //hot-container
+
+.maintenanceOverlay {
+  // @include wh(100%, 100%);
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+  display: none;
+  z-index: 999999;
+  width: 1920px;
+  height:1080px;
+  top: 0%;
+  right: 0%;
+} //maintenanceOverlay
+
+.maintenanceBg {
+  @include wh(100%, 100%);
+  background: #cf2112;
+}//maintenanceBg
+
+.nihtanLogo {
+  @include wh(550px, 130px);
+  background: url('/img/maintenance/logo.png') no-repeat;
+  position: fixed;
+  top: 20%;
+  left: 35%;
+} //nihtanLogo
+
+.patternLeft {
+  @include wh(550px, 350px);
+  background: url('/img/maintenance/pattern_left.png') no-repeat;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  background-size: contain;
+} //patternLeft
+
+.patternRight {
+  @include wh(420px, 365px);
+  background: url('/img/maintenance/pattern_right.png') no-repeat;
+  position: fixed;
+  bottom: 0;
+  right: -5%;
+  background-size: contain;
+} //patternRight
+
+.maintenanceLogo {
+  @include wh(160px, 160px);
+  background: url('/img/maintenance/maintenance_ico.png') no-repeat;
+  position: fixed;
+  top: 45%;
+  left: 46%;
+} //maintenanceLogo
+
+.mainText{
+  font: normal 50px Arial;
+  text-align: center;
+  color: #ffb94a;
+  position: fixed;
+  top: 62%;
+  width: 100%;
+  /*left: 31%;*/
+}
+.subText{
+  font: normal 40px Arial;
+  text-align: center;
+  color: #fff;
+  position: fixed;
+  top: 68%;
+  width: 100%;
+  /*left: 39%;*/
+}
+.schedule {
+  font: normal 38px Arial;
+  text-align: center;
+  color: #fff;
+  position: fixed;
+  top: 73%;
+  width: 100%;
+  /*left: 30%;*/
+}
+
+.loading {
+  @include wh(100%, 100%);
+  position: absolute;
+  z-index: 999;
+  background: #000;
+
+  & > .rot {
+    @include bgs('/img/loading-2.jpg', contain);
+    @include wh(150px, 150px);
+    @include transform(rotate(0deg));
+    @include prefix(transform-origin, center);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left : 48%;
+    top : 48%;
+
+    -webkit-animation : infinterot 1s linear infinite;
+    animation : infinterot 1s linear infinite;
+
+    @at-root {
+      @keyframes infinterot {
+          0% { transform: rotate(0); }
+          100% { transform: rotate(360deg); }
+      }
+      @-moz-keyframes infinterot {
+          0% { transform: rotate(0); }
+          100% { transform: rotate(360deg); }
+      }
+      @-webkit-keyframes "infinterot" {
+          0% { transform: rotate(0); }
+          100% { transform: rotate(360deg); }
+      }
+      @-o-keyframes infinterot {
+          0% { transform: rotate(0); }
+          100% { transform: rotate(360deg); }
+      }
+    } //root
+  }
+} //loading
+
+.banner-wrapper {
+  @include wh(100%, 30%);
+  overflow: hidden;
+  left: 0;
+  position: absolute;
+} //banner-wrapper
+
+#red-white-toggle,
+#baccarat-toggle,
+#sicbo-toggle,
+#poker-toggle,
+#dragontiger-toggle,
+#roulette-toggle,
+#bigwheel-toggle {
+    display: none;
+}
+
+span {
+  &.scroll-button {
+    @include wh(70px, 70px);
+    display: none;
+    position: absolute !important;
+    left: 90.5%;
+    bottom: 0%;
+    border-radius: 50%;
+    opacity: 0.5;
+    z-index: 10;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+
+    &:hover {
+      opacity: 1.0;
+      filter: alpha(opacity=100);
+      cursor: pointer;
+    }
+  } //scroll-button
+}
+
+#myCanvas {
+  @include transform(translate(0%, 0%));
+  left: 0;
+  top: 0;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+.dom-resizable {
+	-webkit-transform-origin: right top;
+	-moz-transform-origin: right top;
+	-ms-transform-origin: right top;
+	-o-transform-origin: right top;
+	transform-origin: right top;
+}
+
+#all-container,  #junket-baccarat-list, #junket-other-list{
+  &::-webkit-scrollbar{	width: 6px; }
+  &::-webkit-scrollbar-track{
+  	width: 4px;
+  	background: #1d1d1d;
+  	box-shadow:inset #4d4d4d 2px 0px 0px, inset #4d4d4d -2px 0px 0px;
+  }
+  &::-webkit-scrollbar-thumb{
+  	border-radius: 10px;
+  	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  	background-color: #fff;
+  }
+}
+
+
+
+.white-theme{ background: #4d4d4d;}
+
+.popup-bg {
+	@include wh(100%, 100%);
+	@include transition(all 1s ease);
+	background-color: rgba(#000, 0.7);
+	position: absolute;
+	top: 6.6%;
+	left: 0;
+	// z-index: 998;
+	display: none;
+
+	&.active {
+		display: block;
+	}
+}
+
+/************** MOBOLE ******************/
+.howto--layers{ margin: 32px 0; }
+.maintenanceOverlay.-mb {
+  right: auto;
+
+  .nihtanLogo {
+    @include wh(550px, 130px);
+    top: 20%;
+    left: 30%;
+  } //nihtanLogo
+  .patternLeft {
+    @include wh(550px, 350px);
+    top: 0%;
+    left: 0%;
+    background-size: contain;
+  }
+  .patternRight {
+    @include wh(420px, 365px);
+    bottom: 0;
+    right: -5%;
+  }
+  .maintenanceLogo {
+    @include wh(160px, 160px);
+    top: 41%; /*45%;*/
+    left: 45%;
+  }
+  .mainText{
+    top: 65%;
+    top: 66%;
+    /* left: 23%; */
+    width: 100%;
+  }
+  .subText{
+    top: 74%;
+    /*left: 36%;*/
+    width: 100%;
+  }
+  .schedule {
+    top: 81%;
+    /*left: 21%;*/
+    width: 100%;
+  }
+
+} //.maintenanceOverlay.-mb
+
+body.mb {
+  .container-wrap {
+    @extend %cf;
+    @include wh(100%, 100%);
+    display: block;
+    position: relative;
+    background: #000;
+    overflow: hidden;
+  }
+  .container {
+    @include prefix(transform-style, preserve-3d);
+    overflow:hidden;
+    width: 1280px;
+    display: block;
+    height: 720px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    margin-left: -640px;
+    margin-top: -360px;
+    background: url(/img/Lobby-MOBILE_v2.1-update/livegames-bg-mobile.png);
+  }
+  #lobby {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-size: 100% 100%;
+  }
+  #lobby-content {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: none;
+  }
+  .lobby-main-container {
+    @include wh(1280px, 720px);
+    display: block;
+    position: relative;
+    overflow: hidden;
+    top: 0;
+    background: url("/img/livegames-bg-mobile.png");
+    transform: none;
+    background-position: 0px 0px;
+    background-size: cover;
+    -webkit-overflow-scrolling: touch;
+    // z-index: 99;
+    &.bg-grey{ background: #373737; }
+  }
+  .tables-container {
+    @extend %cf;
+    @include wh(1280px, 565px);
+    @include transform(translate3d(0,0,0));
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    top: 168px;
+    z-index: 99;
+    background: url("/img/livegames-bg-mobile.png");
+    transform: none;
+    background-position: 0px 0px;
+    background-size: cover;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    overflow-y: auto;
+  } //.tables-container
+
+  .tables-container::-webkit-scrollbar, .game-container::-webkit-scrollbar {
+    width: 0 !important;
+  }
+
+  .ub-game {
+    @include wh(430px,565px);
+    @include transform(translate3d(0,0,0));
+    display: block;
+    left: 0;
+    position: absolute;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    overflow-y: auto;
+  }
+  .ub-room {
+    @include wh(869px, 551px);
+    @include transform(translate3d(0,0,0));
+    display: block;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch;
+    overflow-y: auto;
+  }
+
+  #header {
+    display: block;
+    position: absolute;
+    /*z-index: 9999999999;*/
+    z-index: 9
+  }
+
+
+  .loading > .rot {
+    @include wh(300px, 300px);
+    left: 40%;
+    top: 30%;
+  }
+  #red-white-toggle,
+  #baccarat-toggle,
+  #sicbo-toggle,
+  #poker-toggle,
+  #dragontiger-toggle,
+  #bigwheel-toggle {
+    display: none;
+  }
+  span.scroll-button {
+    left: 90.5%;
+    bottom: 2.7%;
+  }
+  #lobby-announcement {
+    position: absolute;
+  }
+
+  .kaga-container {
+    width: 100%;
+    background: url('/img/reelgames/bg_orange_pattern.jpg');
+    display: none;
+    margin-bottom: 56px;
+    padding: 10px;
+  }
+
+  .reelgames-container {
+    width: 100%;
+    background: url('/img/reelgames/bg_orange_pattern.jpg');
+    display: none;
+    top: 168px;
+    width: 1300px;
+    height: 569px;
+    position: absolute;
+    right: 0;
+    }
+
+    .reelgames-container .reelgames-list.all {
+        padding: 5em 18em 0 17em;
+        position: relative;
+    }
+
+    .reelgames-container .reelgames-list.kagaming {
+        overflow-y: scroll;
+        height: 552px;
+        padding: 10px;
+        margin: 0;
+    }
+
+  .dummy-tables {
+    width: 1244px;
+    height: 284px;
+    background: #fff;
+    position: relative;
+    top: 5px;
+    left: 16px;
+    /* border: 2px black; */
+    border-radius: 10px 0px 0px 10px;
+    margin-bottom: 18px;
+    position: absolute;
+    z-index: -1;
+  }
+  .dummy-tables .dealer-bg {
+    height: 100%;
+    width: 350px;
+    background: #000;
+  }
+
+  .bc-tables > canvas {
+    /*background: red*/
+  }
+} //body.mb

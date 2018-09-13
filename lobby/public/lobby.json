@@ -1,0 +1,57 @@
+[
+	{
+		"id" : " pagcor_logo",
+		"src" : "/img/pagcor_logo.jpg"
+	},
+	{
+		"id" : "show_icon",
+		"src" : "/img/show_2.png"
+	},
+	{
+		"id" : "modal_bg",
+		"src" : "/img/confirmation/popup_bg.png"
+	},
+	{
+		"id" : "modal_nihtan_logo",
+		"src" : "/img/confirmation/nihtan-yellow_logo.png"
+	},
+	{
+		"id" : "small_tiles",
+		"src": "/img/tiles/small_tiles.png"
+	},
+	{
+		"id" : "big_tiles",
+		"src": "/img/tiles/big_tiles.png"
+	},
+	{
+		"id" : "new_cards",
+		"src" : "/img/cards/lobby_sprite_cards.png"
+	},
+	{
+		"comment" : "**----------------maintenance------------------**",
+		"id" : "maintenance_nihtan",
+		"src" : "/img/maintenance/logo.png"
+	},
+	{
+		"id" : "maintenance_ico",
+		"src" : "/img/maintenance/maintenance_ico.png"
+	},
+	{
+		"id" : "maintenance_lpattern",
+		"src" : "/img/maintenance/pattern_left.png"
+	},
+	{
+		"id" : "maintenance_rpattern",
+		"src" : "/img/maintenance/pattern_right.png"
+	},
+	{
+		"comment" : "**----------------sounds------------------**",
+		"id" : "click",
+		"src" : "/sound/click.mp3"
+	},
+	{
+		"comment" : "**----------------announcement/notice------------------**",
+		"id" : "notice_ico",
+		"src" : "/img/icons/notice_icon.png"
+	}
+]

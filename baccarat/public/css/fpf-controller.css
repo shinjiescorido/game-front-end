@@ -1,0 +1,296 @@
+canvas {
+	display: block;
+	/*background-color:red;*/
+}
+
+/*
+================================================
+ */
+
+#open-all {
+    position: absolute;
+    z-index: 9999999999999;
+    transform: scale(0.819271);
+    right: 34.5%;
+    /*right: 34.5%;*/
+    width: 180px;
+    height: 40px;
+    /*top: 65%;*/
+    top: 84%;
+    background: #d5c470;
+    color: #000;
+    font: 20px lato-black;
+     background: #877842; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(to bottom, #fdf19f 40%, #a18e53 89%,#f8e998 105%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(to bottom, #fdf19f 40%, #a18e53 89%,#f8e998 105%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(to bottom, #fdf19f 40%, #a18e53 89%,#f8e998 105%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, #fdf19f 40%, #a18e53 89%,#f8e998 105%); /* Standard syntax */
+    background: linear-gradient(to bottom, #fdf19f 40%, #a18e53 89%,#f8e998 105%); /* Standard syntax */
+    /*box-shadow: inset 1px 2.4px 1px #4e4524*/
+    border:1px solid #8c8058;
+    border-radius: 12px;
+}
+#open-all:hover {
+    background: -webkit-linear-gradient(to top, #fdf19f 40%, #a18e53 89%,#f8e998 105%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(to top, #fdf19f 40%, #a18e53 89%,#f8e998 105%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(to top, #fdf19f 40%, #a18e53 89%,#f8e998 105%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top, #fdf19f 40%, #a18e53 89%,#f8e998 105%); /* Standard syntax */
+    background: linear-gradient(to top, #fdf19f 40%, #a18e53 89%,#f8e998 105%); /* Standard syntax */
+    /*box-shadow: inset 1px 2.4px 1px #4e4524;*/
+    /*text-shadow: 0px -2px #f9f9a8;*/
+    cursor: pointer;
+}
+
+.mobile--portrait #open-all {
+  right: 24%;
+  height: 80px;
+  width: 380px;
+  border-radius: 30px;
+  font: 32px lato-black;
+  top: 60%;
+}
+.mobile--landscape #open-all {
+  transform: scale(0.882031);
+  right: 34%;
+  height: 70px;
+  width: 380px;
+  border-radius: 25px;
+  font: 32px lato-black;
+  top: 82%;
+}
+.open-all-mobile {
+	display: inline-block;
+    top: 80% !important;
+    width: 300px !important;
+    height: 80px !important;
+    border-radius: 50px !important;
+    font-size: 40px !important;
+    right: 39% !important;
+}
+.open-all-portrait {
+    top: 62% !important;
+    right : 85% !important;
+}
+button:focus {outline:0;}
+
+.fpf-overlay-base {
+    position: absolute;
+    width: 100%;
+    height: 236px;
+    overflow: hidden;
+    z-index: 99;
+    display: none;
+    top: 238px;
+    left: 0;
+}
+
+.fpf-overlay {
+	position: absolute;
+	width: 85%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 99999;
+	display: none;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+}
+
+.fpf-overlay.card-1{
+	width: 60%;
+	left: -6.5%;
+}
+.fpf-overlay.card-1-m{
+	width: 60%;
+	left: 3%;
+}
+
+.fpf-overlay.card-2{
+	width: 60%;
+	right: -13.5%;
+}
+
+.fpf-overlay.card-2-m{
+	right: 3% !important;
+}
+
+.fpf-overlay.fpf-overlay-centered{
+	right: 0;
+	left: 0;
+	right: 0;
+	left: 0;
+	right: -7%;
+	width: 60%;
+}
+.fpf-overlay.fpf-overlay-centered-m{
+	right: 0%;
+}
+
+.fpf-overlay-m {
+	right: 0;
+	left: 0;
+	width: 85%;
+	height: 100%;
+}
+/*
+================================================
+ */
+
+.fpf-controller-stage {
+	position: relative;
+	-webkit-perspective: 1200px;
+	perspective: 1200px;
+	width: 100%;
+	height: 100%;
+
+}
+
+.fpf-controller-card {
+
+	opacity: 0.8;
+	position: absolute;
+	visibility: hidden;
+
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+
+	-webkit-transform-origin: 0 0;
+	transform-origin: 0 0;
+
+	-webkit-transform: 	rotateX(180deg) !important;
+	transform: 	rotateX(180deg) !important;
+
+
+	/*width: 14.641288433382137628111273792094%;*/ /* 200 px base 1366 full screen */
+	/*200 x 270 reduced to 100 x 135 */
+
+	width: 7.320644216691068814055636896047%;
+
+}
+
+.fpf-controller-card.fpf-open {
+	-webkit-transform: rotateX(0deg) !important;
+	transform: rotateX(0deg) !important;
+}
+
+.fpf-controller-card-side {
+	position: relative;
+	width: 100%;
+	height: 0;
+	/*padding-bottom: 135%;*/ /* 270 px base 200 px width */
+	padding-bottom: 135%;
+
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+.fpf-controller-card-back {
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+}
+
+.fpf-controller-card-front,
+.fpf-controller-card-back {
+
+	position: absolute;
+	left: 0;
+	top: 0;
+
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+/*.fpf-controller-card-side,*/
+.fpf-controller-card-front,
+.fpf-controller-card-back,
+.fpf-controller-card-side img {
+	width: 100%;
+	height: 100%;
+}
+
+.fpf-controller-p-2,
+.fpf-controller-b-2  {
+	-webkit-transform: rotateX(180deg) rotateZ(90deg) !important;
+	transform: rotateX(180deg) rotateZ(90deg) !important;
+}
+
+.fpf-controller-p-2.fpf-open,
+.fpf-controller-b-2.fpf-open {
+	-webkit-transform: rotateX(0deg) rotateZ(90deg) !important;
+	transform: rotateX(0deg) rotateZ(90deg) !important;
+}
+
+
+/*
+================================================
+ */
+
+#flip-card-canvas {
+	opacity: 0.5;
+	width: 80%;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+
+
+}
+
+#card-canvas-wrapper {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/** flippy */
+
+#flippy-wrapper {
+  background-color: transparent;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  transform: translate(-50%,-50%);
+  position: absolute;
+  /*width: 34%;
+  height: 50%;*/
+  left: 50%;
+  top: 50%;
+}
+
+#flipclick {
+  z-index: 9999;
+  /*transform: scale(0.520833);*/
+  left: 196%;
+  position: relative;
+  top: 50%;
+  transform-origin: left top;
+  display: none;
+}
+
+#flippy-wrap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 999;
+  display: none
+}
+#flippy-wrap canvas {
+  top:46%;
+}
+
+#flippy-wrap.mobile--portrait canvas {
+  top:40%;
+}

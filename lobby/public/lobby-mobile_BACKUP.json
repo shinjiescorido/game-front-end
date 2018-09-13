@@ -1,0 +1,446 @@
+[
+	{
+		"id" : "all_scoreboard",
+		 "src" : "/img/all_scoreboard.png"
+	},
+	{
+		"id" : "show_icon",
+		"src" : "/img/show.png"
+	},
+	{
+		"id" : "baccarat_banner_road",
+		"src" : "/img/baccarat_banner_road.png"
+	},
+	{
+		"id" : "cards",
+		"src" : "/img/cards/lobby_sprite_cards.png"
+	},
+	{
+		"id" : "cards2",
+		"src" : "/img/cards/mobile_sprite_cards.png"
+	},
+	{
+		"id" : "dealer_temp",
+		"src" : "/img/dealer_temp.png"
+	},
+	{
+		"id":"sample_1",
+		"src": "/img/1.jpg"
+	},
+	{
+		"id":"sample_2",
+		"src": "/img/2.jpg"
+	},
+	{
+		"id" : "logo",
+		"src" : "/img/nihtan_logo_mobile.png"
+	},
+	{
+		"id" : "livegames_icon",
+		"src" : "/img/livegames_ico.png"
+	},
+	{
+		"id" : "reelgames_icon",
+		"src" : "/img/reelgames_ico.png"
+	},
+	{
+		"id" : "themedgames_icon",
+		"src" : "/img/themedgames_ico.png"
+	},
+	{
+		"id" : "baccarat_icon",
+		"src" : "/img/baccarat_ico.png"
+	},
+	{
+		"id" : "poker_icon",
+		"src" : "/img/poker_ico.png"
+	},
+	{
+		"id" : "sicbo_icon",
+		"src" : "/img/sicbo_ico.png"
+	},
+	{
+		"id" : "dragontiger_icon",
+		"src" : "/img/dragontiger_ico.png"
+	},
+	{
+		"id" : "roulette_icon",
+		"src" : "/img/roulette_ico.png"
+	},
+  {
+		"id" : "redwhite_icon",
+		"src" : "/img/themed_games/redwhite_ico.png"
+	},
+	{
+		"id" : "spinwin_icon",
+		"src" : "/img/themed_games/moneywheel_ico.png"
+	},
+	{
+		"id" : "banner_img1",
+		"src" : "/img/banner_img1.png"
+	},
+	{
+		"id" : "bethistory_icon",
+		"src" : "/img/bethistory_ico.png"
+	},
+	{
+		"id" : "transactionhistory_icon",
+		"src" : "/img/transactionhistory_ico.png"
+	},
+	{
+		"id" : "gamerules_icon",
+		"src" : "/img/gamerules_ico.png"
+	},
+	{
+		"id" : "settings_icon",
+		"src" : "/img/settings_ico.png"
+	},
+	{
+		"id" : "hotgames_img2",
+		"src" : "/img/hot-live_img1.png"
+	},
+	{
+		"id" : "hotgames_img1",
+		"src" : "/img/hot-live_img1.png"
+	},
+	{
+		"id" : "logout_icon",
+		"src" : "/img/logout_ico.png"
+	},
+	{
+		"id" : "table-games-baccarat",
+		"src" : "/img/m-table-games/baccarat_img.png"
+	},
+	{
+		"id" : "table-games-dragontiger",
+		"src" : "/img/m-table-games/dragon-tiger_img.png"
+	},
+	{
+		"id" : "table-games-poker",
+		"src" : "/img/m-table-games/poker_img.png"
+	},
+	{
+		"id" : "table-games-roulette",
+		"src" : "/img/m-table-games/roulette_img.png"
+	},
+	{
+		"id" : "table-games-sicbo",
+		"src" : "/img/m-table-games/sicbo_img.png"
+	},
+  {
+		"id" : "themed-games-spinwin",
+		"src" : "/img/m-table-games/roulette_img.png"
+	},
+	{
+		"id" : "themed-games-redwhite",
+		"src" : "/img/m-table-games/dragon-tiger_img.png"
+	},
+	{
+		"id" : "themed-games_img1",
+		"src" : "/img/themed-games_img1.png"
+	},
+	{
+		"id" : "themed-games_img2",
+		"src" : "/img/themed-games_img2.png"
+	},
+	{
+		"id" : "user_avatar_test",
+		"src" : "/img/blue_queen.png"
+	},
+	{
+		"id" : "road_map_poker",
+		"src" : "/img/road_map.png"
+	},
+	{
+		"id" : "sicbo_map_poker",
+		"src" : "/img/sicbo_road_map.png"
+	},
+	{
+		"id" : "road_map_dragontiger",
+		"src" : "/img/dragon-tiger-roadmap.png"
+	},
+	{
+		"_comment" : "/************* dice ************/",
+		"id" : "dice-1",
+		"src" : "/img/dice/dice1.png"
+	},
+	{
+		"id" : "dice-2",
+		"src" : "/img/dice/dice2.png"
+	},
+	{
+		"id" : "dice-3",
+		"src" : "/img/dice/dice3.png"
+	},
+	{
+		"id" : "dice-4",
+		"src" : "/img/dice/dice4.png"
+	},
+	{
+		"id" : "dice-5",
+		"src" : "/img/dice/dice5.png"
+	},
+	{
+		"id" : "dice-6",
+		"src" : "/img/dice/dice6.png"
+	},
+  	{
+		"_comment" : "/************* moneywheel bet faces ************/",
+		"id" : "bet_x1",
+		"src" : "/img/moneywheel-bets/bet_x1.png"
+	},
+	{
+		"id" : "bet_x2",
+		"src" : "/img/moneywheel-bets/bet_x2.png"
+	},
+	{
+		"id" : "bet_x5",
+		"src" : "/img/moneywheel-bets/bet_x5.png"
+	},
+	{
+		"id" : "bet_x10",
+		"src" : "/img/moneywheel-bets/bet_x10.png"
+	},
+	{
+		"id" : "bet_x20",
+		"src" : "/img/moneywheel-bets/bet_x20.png"
+	},
+	{
+		"id" : "bet_x45",
+		"src" : "/img/moneywheel-bets/bet_x45.png"
+	},
+	{
+		"id" : "mobile_bg",
+		"src" : "/img/landing-page_bg.png"
+	},
+	{
+		"comment" : "**----------------nihtan logo------------------**",
+		"id" : "nihtan_logo",
+		"src" : "/img/nihtan_logo_mobile.png"
+	},
+	{
+		"comment" : "**----------------maintenance------------------**",
+		"id" : "maintenance_nihtan",
+		"src" : "/img/maintenance/logo.png"
+	},
+	{
+		"id" : "maintenance_ico",
+		"src" : "/img/maintenance/maintenance_ico.png"
+	},
+	{
+		"id" : "maintenance_lpattern",
+		"src" : "/img/maintenance/pattern_left.png"
+	},
+	{
+		"id" : "maintenance_rpattern",
+		"src" : "/img/maintenance/pattern_right.png"
+	},
+  {
+		"comment" : "**----------------howtoplay------------------**",
+		"id" : "nihtan-logo",
+		"src" : "/img/howtoplay/lobby/nihtan-logo.png"
+	},
+  {
+		"id" : "dealer",
+		"src" : "/img/howtoplay/lobby/dealer.png"
+	},
+  {
+		"id" : "header-baccarat",
+		"src" : "/img/howtoplay/lobby/header-baccarat.png"
+	},
+	{
+		"id" : "header-dragontiger",
+		"src" : "/img/howtoplay/lobby/header-dragontiger.png"
+	},
+	{
+		"id" : "header-redwhite",
+		"src" : "/img/howtoplay/lobby/header-redwhite.png"
+	},
+	{
+		"id" : "header-roulette",
+		"src" : "/img/howtoplay/lobby/header-roulette.png"
+	},
+	{
+		"id" : "header-sicbo",
+		"src" : "/img/howtoplay/lobby/header-sicbo.png"
+	},
+	{
+		"id" : "header-spinnwin",
+		"src" : "/img/howtoplay/lobby/header-spinwin.png"
+	},
+	{
+		"id" : "header-texasholdem",
+		"src" : "/img/howtoplay/lobby/header-texasholdem.png"
+	},
+  {
+		"comment" : "**----------------howtoplay spinwin------------------**",
+		"id" : "howto_bet_x1",
+		"src" : "/img/howtoplay/spinwin/bet_1.png"
+	},
+  {
+		"id" : "howto_bet_x2",
+		"src" : "/img/howtoplay/spinwin/bet_2.png"
+	},
+  {
+		"id" : "howto_bet_x5",
+		"src" : "/img/howtoplay/spinwin/bet_5.png"
+	},
+  {
+		"id" : "howto_bet_x10",
+		"src" : "/img/howtoplay/spinwin/bet_10.png"
+	},
+  {
+		"id" : "howto_bet_x20",
+		"src" : "/img/howtoplay/spinwin/bet_20.png"
+	},
+  {
+		"id" : "howto_bet_x45",
+		"src" : "/img/howtoplay/spinwin/bet_45.png"
+	},
+  {
+		"comment" : "**----------------howtoplay sicbo------------------**",
+		"id" : "howto_a",
+		"src" : "/img/howtoplay/sicbo/dark/a.png"
+	},
+  {
+		"id" : "howto_b",
+		"src" : "/img/howtoplay/sicbo/dark/b.png"
+	},
+  {
+		"id" : "howto_c",
+		"src" : "/img/howtoplay/sicbo/dark/c.png"
+	},
+  {
+		"id" : "howto_d",
+		"src" : "/img/howtoplay/sicbo/dark/d.png"
+	},
+  {
+		"id" : "howto_e",
+		"src" : "/img/howtoplay/sicbo/dark/e.png"
+	},
+  {
+		"id" : "howto_f",
+		"src" : "/img/howtoplay/sicbo/dark/f.png"
+	},
+  {
+		"id" : "howto_g",
+		"src" : "/img/howtoplay/sicbo/dark/g.png"
+	},
+  {
+		"id" : "howto_h",
+		"src" : "/img/howtoplay/sicbo/dark/h.png"
+	},
+  {
+		"id" : "howto_i",
+		"src" : "/img/howtoplay/sicbo/dark/i.png"
+	},
+  {
+		"id" : "howto_bettypes",
+		"src" : "/img/howtoplay/sicbo/dark/types_of_bet_figure.png"
+	},
+  {
+		"comment" : "**----------------howtoplay redwhite------------------**",
+		"id" : "nihtan_symbol",
+		"src" : "/img/howtoplay/redwhite/nihtan_symbol.png"
+	},
+  {
+		"id" : "red_square",
+		"src" : "/img/howtoplay/redwhite/red_square.png"
+	},
+  {
+		"id" : "white_square",
+		"src" : "/img/howtoplay/redwhite/white_square.png"
+	},
+  {
+		"comment" : "**----------------howtoplay texasholdem------------------**",
+		"id" : "royalflush",
+		"src" : "/img/howtoplay/poker/dark/poker_handranking_1.png"
+	},
+  {
+		"id" : "straightflush_1",
+		"src" : "/img/howtoplay/poker/dark/poker_handranking_2.png"
+	},
+  {
+		"id" : "straightflush_2",
+		"src" : "/img/howtoplay/poker/dark/poker_handranking_2-1.png"
+	},
+  {
+		"id" : "fourofakind",
+		"src" : "/img/howtoplay/poker/dark/poker_handranking_3.png"
+	},
+  {
+		"id" : "fullhouse",
+		"src" : "/img/howtoplay/poker/dark/poker_handranking_4.png"
+	},
+  {
+		"id" : "flush",
+		"src" : "/img/howtoplay/poker/dark/poker_handranking_5.png"
+	},
+  {
+		"id" : "straight_1",
+		"src" : "/img/howtoplay/poker/dark/poker_handranking_6.png"
+	},
+  {
+		"id" : "straight_2",
+		"src" : "/img/howtoplay/poker/dark/poker_handranking_6-1.png"
+	},
+  {
+		"id" : "threeofakind",
+		"src" : "/img/howtoplay/poker/dark/poker_handranking_7.png"
+	},
+  {
+		"id" : "twopairs",
+		"src" : "/img/howtoplay/poker/dark/poker_handranking_8.png"
+	},
+  {
+		"id" : "pair",
+		"src" : "/img/howtoplay/poker/dark/poker_handranking_9.png"
+	},
+  {
+		"id" : "highcard",
+		"src" : "/img/howtoplay/poker/dark/poker_handranking_10.png"
+	},
+  {
+		"id" : "same_handranking_1.1",
+		"src" : "/img/howtoplay/poker/dark/same_handranking_1.1.png"
+	},
+  {
+		"id" : "same_handranking_1.2",
+		"src" : "/img/howtoplay/poker/dark/same_handranking_1.2.png"
+	},
+  {
+		"id" : "same_handranking_2.1",
+		"src" : "/img/howtoplay/poker/dark/same_handranking_2.1.png"
+	},
+  {
+		"id" : "same_handranking_2.2",
+		"src" : "/img/howtoplay/poker/dark/same_handranking_2.2.png"
+	},
+  {
+		"id" : "same_handranking_3.1",
+		"src" : "/img/howtoplay/poker/dark/same_handranking_3.1.png"
+	},
+  {
+		"id" : "same_handranking_3.2",
+		"src" : "/img/howtoplay/poker/dark/same_handranking_3.2.png"
+	},
+  {
+		"id" : "same_handranking_3.3",
+		"src" : "/img/howtoplay/poker/dark/same_handranking_3.3.png"
+	},
+  {
+		"id" : "suit_ranking",
+		"src" : "/img/howtoplay/poker/dark/suit_ranking.png"
+	},
+  {
+		"comment" : "**----------------howtoplay dragontiger------------------**",
+		"id" : "card_results",
+		"src" : "/img/howtoplay/dragontiger/dark/card_results.png"
+	},
+  {
+		"comment" : "**----------------howtoplay baccarat------------------**",
+		"id" : "card_position_4",
+		"src" : "/img/howtoplay/baccarat/dark/card_position_4.png"
+	}
+
+]

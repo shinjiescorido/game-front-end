@@ -1,0 +1,16 @@
+/*====================================*\
+  >> Silent Class
+/*====================================*/
+  %bf { overflow: hidden; position: relative; }
+  %center { @include blockCenter; }
+  %cf { @include cf; }
+  %ir { @include ir; }
+  %word-break { @include word-break; }
+  %word-wrap { @include word-wrap; }
+  %truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: break-all;
+  }
+  %noflick { @include prefix(transform-style, preserve-3d); }

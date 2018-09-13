@@ -1,0 +1,209 @@
+.balancebet-con {
+  width: 411px;
+  color: #fff;
+  height: 200px;
+  position: absolute;
+  top:26.8%; 
+  /*21.6%;*/
+  background: rgba(22, 22, 22, 0.9);
+  right: 100%;
+ 	/*right: 78.6%;*/
+/* 	transition: top 0.2s, right 0.2s;
+ 	-webkit-transition: top 0.2s, right 0.2s;
+ 	-moz-transition: top 0.2s, right 0.2s;
+ 	-o-transition: top 0.2s, right 0.2s;*/
+ 	display: none;
+}
+
+.balancebet-con.-top-junketdetails {
+	top: 21.6%;
+}
+.balancebet-con.-top-betlimit {
+	top: 26.8%;
+}
+.balancebet-con.-top-betlimit-supersix {
+	top:29.6%;
+}
+.balancebet-con.-user {
+	top:7.4%;
+	right: 78.6%
+}
+.-active {
+	display: block
+}
+
+.balance-body-info {
+  float: left;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+	font-family: lato
+}
+
+.info-list-left {
+  position: relative;
+  float: left;
+  color: #fff;
+  font: 18px lato-regular;
+}
+
+.balancebet-con .header { padding:10px 10px 0px 0px; }
+.balancebet-con .header span,
+.balancebet-con .balance-total-info .label {
+	height: 40px;
+	margin: 0;
+	font-family: lato-regular;
+	font-size: 20px;
+	color: #E1D37B;
+	vertical-align: middle;
+	padding: 7px 20px;
+	display: block;
+	font-weight: bold;
+	float: left
+}
+
+.balancebet-con .balance-total-info .label {
+	padding: 2px 15px;
+  text-align: right;
+}
+.balancebet-con .balance-total-info .label > span{ vertical-align: middle; }
+
+.balancebet-con .header span#balance{
+	float: right;
+	color:#fff;
+	font-family: bebas-regular;
+	font-weight: normal;
+}
+
+.balancebet-con .bar-con {
+	width: 225px;
+	height: 25px;
+	display: inline-block;
+	/*margin-left: 30px;*/
+	padding-left:10px;
+	padding-right:10px;
+}
+.balancebet-con .bar-percent {
+	width: 0%;
+	height: 25px;
+	transition: width 0.2s
+}
+
+
+.balancebet-con .player-bar {
+	background:#0d4780;
+}
+
+.balancebet-con .player-bar>.bar-percent {
+	background:#1665c1;
+}
+
+.balancebet-con .banker-bar {
+	background:#892122;
+}
+
+.balancebet-con .banker-bar>.bar-percent {
+	background:#cd2f2e;
+}
+.player-banker-info {
+	display: block;
+	margin-top:10px;
+	height: 32px;
+}
+
+.balancebet-con .player-banker-info span{
+	font-size: 18px;
+}
+.balancebet-con .player-banker-info>span:nth-child(1) {
+	float: left;
+	display: block;
+	width: 100px;
+	padding-left: 30px;
+}
+.banker-info>span::before,
+.player-info>span::before {
+	position: absolute;
+	content: "";
+	width: 18px;
+	height: 19px;
+	background-image: url(/img/scoreboard/all_scoreboard.png);
+	background-size: 1750px 20px;
+	left: 18px;
+	margin-top: 1px;
+	border-radius: 30px;
+	background-repeat: no-repeat;
+	box-shadow: inset 0px 0px 0px 1px #fff
+}
+
+.banker-info>span::before {
+	background-position-x: -80px;
+}
+
+.balancebet-con .player-banker-info>span:nth-last-child(1) {
+	float: right;
+	display: block;
+	width: 55px;
+	padding-right: 30px;
+}
+.player-banker-info::after {
+    position: absolute;
+    content: "";
+    background-image: url(/img/3.0/user_icon.png);
+    width: 12px;
+    height: 20px;
+    background-size: 100%;
+    right: 22px;
+    margin-top: 3px;
+    background-repeat: no-repeat;
+}
+
+.total-info {
+  font-family: bebas-regular;
+  display: inline-block;
+  height: auto;
+  width: 100%;
+  position: relative;
+  top: -22px;
+}
+
+.total-info>span:nth-child(1){
+	padding-left: 8px;
+}
+
+.total-info>span:nth-last-child(1){
+	padding-right: 8px;
+	float: right;
+}
+.balance-total-info {
+  display: inline-block;
+  height: auto;
+  width: 100%;
+  display: inline-block;
+}
+.balance-total-info .label {
+	padding-left: 20px;
+	display: inline-block;
+	width: 110px;
+}
+
+.balance-total-info .bet-info {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 7px 6px;
+	font-family: bebas-regular;
+	font-size: 20px;
+	width: 100px;
+}
+.-text-right { text-align: right; }
+
+/*japanese*/
+.balancebet-con.-jp .player-banker-info>span:nth-child(1), .balancebet-con.-kr .player-banker-info>span:nth-child(1) { width: 120px; }
+.balancebet-con.-jp .bar-con, .balancebet-con.-kr .bar-con { width: 205px; }
+.balancebet-con.-jp .balance-total-info .label, .balancebet-con.-kr .balance-total-info .label { width: 130px }
+.balancebet-con.-jp .balance-total-info .bet-info, .balancebet-con.-kr .balance-total-info .bet-info {width: 92px;}
+
+
+.balancebet-con.-zh .banker-info>span::before,
+.balancebet-con.-zh .player-info>span::before {
+	background-image: url(/img/scoreboard/all_scoreboard_zh.png);
+}

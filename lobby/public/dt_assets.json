@@ -1,0 +1,473 @@
+[
+	{
+		"id" : " pagcor_logo",
+		"src" : "/img/pagcor_logo.jpg"
+	},
+	{
+		"comment": "/*----------chips----------*/",
+		"id":"chip_1k",
+		"src": "/img/bet-chips/v2/ani1k.png"
+	},
+	{
+		"id":"chip_3k",
+		"src": "/img/bet-chips/v2/ani3k.png"
+	},
+	{
+		"id":"chip_5k",
+		"src": "/img/bet-chips/v2/ani5k.png"
+	},
+	{
+		"id":"chip_10k",
+		"src": "/img/bet-chips/v2/ani10k.png"
+	},
+	{
+		"id":"chip_30k",
+		"src": "/img/bet-chips/v2/ani30k.png"
+	},
+	{
+		"id":"chip_50k",
+		"src": "/img/bet-chips/v2/ani50k.png"
+	},
+	{
+		"id":"chip_100k",
+		"src": "/img/bet-chips/v2/ani100k.png"
+	},
+	{
+		"id":"chip_200k",
+		"src": "/img/bet-chips/v2/ani200k.png"
+	},
+	{
+		"id":"chip_300k",
+		"src": "/img/bet-chips/v2/ani300k.png"
+	},
+	{
+		"id":"chip_500k",
+		"src": "/img/bet-chips/v2/ani500k.png"
+	},
+	{
+		"id":"chip_1000k",
+		"src": "/img/bet-chips/v2/ani1000k.png"
+	},
+	{
+		"id":"chip_max",
+		"src": "/img/bet-chips/v2/aniMax.png"
+	},
+	{
+		"id":"single_chip_1k",
+		"src": "/img/bet-chips/v2/chip_1k.png"
+	},
+	{
+		"id":"single_chip_3k",
+		"src": "/img/bet-chips/v2/chip_3k.png"
+	},
+	{
+		"id":"single_chip_5k",
+		"src": "/img/bet-chips/v2/chip_5k.png"
+	},
+	{
+		"id":"single_chip_10k",
+		"src": "/img/bet-chips/v2/chip_10k.png"
+	},
+	{
+		"id":"single_chip_30k",
+		"src": "/img/bet-chips/v2/chip_30k.png"
+	},
+	{
+		"id":"single_chip_50k",
+		"src": "/img/bet-chips/v2/chip_50k.png"
+	},
+	{
+		"id":"single_chip_100k",
+		"src": "/img/bet-chips/v2/chip_100k.png"
+	},
+	{
+		"id":"single_chip_200k",
+		"src": "/img/bet-chips/v2/chip_200k.png"
+	},
+	{
+		"id":"single_chip_300k",
+		"src": "/img/bet-chips/v2/chip_300k.png"
+	},
+	{
+		"id":"single_chip_500k",
+		"src": "/img/bet-chips/v2/chip_500k.png"
+	},
+	{
+		"id":"single_chip_1000k",
+		"src": "/img/bet-chips/v2/chip_1m.png"
+	},
+	{
+		"id":"single_chip_max",
+		"src": "/img/bet-chips/v2/chip_max.png"
+	},
+	{
+		"id":"chip_container",
+		"src": "/img/bet-chips/v2/modchip_container.png"
+	},
+	{
+		"comment": "/*----------table----------*/",
+		"id":"dragon",
+		"src": "/img/dt_betBoard/dragon.png"
+	},
+	{
+		"id":"dragon_big",
+		"src": "/img/dt_betBoard/dragon_big.png"
+	},
+	{
+		"id":"dragon_clubs",
+		"src": "/img/dt_betBoard/dragon_clubs.png"
+	},
+	{
+		"id":"dragon_diamonds",
+		"src": "/img/dt_betBoard/dragon_diamond.png"
+	},
+	{
+		"id":"dragon_even",
+		"src": "/img/dt_betBoard/dragon_even.png"
+	},
+	{
+		"id":"dragon_hearts",
+		"src": "/img/dt_betBoard/dragon_heart.png"
+	},
+	{
+		"id":"dragon_odd",
+		"src": "/img/dt_betBoard/dragon_odd.png"
+	},
+	{
+		"id":"dragon_small",
+		"src": "/img/dt_betBoard/dragon_small.png"
+	},
+	{
+		"id":"dragon_spades",
+		"src": "/img/dt_betBoard/dragon_spades.png"
+	},
+	{
+		"id":"the_betboard",
+		"src": "/img/dt_betBoard/singleplayer_table.png"
+	},
+	{
+		"id":"tie",
+		"src": "/img/dt_betBoard/tie.png"
+	},
+	{
+		"id":"tiger",
+		"src": "/img/dt_betBoard/tiger.png"
+	},
+	{
+		"id":"tiger_big",
+		"src": "/img/dt_betBoard/tiger_big.png"
+	},
+	{
+		"id":"tiger_clubs",
+		"src": "/img/dt_betBoard/tiger_clubs.png"
+	},
+	{
+		"id":"tiger_diamonds",
+		"src": "/img/dt_betBoard/tiger_diamond.png"
+	},
+	{
+		"id":"tiger_even",
+		"src": "/img/dt_betBoard/tiger_even.png"
+	},
+	{
+		"id":"tiger_hearts",
+		"src": "/img/dt_betBoard/tiger_heart.png"
+	},
+	{
+		"id":"tiger_odd",
+		"src": "/img/dt_betBoard/tiger_odd.png"
+	},
+	{
+		"id":"tiger_small",
+		"src": "/img/dt_betBoard/tiger_small.png"
+	},
+	{
+		"id":"tiger_spades",
+		"src": "/img/dt_betBoard/tiger_spades.png"
+	},
+	{
+		"comment":"***-----------BET BUTTONS----------------***",
+		"id" : "confirm_button",
+		"src": "/img/v2_1/bet_buttons/confirm_button.png"
+	},
+	{
+		"id" : "clear_button",
+		"src": "/img/v2_1/bet_buttons/clear_button.png"
+	},
+	{
+		"id" : "undo_button",
+		"src": "/img/v2_1/bet_buttons/undo_button.png"
+	},
+	{
+		"id" : "repeat_button",
+		"src": "/img/v2_1/bet_buttons/repeat_button.png"
+	},
+	{
+		"comment" : "***---------cards-------****",
+		"id" : "cards",
+		"src": "/img/window-cards.png"
+	},
+	{
+		"comment" : "**-------- menu button -----------**",
+		"id" : "exit-menu-black",
+		"src" : "/img/v2_1/menu/dark/exit_button.png"
+	},
+	{
+		"id" : "fullscreen-menu-black",
+		"src" : "/img/v2_1/menu/dark/fullscreen_button.png"
+	},
+	{
+		"id" : "howto-menu-black",
+		"src" : "/img/v2_1/menu/dark/howto_button.png"
+	},
+	{
+		"id" : "videoRefresh-menu-black",
+		"src" : "/img/v2_1/menu/dark/refresh_button.png"
+	},
+	{
+		"id" : "playerInfo-menu-black",
+		"src" : "/img/v2_1/menu/dark/playerinfo_button.png"
+	},
+	{
+		"id" : "betRecords-menu-black",
+		"src" : "/img/v2_1/menu/dark/betrecords_button.png"
+	},
+	{
+		"id" : "transfer-menu-black",
+		"src" : "/img/v2_1/menu/dark/transfer_button.png"
+	},
+	{
+		"id" : "modifyChips-menu-black",
+		"src" : "/img/v2_1/menu/dark/modchips_button.png"
+	},
+	{
+		"id" : "settings-menu-black",
+		"src" : "/img/v2_1/menu/dark/settings_button.png"
+	},
+	{
+		"id" : "volume-mute-black",
+		"src" : "/img/v2_1/icons/menu/dark/mute_icon.png"
+	},
+	{
+		"id" : "volume-max-black",
+		"src" : "/img/v2_1/icons/menu/dark/loud_icon.png"
+	},
+	{
+		"id" : "bet-logs-black",
+		"src" : "/img/v2_1/icons/menu/dark/betlogs_icon.png"
+	},
+	{
+		"id" : "game-history-black",
+		"src" : "/img/v2_1/icons/menu/dark/gamehistory_icon.png"
+	},
+	{
+		"id" : "transfer-black",
+		"src" : "/img/v2_1/icons/menu/dark/transfer_icon.png"
+	},
+	{
+		"id" : "next-arrow-black",
+		"src" : "/img/v2_1/icons/menu/dark/next_arrow.png"
+	},
+	{
+		"id" : "prev-arrow-black",
+		"src" : "/img/v2_1/icons/menu/dark/previous_arrow.png"
+	},
+	{
+		"comment" : "**-menu button LIGHT-**",
+		"id" : "exit-menu-white",
+		"src" : "/img/v2_1/menu/light/exit_button.png"
+	},
+	{
+		"id" : "fullscreen-menu-white",
+		"src" : "/img/v2_1/menu/light/fullscreen_button.png"
+	},
+	{
+		"id" : "howto-menu-white",
+		"src" : "/img/v2_1/menu/light/howto_button.png"
+	},
+	{
+		"id" : "videoRefresh-menu-white",
+		"src" : "/img/v2_1/menu/light/refresh_button.png"
+	},
+	{
+		"id" : "playerInfo-menu-white",
+		"src" : "/img/v2_1/menu/light/playerinfo_button.png"
+	},
+	{
+		"id" : "betRecords-menu-white",
+		"src" : "/img/v2_1/menu/light/betrecords_button.png"
+	},
+	{
+		"id" : "transfer-menu-white",
+		"src" : "/img/v2_1/menu/light/transfer_button.png"
+	},
+	{
+		"id" : "modifyChips-menu-white",
+		"src" : "/img/v2_1/menu/light/modchips_button.png"
+	},
+	{
+		"id" : "settings-menu-white",
+		"src" : "/img/v2_1/menu/light/settings_button.png"
+	},
+	{
+		"id" : "volume-mute-white",
+		"src" : "/img/v2_1/icons/menu/light/mute_icon.png"
+	},
+	{
+		"id" : "volume-max-white",
+		"src" : "/img/v2_1/icons/menu/light/loud_icon.png"
+	},
+	{
+		"id" : "bet-logs-white",
+		"src" : "/img/v2_1/icons/menu/light/betlogs_icon.png"
+	},
+	{
+		"id" : "game-history-white",
+		"src" : "/img/v2_1/icons/menu/light/gamehistory_icon.png"
+	},
+	{
+		"id" : "transfer-white",
+		"src" : "/img/v2_1/icons/menu/light/transfer_icon.png"
+	},
+	{
+		"id" : "next-arrow-white",
+		"src" : "/img/v2_1/icons/menu/light/next_arrow.png"
+	},
+	{
+		"id" : "prev-arrow-white",
+		"src" : "/img/v2_1/icons/menu/light/previous_arrow.png"
+	},
+	{
+		"comment" : "**-----------winning result -----------**",
+		"id" : "dragon_win",
+		"src" : "/img/v2_1/win_dragon_tiger/Dragon_Wins.png"
+	},
+	{
+		"id" : "tiger_win",
+		"src" : "/img/v2_1/win_dragon_tiger/Tiger_Wins.png"
+	},
+	{
+		"id" : "dragon_tiger_tie",
+		"src" : "/img/v2_1/win_dragon_tiger/Dragon_Tiger_Ties.png"
+	},
+	{
+		"comment" : "**---------------win fx----------------**",
+		"id" : "win_clubs",
+		"src" : "/img/v2_1/win_animation_suits/clubs.png"
+	},
+	{
+		"id" : "win_diamond",
+		"src" : "/img/v2_1/win_animation_suits/diamond.png"
+	},
+	{
+		"id" : "win_heart",
+		"src" : "/img/v2_1/win_animation_suits/heart.png"
+	},
+	{
+		"id" : "win_spade",
+		"src" : "/img/v2_1/win_animation_suits/spade.png"
+	},
+	{
+		"comment" : "**----------------user avatar-----------------**",
+		"id" : "blue_jack",
+		"src" : "/img/avatar/poker/blue_jack.png"
+	},
+	{
+		"id" : "blue_joker",
+		"src" : "/img/avatar/poker/blue_joker.png"
+	},
+	{
+		"id" : "blue_king",
+		"src" : "/img/avatar/poker/blue_king.png"
+	},
+	{
+		"id" : "blue_queen",
+		"src" : "/img/avatar/poker/blue_queen.png"
+	},
+	{
+		"id" : "red_jack",
+		"src" : "/img/avatar/poker/red_jack.png"
+	},
+	{
+		"id" : "red_joker",
+		"src" : "/img/avatar/poker/red_joker.png"
+	},
+	{
+		"id" : "red_king",
+		"src" : "/img/avatar/poker/red_king.png"
+	},
+	{
+		"id" : "red_queen",
+		"src" : "/img/avatar/poker/red_queen.png"
+	},
+	{
+		"comment": "**----- chip icon ----------**",
+		"id": "black-theme-chip_icon",
+		"src" : "/img/v2_1/light-chip.png"
+	},
+	{
+		"id": "white-theme-chip_icon",
+		"src" : "/img/v2_1/dark-chip.png"
+	},
+	{
+		"comment": "**----- channel icon ----------**",
+		"id": "channel-black",
+		"src" : "/img/v2_1/channel/dark/channel_ico.png"
+	},
+	{
+		"id": "channel-white",
+		"src" : "/img/v2_1/channel/light/channel_ico.png"
+	},
+	{
+		"id": "1Wins5_12",
+		"src" : "/img/sicbo_table_v2/1Wins5_12.png"
+	},
+	{
+		"comment" : "**----------------dealing card image------------------**",
+		"id" : "dragon_dealing_circle",
+		"src" : "/img/dt/dragon_cards.png"
+	},
+	{
+		"id" : "tiger_dealing_circle",
+		"src" : "/img/dt/tiger_cards.png"
+	},
+	{
+		"id" : "bet_indicator",
+		"src" : "/img/v2_1/bet_indicator2.png"
+	},
+	{
+		"comment" : "**---------------- scoreboard ------------------**",
+		"id" : "numeric_stats",
+		"src" : "/img/v2_1/scoreboard/numeric_stats.png"
+	},
+	{
+		"id" : "bead_road_dragon",
+		"src" : "/img/scoreboard/bead_road_dragon.png"
+	},
+	{
+		"id" : "bead_road_tiger",
+		"src" : "/img/scoreboard/bead_road_tiger.png"
+	},
+	{
+		"id" : "bead_road_tie",
+		"src" : "/img/scoreboard/bead_road_tie.png"
+	},
+	{
+		"id" : "bead_road_oddeven",
+		"src" : "/img/scoreboard/bead_road_oddeven.png"
+	},
+	{
+		"id" : "big_road",
+		"src" : "/img/scoreboard/big_road.png"
+	},
+	{
+		"id" : "road_marks",
+		"src" : "/img/scoreboard/road_marks.png"
+	},
+	{
+		"id" : "prediction",
+		"src" : "/img/scoreboard/prediction.png"
+	}
+
+
+]

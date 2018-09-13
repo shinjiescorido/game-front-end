@@ -1,0 +1,267 @@
+[1mdiff --git a/resources/assets/js/components/baccarat/ingame-roadmap.js b/resources/assets/js/components/baccarat/ingame-roadmap.js[m
+[1mindex 1ccb4ca..a66ad2e 100644[m
+[1m--- a/resources/assets/js/components/baccarat/ingame-roadmap.js[m
+[1m+++ b/resources/assets/js/components/baccarat/ingame-roadmap.js[m
+[36m@@ -88,27 +88,27 @@[m [mexport default() => {[m
+ 			p_text.textBaseline = "center"[m
+ 			this.addChild(p_text);[m
+ [m
+[31m-			let player_prediction1 = new createjs.Shape();[m
+[31m-			player_prediction1.x = player_pred_bg.x + 16;[m
+[31m-			player_prediction1.y = player_pred_bg.y + 50;[m
+[31m-			player_prediction1.graphics.ss(3).s("#1565c0").drawCircle(0,0,10);[m
+[31m-			player_prediction1.hitArea = player_pred_bg[m
+[31m-			this.addChild(player_prediction1);[m
+[31m-[m
+[31m-			let player_prediction2 = new createjs.Shape();[m
+[31m-			player_prediction2.x = player_pred_bg.x + 16;[m
+[31m-			player_prediction2.y = player_pred_bg.y + 52+30;[m
+[31m-			player_prediction2.graphics.beginFill("#1565c0").drawCircle(0,0,10);[m
+[31m-			player_prediction2.hitArea = player_pred_bg[m
+[31m-			this.addChild(player_prediction2);[m
+[31m-[m
+[31m-			let player_prediction3 = new createjs.Shape();[m
+[31m-			player_prediction3.x = player_pred_bg.x + 16 + 5;[m
+[31m-			player_prediction3.y = player_pred_bg.y + 55+30+20;[m
+[31m-			player_prediction3.rotation = 30[m
+[31m-			player_prediction3.graphics.beginFill("#1565c0").drawRoundRect(0,0,5,25,2);[m
+[31m-			player_prediction3.hitArea = player_pred_bg[m
+[31m-			this.addChild(player_prediction3);[m
+[32m+[m			[32mthis.player_prediction1 = new createjs.Shape();[m
+[32m+[m			[32mthis.player_prediction1.x = player_pred_bg.x + 16;[m
+[32m+[m			[32mthis.player_prediction1.y = player_pred_bg.y + 50;[m
+[32m+[m			[32mthis.player_prediction1.graphics.ss(3).s("#1565c0").drawCircle(0,0,10);[m
+[32m+[m			[32mthis.player_prediction1.hitArea = player_pred_bg[m
+[32m+[m			[32mthis.addChild(this.player_prediction1);[m
+[32m+[m
+[32m+[m			[32mthis.player_prediction2 = new createjs.Shape();[m
+[32m+[m			[32mthis.player_prediction2.x = player_pred_bg.x + 16;[m
+[32m+[m			[32mthis.player_prediction2.y = player_pred_bg.y + 52+30;[m
+[32m+[m			[32mthis.player_prediction2.graphics.beginFill("#1565c0").drawCircle(0,0,10);[m
+[32m+[m			[32mthis.player_prediction2.hitArea = player_pred_bg[m
+[32m+[m			[32mthis.addChild(this.player_prediction2);[m
+[32m+[m
+[32m+[m			[32mthis.player_prediction3 = new createjs.Shape();[m
+[32m+[m			[32mthis.player_prediction3.x = player_pred_bg.x + 16 + 5;[m
+[32m+[m			[32mthis.player_prediction3.y = player_pred_bg.y + 55+30+20;[m
+[32m+[m			[32mthis.player_prediction3.rotation = 30[m
+[32m+[m			[32mthis.player_prediction3.graphics.beginFill("#1565c0").drawRoundRect(0,0,5,25,2);[m
+[32m+[m			[32mthis.player_prediction3.hitArea = player_pred_bg[m
+[32m+[m			[32mthis.addChild(this.player_prediction3);[m
+ [m
+ [m
+ 			let banker_prediction = new createjs.Shape();[m
+[36m@@ -132,27 +132,27 @@[m [mexport default() => {[m
+ 			line.y= banker_prediction.y +16[m
+ 			this.addChild(line);[m
+ [m
+[31m-			let banker_prediction1 = new createjs.Shape();[m
+[31m-			banker_prediction1.x = banker_pred_bg.x + 16;[m
+[31m-			banker_prediction1.y = banker_pred_bg.y + 50;[m
+[31m-			banker_prediction1.hitArea = banker_pred_bg;[m
+[31m-			banker_prediction1.graphics.ss(3).s("#d33030").drawCircle(0,0,10);[m
+[31m-			this.addChild(banker_prediction1);[m
+[31m-[m
+[31m-			let banker_prediction2 = new createjs.Shape();[m
+[31m-			banker_prediction2.x = banker_pred_bg.x + 16;[m
+[31m-			banker_prediction2.y = banker_pred_bg.y + 52+30;[m
+[31m-			banker_prediction2.hitArea = banker_pred_bg;[m
+[31m-			banker_prediction2.graphics.beginFill("#d33030").drawCircle(0,0,10);[m
+[31m-			this.addChild(banker_prediction2);[m
+[31m-[m
+[31m-			let banker_prediction3 = new createjs.Shape();[m
+[31m-			banker_prediction3.x = banker_pred_bg.x + 16 + 5;[m
+[31m-			banker_prediction3.y = banker_pred_bg.y + 55+30 + 20;[m
+[31m-			banker_prediction3.hitArea = banker_pred_bg;[m
+[31m-			banker_prediction3.rotation = 30[m
+[31m-			banker_prediction3.graphics.beginFill("#d33030").drawRoundRect(0,0,5,25,2);[m
+[31m-			this.addChild(banker_prediction3);[m
+[32m+[m			[32mthis.banker_prediction1 = new createjs.Shape();[m
+[32m+[m			[32mthis.banker_prediction1.x = banker_pred_bg.x + 16;[m
+[32m+[m			[32mthis.banker_prediction1.y = banker_pred_bg.y + 50;[m
+[32m+[m			[32mthis.banker_prediction1.hitArea = banker_pred_bg;[m
+[32m+[m			[32mthis.banker_prediction1.graphics.ss(3).s("#d33030").drawCircle(0,0,10);[m
+[32m+[m			[32mthis.addChild(this.banker_prediction1);[m
+[32m+[m
+[32m+[m			[32mthis.banker_prediction2 = new createjs.Shape();[m
+[32m+[m			[32mthis.banker_prediction2.x = banker_pred_bg.x + 16;[m
+[32m+[m			[32mthis.banker_prediction2.y = banker_pred_bg.y + 52+30;[m
+[32m+[m			[32mthis.banker_prediction2.hitArea = banker_pred_bg;[m
+[32m+[m			[32mthis.banker_prediction2.graphics.beginFill("#d33030").drawCircle(0,0,10);[m
+[32m+[m			[32mthis.addChild(this.banker_prediction2);[m
+[32m+[m
+[32m+[m			[32mthis.banker_prediction3 = new createjs.Shape();[m
+[32m+[m			[32mthis.banker_prediction3.x = banker_pred_bg.x + 16 + 5;[m
+[32m+[m			[32mthis.banker_prediction3.y = banker_pred_bg.y + 55+30 + 20;[m
+[32m+[m			[32mthis.banker_prediction3.hitArea = banker_pred_bg;[m
+[32m+[m			[32mthis.banker_prediction3.rotation = 30[m
+[32m+[m			[32mthis.banker_prediction3.graphics.beginFill("#d33030").drawRoundRect(0,0,5,25,2);[m
+[32m+[m			[32mthis.addChild(this.banker_prediction3);[m
+ [m
+ 			// *** end predition ***//[m
+ [m
+[36m@@ -413,20 +413,137 @@[m [mexport default() => {[m
+ 			if(type == "p") {[m
+ 				setTimeout(()=>{[m
+ 					this.clone_marks.splice(this.clone_marks.length-1, 1)[m
+[32m+[m
+ 					this.drawPearlRoad(this.context.roadMarks);[m
+ 					this.drawBigRoad(this.context.roadMarks);[m
+ 					this.drawBigeyeboy(this.context.roadMarks);[m
+[32m+[m					[32mthis.drawSmallRoad(this.context.roadMarks);[m
+[32m+[m					[32mthis.drawCockroachroad(this.context.roadMarks);[m
+[32m+[m
+ 					this.player_prediction_clicked = false[m
+ 				},4000)[m
+ 			} else {[m
+ 				setTimeout(()=>{[m
+ 					this.clone_marks.splice(this.clone_marks.length-1, 1)[m
+[32m+[m[41m					[m
+ 					this.drawPearlRoad(this.context.roadMarks);[m
+ 					this.drawBigRoad(this.context.roadMarks);[m
+ 					this.drawBigeyeboy(this.context.roadMarks);[m
+[32m+[m					[32mthis.drawSmallRoad(this.context.roadMarks);[m
+[32m+[m					[32mthis.drawCockroachroad(this.context.roadMarks);[m
+ 					this.banker_prediction_clicked = false[m
+ 				},4000)[m
+ 			}[m
+[32m+[m[41m			[m
+[32m+[m			[32m//reset on click[m
+[32m+[m[41m			[m
+[32m+[m			[32mthis.player_prediction1.graphics.clear().ss(3).s("#1565c0").drawCircle(0,0,10);[m
+[32m+[m			[32mthis.player_prediction2.graphics.clear().beginFill("#1565c0").drawCircle(0,0,10);[m
+[32m+[m			[32mthis.player_prediction3.graphics.clear().beginFill("#1565c0").drawRoundRect(0,0,5,25,2);[m
+[32m+[m
+[32m+[m			[32mthis.banker_prediction1.graphics.clear().ss(3).s("#d33030").drawCircle(0,0,10);[m
+[32m+[m			[32mthis.banker_prediction2.graphics.clear().beginFill("#d33030").drawCircle(0,0,10);[m
+[32m+[m			[32mthis.banker_prediction3.graphics.clear().beginFill("#d33030").drawRoundRect(0,0,5,25,2);[m
+[32m+[m
+[32m+[m			[32mlet biglast  = _.clone(this.bigeyeboy_container.children);[m
+[32m+[m
+[32m+[m			[32mbiglast = _.find(biglast, (e) => {[m
+[32m+[m				[32mif(e.last_child) {[m
+[32m+[m					[32mreturn e.clone()[m
+[32m+[m				[32m}[m
+[32m+[m			[32m});[m
+[32m+[m
+[32m+[m			[32mlet smalllast = _.clone(this.smallroad_container.children);[m
+[32m+[m
+[32m+[m			[32msmalllast = _.find(smalllast, (e) => {[m
+[32m+[m				[32mif(e.last_child) {[m
+[32m+[m					[32mreturn e.clone()[m
+[32m+[m				[32m}[m
+[32m+[m			[32m});[m
+[32m+[m
+[32m+[m
+[32m+[m			[32mlet roachlast = _.clone(this.cockroachroad_container.children);[m
+[32m+[m
+[32m+[m			[32mroachlast = _.find(roachlast, (e) => {[m
+[32m+[m				[32mif(e.last_child) {[m
+[32m+[m					[32mreturn e.clone()[m
+[32m+[m				[32m}[m
+[32m+[m			[32m});[m
+[32m+[m
+[32m+[m			[32mlet toChange1 = "";[m
+[32m+[m			[32mlet toChange2 = "";[m
+[32m+[m			[32mlet toChange3 = "";[m
+[32m+[m[41m			[m
+[32m+[m			[32mif(type == "p") {[m
+[32m+[m				[32mtoChange1 = this.player_prediction1;[m
+[32m+[m				[32mtoChange2 = this.player_prediction2;[m
+[32m+[m				[32mtoChange3 = this.player_prediction3;[m
+[32m+[m			[32m} else {[m
+[32m+[m
+[32m+[m				[32mtoChange1 = this.banker_prediction1[m
+[32m+[m				[32mtoChange2  = this.banker_prediction2[m
+[32m+[m				[32mtoChange3 = this.banker_prediction3[m
+[32m+[m				[32m// this.banker_prediction3.graphics.clear().beginFill("#d33030").drawRoundRect(0,0,5,20,2);[m
+[32m+[m			[32m}[m
+[32m+[m
+[32m+[m			[32mif(biglast.mark == "B") {[m
+[32m+[m				[32mtoChange1.graphics.clear().ss(3).s("#1565c0").drawCircle(0,0,10);[m
+[32m+[m			[32m} else {[m
+[32m+[m				[32mtoChange1.graphics.clear().ss(3).s("#d33030").drawCircle(0,0,10);[m
+[32m+[m			[32m}[m
+[32m+[m
+[32m+[m			[32mif(smalllast.mark == "B") {[m
+[32m+[m				[32mtoChange2.graphics.clear().beginFill("#1565c0").drawCircle(0,0,10);[m
+[32m+[m			[32m}[m[41m [m
+[32m+[m			[32melse {[m
+[32m+[m				[32mtoChange2.graphics.clear().beginFill("#d33030").drawCircle(0,0,10);[m
+[32m+[m			[32m}[m
+[32m+[m
+[32m+[m			[32mif(roachlast.mark == "B") {[m
+[32m+[m				[32mtoChange3.graphics.clear().beginFill("#1565c0").drawRoundRect(0,0,5,25,2);[m
+[32m+[m			[32m}[m[41m [m
+[32m+[m			[32melse {[m
+[32m+[m				[32mtoChange3.graphics.clear().beginFill("#d33030").drawRoundRect(0,0,5,25,2);[m
+[32m+[m			[32m}[m
+[32m+[m[41m		[m
+[32m+[m			[32mcreatejs.Tween.get(toChange1)[m
+[32m+[m			[32m.to({ alpha : 1 },200)[m
+[32m+[m			[32m.to({ alpha : 0 },200)[m
+[32m+[m			[32m.to({ alpha : 1 },200)[m
+[32m+[m			[32m.to({ alpha : 0 },200)[m
+[32m+[m			[32m.to({ alpha : 1 },200)[m
+[32m+[m
+[32m+[m
+[32m+[m			[32mcreatejs.Tween.get(toChange2)[m
+[32m+[m			[32m.to({ alpha : 1 },200)[m
+[32m+[m			[32m.to({ alpha : 0 },200)[m
+[32m+[m			[32m.to({ alpha : 1 },200)[m
+[32m+[m			[32m.to({ alpha : 0 },200)[m
+[32m+[m			[32m.to({ alpha : 1 },200)[m
+[32m+[m
+[32m+[m			[32mcreatejs.Tween.get(toChange3)[m
+[32m+[m			[32m.to({ alpha : 1 },200)[m
+[32m+[m			[32m.to({ alpha : 0 },200)[m
+[32m+[m			[32m.to({ alpha : 1 },200)[m
+[32m+[m			[32m.to({ alpha : 0 },200)[m
+[32m+[m			[32m.to({ alpha : 1 },200)[m
+[32m+[m
+[32m+[m			[32msetTimeout(() => {[m
+[32m+[m				[32mif(type  == "p") {[m
+[32m+[m
+[32m+[m					[32mtoChange1.graphics.clear().ss(3).s("#1565c0").drawCircle(0,0,10);[m
+[32m+[m					[32mtoChange2.graphics.clear().beginFill("#1565c0").drawCircle(0,0,10);[m
+[32m+[m					[32mtoChange3.graphics.clear().beginFill("#1565c0").drawRoundRect(0,0,5,25,2);[m
+[32m+[m[41m					[m
+[32m+[m
+[32m+[m				[32m} else {[m
+[32m+[m					[32mtoChange1.graphics.clear().ss(3).s("#d33030").drawCircle(0,0,10);[m
+[32m+[m					[32mtoChange2.graphics.clear().beginFill("#d33030").drawCircle(0,0,10);[m
+[32m+[m					[32mtoChange3.graphics.clear().beginFill("#d33030").drawRoundRect(0,0,5,25,2);[m
+[32m+[m				[32m}[m
+[32m+[m
+[32m+[m			[32m},4000);[m
+[32m+[m
+ 		},[m
+ 		drawBigeyeboy (data) {[m
+ 			let mark_data = null;[m
+[36m@@ -449,6 +566,7 @@[m [mexport default() => {[m
+ 					if((i) == mark_data.row) {[m
+ 						if(mark_data.matrix[0][e+1] == undefined) {[m
+ 							sp.last_child = true;[m
+[32m+[m							[32msp.mark = mark_data.matrix[i][e].mark[m
+ 						}[m
+ 					}[m
+ [m
+[36m@@ -489,6 +607,7 @@[m [mexport default() => {[m
+ 					if((i) == mark_data.row) {[m
+ 						if(mark_data.matrix[0][e+1] == undefined) {[m
+ 							sp.last_child = true;[m
+[32m+[m							[32msp.mark = mark_data.matrix[i][e].mark;[m
+ 						}[m
+ 					}[m
+ [m
+[36m@@ -531,8 +650,9 @@[m [mexport default() => {[m
+ 					sp.gotoAndStop("roach-"+mark_data.matrix[i][e].mark);[m
+ [m
+ 					if((i) == mark_data.row) {[m
+[31m-						if(mark_data.matrix[0][e+1] == undefined) {[m
+[32m+[m						[32mif(mark_data.matrix[mark_data.row][e+1] == undefined) {[m
+ 							sp.last_child = true;[m
+[32m+[m							[32msp.mark = mark_data.matrix[i][e].mark;[m
+ 						}[m
+ 					}[m
+ [m

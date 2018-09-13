@@ -1,0 +1,199 @@
+/* common */
+.tutorials_wrap {
+  position: absolute;
+  right: 24%;
+}
+
+.tutorials {
+  position: relative;
+  margin-top: 34%;
+}
+
+.tutorials--img:before {
+  background: url("/img/tutorials/dragontiger-tut_logo.png") no-repeat;
+  background-size: cover;
+  width: 150px;
+  height: 146px;
+  position: absolute;
+  display: block;
+  top: 73%;
+  left: -21.5%;
+  z-index: 3;
+}
+
+.tutorials--img:after {
+  background: url("/img/tutorials/poker-tut_logo.png") no-repeat;
+  background-size: cover;
+  width: 150px;
+  height: 115px;
+  position: absolute;
+  display: block;
+  top: -27%;
+  left: 78.5%;
+  z-index: 2;
+}
+
+.tutorials--intro:before {
+  background: url("/img/tutorials/sicbo-tut_logo.png") no-repeat;
+  background-size: cover;
+  width: 130px;
+  height: 125px;
+  position: absolute;
+  display: block;
+  top: 44%;
+  left: -7%;
+  z-index: 1;
+}
+
+.tutorials--intro:after {
+  background: url("/img/tutorials/baccarat-tut_logo.png") no-repeat;
+  background-size: cover;
+  width: 135px;
+  height: 125px;
+  position: absolute;
+  display: block;
+  top: 5%;
+  left: 93%;
+  z-index: 1;
+}
+
+.tutorials h2, h4, p {
+  font-family: "lato-regular";
+}
+
+.tutorials h2 {
+  font-size: 50px;
+  text-transform: uppercase;
+  color: #efe280;
+  margin: 0;
+}
+
+.tutorials h4 {
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #4d4d4d;
+  padding-bottom: 5px;
+  margin: 0;
+}
+.tutorials p { font-size: 30px; color: #4d4d4d; }
+
+/* intro */
+.tutorials--intro {
+  width: 745px;
+  margin: 0 auto;
+  position: relative;
+  background: #e5e5e5;
+  border-radius: 8px;
+  padding: 25px 73px;
+  text-align: center;
+  box-shadow: 0 0 15px 0px #000;
+  z-index: 3;
+  margin-left: -11%;
+}
+
+.intro-text {
+  font-size : 21px !important;
+  line-height : 26px;
+  color : #4D4D4D;
+}
+
+.tutorials--intro img {
+  width: 235px;
+  margin: 0 auto;
+  display: block;
+}
+
+/* tutorials con */
+.tutorials .tutorials--con {
+  margin: 0px auto;
+  width: 900px;
+  text-align: center;
+  margin-top: -16%;
+  display: none;
+}
+
+.tutorials #bettingLayout { margin-top: -18%; }
+#dealerInfoChannel h2, #betButtonTimer h2, #channelBetlimit h2 { text-transform: none; }
+#dealerInfo img { width: 10%; }
+#gameStatistics img { width: 16%; }
+.tutorials--con img { width: 13%; }
+
+.tutorials .tutorials--con p {
+  color: #fff;
+  margin-top: 10px;
+}
+
+/* buttons */
+.tutorials .btn {
+  width: 180px;
+  height : 38px;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 3%;
+  font: bold 20px 'lato-regular';
+  color: #fff;
+  text-transform: uppercase;
+  border-radius : 4px;
+  display: inline-block;
+  line-height: 38px;
+  box-shadow: 0 0 15px 0px #000;
+  cursor: pointer;
+}
+
+.tutorials .btn-nevershow, .tutorials .btn-close { text-transform: none; box-shadow: none; }
+.tutorials .btn-continue { box-shadow: none; }
+
+.tutorials .btn-center {
+  margin: 0 auto;
+  display: block;
+}
+
+.tutorials .btn:last-child { margin-right: 0; }
+.tutorials .btn-nevershow, .tutorials .btn-close, .tutorials .btn-cancel { background: #BC140C; }
+.tutorials .btn-nevershow:hover, .tutorials .btn-close:hover, .tutorials .btn-cancel:hover { background: #820000; }
+.tutorials .btn-continue, .tutorials .btn-next, .btn-startGame { background: #4A8900; }
+.tutorials .btn-continue:hover, .tutorials .btn-next:hover, .btn-startGame:hover { background: #3F6000; }
+
+/* progress bar*/
+.progress-bar {
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 2.5%;
+}
+
+.progress-bar ul { padding: 0 }
+.progress-bar ul li {
+  display: inline;
+  display: inline-block;
+  zoom: 1;
+}
+.progress-bar ul li:before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  background: #969595;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.progress-bar ul li:last-child:before { margin-right: 0px; }
+.progress-bar ul li.on:before {
+  background: #fff;
+  opacity: 1;
+}
+
+/* mobile ovorride*/
+.tutorials-wrap-m { margin-top: 6%; }
+.tutorials-wrap-m .tutorials--intro { margin-left: auto; margin-top: 10%; }
+.tutorials-wrap-m, .progress-bar-m { margin-left: 0%; }
+.tutorials-wrap-m .tutorials--img:before { left: 14.5%; }
+.tutorials-wrap-m .tutorials--img:after { left: 73.4%; }
+.tutorials-wrap-m p { font-size: 30px; }
+.tutorials-wrap-m h2 { font-size: 40px; }
+.tutorials-wrap-m .tutorials--con { width: 49%; margin-left: auto; margin-top: 0; }
+.tutorials-wrap-m .tutorials--con img { width: 17%; }
+.tutorials-wrap-m #gameStatistics img { width: 20%; }
+.tutorials-wrap-m #bettingLayout img { width: 15%; }
+.tutorials-wrap-m #dealerInfoChannel img { width: 14%; }
+.tutorials-wrap-m  #bettingLayout { margin-top: -6%; }

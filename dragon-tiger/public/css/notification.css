@@ -1,0 +1,84 @@
+.notification-container {
+  position: absolute;
+  z-index: 99;
+  right: 0;
+  top: 92.3%;
+  width: 280px;
+  height: 84px;
+  display:none;
+}
+
+.notification-container.toggle {
+  top: 85.7%;
+  width: 253px;
+  right: -10px;
+}
+
+.notification-container.toggle .notif-box .notif-box__wrap {
+  display: none;
+}
+
+.notif-box {
+  display: block;
+  width: 100%;
+  /*padding: 10px;*/
+  position: absolute;
+  bottom: 0;
+}
+
+.notif-box .notif-box__wrap {
+  width: 100%;
+  display: block;
+  left: 0;
+  top: 0;
+  height: 100%;
+  position: absolute;
+  background: #111111;
+  z-index: 1;
+}
+
+.notif-box .notif-box__con {
+  float: left;
+  height: 60px;
+  width: 100%;
+  position: relative;
+  padding: 7px 20px;
+  z-index: 3;
+}
+
+.notif-box .notif-box__con:before{
+  content: '';
+  background: #568E23;
+  display: block;
+  width: 10px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 60px;
+}
+
+.notif-box .notif-box__con h4 {
+  font-size: 20px;
+  font-family: arial;
+  font-weight: bold;
+  display: inline;
+}
+
+.notif-box .notif-box__con span.notif-box_money {
+  display: block;
+  color: #568E23;
+  font-size: 28px;
+  font-family: bebas-regular;
+}
+
+.notif-box .notif-box__con i.notif-box_close:before {
+  content:'x';
+  display: block;
+  color: #d43030;
+  font-size: 30px;
+  font-family: lato-regular;
+  font-style: normal;
+  float: right;
+  font-weight: 600;
+  cursor: pointer;
+}

@@ -1,0 +1,66 @@
+.announcement {
+  @include wh(1365px, 55px);
+  @include prefix(transform-origin, bottom left);
+  @include background-image(linear-gradient(left, #59090a, #59090a, transparent));
+  @include transform(translate3d(0, 0, 0));
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  &.innerpage {
+    @include prefix(transform-origin, top left);
+    top: 11.2%;
+    width: 885px;
+    .announcement__msg  { width: 820px !Important; }
+  }
+
+  &.-mb {
+    bottom: 1px;
+    width: 1285px;
+    z-index: 9999;
+    .announcement__msg { width: 1220px; }
+  }
+
+  &.active { display: block; }
+} //announcement
+
+.announcement__ico {
+  @include wh(60px, 55px);
+  background-color: #f1e382;
+  display: inline-block;
+  vertical-align: middle;
+  z-index: 1;
+} //announcement__ico
+.announcement__msg {
+  @include wh(1300px, 55px);
+  display: inline-block;
+  margin-left: -4px;
+  vertical-align: middle;
+  padding: 0 5px;
+  overflow: hidden;
+  > div {
+    @include animation(marquee 10s linear infinite);
+    @include transform(translateY(-50%));
+    width: 100%;
+    display: block;
+    top: 50%;
+    position: relative;
+  }
+  span {
+    @include prefix(transform-origin, 0);
+    color: #fff;
+    display: block;
+    font: italic normal 25px LatoRegular;
+    white-space: nowrap;
+    @include breakpoint(hoverable) {
+      &:hover { animation-play-state: paused }
+    } // hoverable
+  }
+  @at-root {
+    @include  keyframes(marquee) {
+      0% { left: 100%; }
+      100% {  left: -100%;  }
+    }
+  } //root
+}

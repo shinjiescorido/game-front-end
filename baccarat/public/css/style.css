@@ -1,0 +1,23 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+canvas {
+    display: block;
+}
+
+.wrapper {
+    background-color: #111;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}

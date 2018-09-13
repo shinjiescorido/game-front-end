@@ -1,0 +1,700 @@
+.game-hover {
+  width: 917px;
+  height: 182px;
+  display: block;
+  z-index: 1;
+  // border-top: 1px solid #2b2b2b;
+  overflow: hidden;
+  pointer-events: auto;
+
+  &.roomactive {
+    &::before {
+      content: "";
+      @include wh(0, 0);
+      @include position(absolute, null, null, 0, 1px);
+      border-bottom: 50px solid #ffd67a;
+      border-right: 50px solid transparent;
+      display: inline-block;
+      position: absolute;
+    }
+    &::after {
+      content: "";
+      @include wh(18px, 14px);
+      @include position(absolute, null, null, 7px, 7px);
+      background: url("../img/v3/icons/rooms/room.png");
+    }
+
+    .password-con {
+      @include vm();
+      @include wh(100px, 100px);
+      @include bradius(all, 50%);
+      @include border(all, 1px solid #ffd67a);
+      background: rgba(0, 0, 0, 0.5);
+      &::before {
+        content: "";
+        @include vm();
+        @include wh(43px, 54px);
+        background: url("../img/v3/icons/rooms/lock-big.png");
+      }
+    }
+
+    .remove-con {
+      // @include vm();
+      @include transform(translateY(-50%));
+      @include wh(100px, 100px);
+      @include bradius(all, 50%);
+      @include border(all, 1px solid #ffd67a);
+      background: rgba(0, 0, 0, 0.5);
+      display: none;
+      cursor: pointer;
+      position: absolute;
+      left: 520px;
+      top: 50%;
+      &::before {
+        content: "";
+        @include vm();
+        @include wh(50px, 50px);
+        @include bgs('../img/icons/ico_close.png', contain);
+        // background: url("../img/v3/icons/rooms/lock-big.png");
+      }
+    }
+
+  }
+
+  .game-con {
+    border-top: 1px solid #2b2b2b;
+    display: none;
+    height: inherit;
+    display: inline-block;
+    background: rgba(22, 22, 22, 0.9);
+    position: relative;
+    margin-left: 160px;
+    top: 0;
+    // overflow: hidden
+  }
+
+  .gameButtons {
+    display: none;
+    height: 36px;
+    font: 15px LatoBold;
+    @include bradius(all, 10px);
+    @include bg-gradient(tb2, #f1e382, #ffd474);
+    border: 0;
+    cursor: pointer;
+    &:hover {
+      @include bg-gradient(tb2, #d6ca76, #dcb660);
+    }
+    &.password {
+      background: #fff;
+      cursor: text;
+    }
+  }
+
+  .disabled-btn {
+    opacity: 0.9;
+    color: #000;
+    cursor: default !important;
+    @include box-shadow( inset 0px 0px 54px -10px rgba(0,0,0,1));
+  }
+
+  .betRangeButtons { display: none; }
+
+  .singleplayer, .createroom { @include position(absolute, 45px, null, null, 10px); }
+  .multiplayer, .enter { @include position(absolute, 100px, null, null, 10px); }
+
+  .enter { top: 105px; }
+
+  .firstBetRange  { @include position(absolute, 20px, null, null, 10px); }
+  .secondBetRange { @include position(absolute, 70px, null, null, 10px); }
+  .thirdBetRange  { @include position(absolute, 120px, null, null, 10px); }
+  .fourthBetRange  { @include position(absolute, 20px, null, null, 250px); }
+  .fifthBetRange  { @include position(absolute, 70px, null, null, 250px); }
+  .sixthBetRange  { @include position(absolute, 120px, null, null, 250px); }
+
+  &.inactive .roominfo-wrap {
+    opacity:1;
+    @include animation(roomInfoInactive 0.2s ease-in-out forwards);
+  }
+  &.inactive .game-con {
+    width: 240px;
+    .gameButtons { display: block; }
+    @include animation(hover 0.2s ease-in-out 0.3s forwards);
+    .singleplayer, .createroom {
+      width: 220px;
+      @include animation(buttons 0.2s ease-in-out 0.3s forwards);
+    }
+    .multiplayer, .enter  {
+      width: 220px;
+      @include animation(buttons 0.2s ease-in-out 0.2s forwards);
+    }
+    .password {
+      width: 220px;
+      padding: 10px;
+      @include animation(password 0.2s ease-in-out 0.2s forwards);
+    }
+  }
+  &.not-clicked.inactive .game-con.morebutton {
+    width: 480px;
+    @include animation(hoverMoreButton 0.8s ease-in-out 0.5s forwards);
+  }
+
+  &.not-clicked .game-con {
+    .betRangeButtons { display: block; }
+    .singleplayer, .multiplayer, .createroom, .enter { display: none; }
+    .firstBetRange {
+      width: 220px;
+      @include animation(buttons 0.2s ease-in-out 0.4s forwards);
+    }
+    .secondBetRange {
+      width: 220px;
+      @include animation(buttons 0.2s ease-in-out 0.3s forwards);
+    }
+    .thirdBetRange {
+      width: 220px;
+      @include animation(buttons 0.2s ease-in-out 0.2s forwards);
+    }
+  }
+  &.not-clicked .game-con.morebutton {
+    .firstBetRange {
+      width: 220px;
+      @include animation(buttons 0.2s ease-in-out 0.7s forwards);
+    }
+    .secondBetRange {
+      width: 220px;
+      @include animation(buttons 0.2s ease-in-out 0.6s forwards);
+    }
+    .thirdBetRange {
+      width: 220px;
+      @include animation(buttons 0.2s ease-in-out 0.5s forwards);
+    }
+    .fourthBetRange {
+      width: 220px;
+      @include animation(buttons 0.2s ease-in-out 0.4s forwards);
+    }
+    .fifthBetRange {
+      width: 220px;
+      @include animation(buttons 0.2s ease-in-out 0.3s forwards);
+    }
+    .sixthBetRange {
+      width: 220px;
+      @include animation(buttons 0.2s ease-in-out 0.2s forwards);
+    }
+  }
+
+  &.active .roominfo-wrap {
+    opacity:0;
+    @include animation(roomInfoActive 0.2s ease-in-out 0.2s forwards);
+  }
+  &.active .game-con {
+    .gameButtons { display: block; }
+    @include animation(hoverActive 0.2s ease-in-out 0.2s forwards);
+    .singleplayer, .createroom {
+      width: 0;
+      @include animation(buttonsActive 0.2s ease-in-out 0.2s forwards);
+    }
+    .multiplayer, .enter {
+      width: 0;
+      @include animation(buttonsActive 0.2s ease-in-out 0.3s forwards);
+    }
+    .password {
+      width: 0;
+      padding: 0;
+      @include animation(passwordActive 0.2s ease-in-out 0.2s forwards);
+    }
+  }
+  &.clicked .game-con {
+    .betRangeButtons { display: block; }
+    @include animation(hoverActive 0.2s ease-in-out forwards);
+    .singleplayer, .createroom {
+      width: 220px;
+      @include animation(buttons 0.2s ease-in-out 0.1s forwards);
+    }
+    .multiplayer, .enter  {
+      width: 220px;
+      @include animation(buttons 0.2s ease-in-out 0.2s forwards);
+    }
+    .firstBetRange {
+      width: 0;
+      @include animation(buttonsActive 0.2s ease-out 0.3s forwards);
+    }
+    .secondBetRange {
+      width: 0;
+      @include animation(buttonsActive 0.2s ease-out 0.4s forwards);
+    }
+    .thirdBetRange {
+      width: 0;
+      @include animation(buttonsActive 0.2s ease-out 0.5s forwards);
+    }
+    .fourthBetRange {
+      width: 0;
+      @include animation(buttonsActive 0.2s ease-out 0.6s forwards);
+    }
+    .fifthBetRange {
+      width: 0;
+      @include animation(buttonsActive 0.2s ease-out 0.7s forwards);
+    }
+    .sixthBetRange {
+      width: 0;
+      @include animation(buttonsActive 0.2s ease-out 0.8s forwards);
+    }
+  }
+  &.clicked .game-con.morebutton {
+    @include animation(hoverMoreButtonActive 0.5s ease-in-out forwards);
+  }
+
+  .enter, .enter--users, .createroom--agent, .enter--agent {
+    @include background-image(linear-gradient(to bottom, #fff39f 20%, #9e8d55 70%, #9f8f53 87%, #e9d98b 100%));
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+
+    height: 42px;
+    overflow: hidden;
+    font: bold 18px lato;
+    @include breakpoint(hoverable) {
+      &:hover {
+        @include background-image(linear-gradient(to bottom, #dad18a 20%, #807245 70%, #7b6f40 87%, #c7ba79 100%));
+      }
+    } // hoverable
+
+  }
+  .enter--users, .createroom--agent, .enter--agent {
+    top: 70px;
+  }
+
+  .enter--agent {
+    top: 85px;
+  }
+
+  .noroom-create--agent {
+    top:40px
+  }
+
+  .noroom-enter--agent {
+    top:110px
+  }
+
+  // without singleplayer and multiplayer buttons
+  &.noButton.active {
+    .game-con.morebutton {
+      @include animation(hoverMoreButtonActive 0.5s ease-in-out forwards);
+    }
+
+    .betRangeButtons.betrange {
+      display: block;
+
+      .firstBetRange {
+        width: 0;
+        @include animation(buttonsActive 0.2s ease-out 0.3s forwards);
+      }
+      .secondBetRange {
+        width: 0;
+        @include animation(buttonsActive 0.2s ease-out 0.4s forwards);
+      }
+      .thirdBetRange {
+        width: 0;
+        @include animation(buttonsActive 0.2s ease-out 0.5s forwards);
+      }
+      .fourthBetRange {
+        width: 0;
+        @include animation(buttonsActive 0.2s ease-out 0.6s forwards);
+      }
+      .fifthBetRange {
+        width: 0;
+        @include animation(buttonsActive 0.2s ease-out 0.7s forwards);
+      }
+      .sixthBetRange {
+        width: 0;
+        @include animation(buttonsActive 0.2s ease-out 0.8s forwards);
+      }
+    }
+  }
+
+  &.noButton.inactive .game-con.morebutton {
+    width: 480px;
+
+    .betRangeButtons.betrange { display: block; }
+
+    @include animation(hoverMoreButton 0.8s ease-in-out 0.5s forwards);
+    .firstBetRange {
+      width: 220px;
+      @include animation(buttons 0.2s ease-in-out 0.7s forwards);
+    }
+    .secondBetRange {
+      width: 220px;
+      @include animation(buttons 0.2s ease-in-out 0.6s forwards);
+    }
+    .thirdBetRange {
+      width: 220px;
+      @include animation(buttons 0.2s ease-in-out 0.5s forwards);
+    }
+    .fourthBetRange {
+      width: 220px;
+      @include animation(buttons 0.2s ease-in-out 0.4s forwards);
+    }
+    .fifthBetRange {
+      width: 220px;
+      @include animation(buttons 0.2s ease-in-out 0.3s forwards);
+    }
+    .sixthBetRange {
+      width: 220px;
+      @include animation(buttons 0.2s ease-in-out 0.2s forwards);
+    }
+  }
+
+  &.noButton.inactive .game-con {
+    .betRangeButtons.betrange { display: block; }
+
+    .firstBetRange {
+      width: 220px;
+      @include animation(buttons 0.2s ease-in-out 0.4s forwards);
+    }
+    .secondBetRange {
+      width: 220px;
+      @include animation(buttons 0.2s ease-in-out 0.3s forwards);
+    }
+    .thirdBetRange {
+      width: 220px;
+      @include animation(buttons 0.2s ease-in-out 0.2s forwards);
+    }
+  }
+
+  @at-root {
+    @include keyframes(hover) {
+      0%   { width: 240px; }
+      100% { width: 0; }
+    }
+    @include keyframes(hoverMoreButton) {
+      0%   { width: 480px; }
+      100% { width: 0; }
+    }
+    @include keyframes(buttons) {
+      0%   { width: 220px; }
+      100% { width: 0;}
+    }
+    @include keyframes(password) {
+      0%   { width: 220px; padding: 10px; }
+      100% { width: 0; padding: 0; }
+    }
+    @include keyframes(hoverActive) {
+      0%   { width: 0; }
+      100% { width: 240px; }
+    }
+    @include keyframes(hoverMoreButtonActive) {
+      0%   { width: 240px; }
+      100% { width: 480px; }
+    }
+    @include keyframes(buttonsActive) {
+      0%   { width: 0; }
+      100% { width: 220px; }
+    }
+    @include keyframes(passwordActive) {
+      0%   { width: 0; padding: 0; }
+      100% { width: 220px; padding: 10px; }
+    }
+    @include keyframes(roomInfoActive) {
+      0%   { opacity:0 }
+      100% { opacity:1 }
+    }
+    @include keyframes(roomInfoInactive) {
+      0%   { opacity:1 }
+      100% { opacity:0 }
+    }
+  }
+
+  .password { top: 55px; }
+}
+
+// maintenance
+.maintenance-con {
+  z-index: 10;
+  display: none;
+  .maintenance-header {
+    background: #141414;
+    height: 35px;
+    border-top-left-radius: 10px;
+    p {
+      color: #f1e382;
+      font: 20px LatoBold;
+      padding: 5px;
+      margin-left: 15px;
+    }
+  }
+  .maintenance-body {
+    background: #2b2b2b;
+    height: 180px;
+    position: relative;
+
+    &::before {
+      content: "";
+      @include wh(110px, 110px);
+      @include position(absolute, 30px, null, null, 25px);
+      background: url("../img/maintenance/v3/maintenance_ico.png");
+      background-size: cover;
+    }
+
+    &::after {
+      content: "";
+      @include wh(199px, 180px);
+      @include position(absolute, 0, 0, null, null);
+      background: url("../img/maintenance/v3/maintenance_symbol.png");
+      background-size: cover;
+      float: right;
+    }
+
+    .maintext {
+      @include position(absolute, 38px, null, null, 17%);
+      color: #f1e382;
+      font: 21px LatoBold;
+    }
+
+    .subtext {
+      @include position(absolute, 90px, null, null, 17%);
+      color: #fff;
+      font: 18px LatoBold;
+    }
+  }
+}
+
+
+//additionals
+.room-active-toggle {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+  z-index : 3;
+
+  & input {
+    display:none;
+  }
+
+  & input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+
+}
+
+.room-active-toggle.checked {
+  .slider:before {
+    background-color: #9e9e9e;
+    left: 4px;
+  }
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #2b2b2b;
+  @include transition(.4s);
+  border-radius: 34px;
+
+  &:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 22px;
+    bottom: 4px;
+    background-color: #f1e383;
+    @include transition(.4s);
+    border-radius: 50%;
+  }
+}
+
+.password.error-mes {
+  font: bolder 18px lato;
+  color: #ce1d1d;
+  margin-bottom: 7px;
+  display: none;
+  margin-top: 5px;
+  text-align: right;
+}
+
+.user.error-mes {
+  // @include position(absolute, 16px, null, null, 15px);
+  // color: #ce1d1d;
+  // font: bolder 14px lato;
+  // display: none;
+  @include bradius(all, 4px);
+  position: absolute;
+  top: 55px;
+  left: 240px;
+  color: #ce1d1d;
+  font: bolder 18px lato;
+  line-height: 1.2;
+  display: none;
+  padding: 7px 10px;
+  /* word-wrap: normal; */
+  background: rgba(22, 22, 22, 0.9);
+  white-space: nowrap;
+  /* border-radius: 5px; */
+  border: 1px solid #ce1d1d;
+
+  &:before {
+    @include wh(0, 0);
+    content:'';
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+
+    border-right:10px solid #ce1d1d;
+    position: absolute;
+    top: 7px;
+    left: -10px;
+  }
+}
+
+.roominfo-wrap {
+  @include wh(238px, auto);
+  display: none;
+  position: absolute;
+  left: 160px;
+  z-index: 1;
+  top: 35px;
+  &.-users { top: 15px; }
+}
+.roominfo-inner {
+  @include wh(100%, 100%);
+  display: block;
+  padding: 10px 15px;
+  position: relative;
+}
+.roominfo__con {
+  display: block;
+  position: relative;
+
+  span {
+    display: block;
+    color: #fff;
+    font: normal 18px lato;
+    position: relative;
+  }
+  &:not(:last-child) { margin-bottom: 4px; }
+}
+.roominfo__gametype {
+  display: block;
+  position: relative;
+  float: left;
+  width: 50%;
+
+  &.-single span, &.-multi span {
+    padding-left: 50px;
+    &:before {
+      @include wh(40px, 40px);
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 1px;
+    }
+  }
+  &.-single span:before {
+      @include bgs('/img/icons/3.0/classic_icon.png',contain);
+  }
+  &.-multi span:before {
+    @include bgs('/img/icons/3.0/multi_icon.png',contain);
+  }
+}
+
+
+.btn-room-close {
+  @include wh(50px, 50px);
+  @include bradius(all, 50%);
+  background: #d32f2e;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  cursor: pointer;
+
+  &:before {
+    @include wh(25px, 25px);
+    @include bgs('/img/icons/3.0/room_close.png',contain);
+    content: '';
+    position: absolute;
+    top: 13px;
+    left: 13px;
+  }
+  @include breakpoint(hoverable) {
+    &:hover { opacity: 0.8; }
+  } // hoverable
+}
+
+// mobile
+body.mb.newdesign {
+  .scroll-button {
+    left: 87.5%;
+    bottom: 4.7%;
+  }
+
+  .game-hover {
+    @include wh(635px, 260px);
+    border-top: none;
+
+    .game-con-mobile {
+      display: none;
+      @include wh(inherit, inherit);
+      background: rgba(22, 22, 22, 0.9);
+      position: relative;
+    }
+
+    &.active .game-con-mobile {
+      display: block;
+    }
+
+    .gameButtons-mobile {
+      @include vm();
+      @include wh(295px, 68px);
+      font: 30px LatoBold;
+      @include bradius(all, 20px);
+      @include bg-gradient(tb3, #fff29f, #bbb068, #ffef87);
+      border: 0;
+      cursor: pointer;
+    }
+  } // game-hover
+
+  #reelgames-container {
+    @include wh(inherit, inherit);
+    top: auto;
+  }
+
+  #reelgames-container .reelgames-list.kagaming {
+    overflow-y: hidden;
+    padding: 0;
+    margin-right: 0;
+    margin-top: 8px;
+    padding-left: 2px;
+    height: auto;
+  }
+
+  #reelgames-container ::-webkit-scrollbar-track, #reelgames-container ::-webkit-scrollbar-thumb {
+    display: none;
+  }
+
+  .maintenance-con {
+    z-index: 1;
+    .maintenance-header {
+      border-radius: 0;
+      height: 50px;
+
+      p {
+        font: italic 25px LatoBold;
+        margin-left: 5px;
+        padding: 0;
+        line-height: 50px;
+      }
+    }
+    .maintenance-body {
+       height: 210px;
+       &::after { bottom: 0; top: unset; }
+    }
+    .maintext, .subtext { left: 30%; z-index: 1; }
+  }
+}

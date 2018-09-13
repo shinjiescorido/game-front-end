@@ -1,0 +1,58 @@
+* {
+  outline: none !important;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently	supported by Chrome and Opera */
+  /*cursor: default;*/
+  margin: 0;
+  padding: 0;
+
+  -webkit-box-sizing: border-box;
+	box-sizing: border-box;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -moz-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+*, *:before, *:after { @include prefix(box-sizing, border-box); }
+
+input, textarea {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+}
+
+body, * {
+  outline: none !important;
+  -webkit-print-color-adjust: exact;
+}
+
+html, body {
+  -webkit-overflow-scrolling: touch;
+  background-attachment: fixed;
+  background-position: center;
+  background-color: #000;
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  // height: 100%;
+  // position: relative;
+  // width: 100%;
+  // overflow: hidden;
+} // body
+
+
+
+.container-wrap {
+  @extend %cf;
+  @include wh(100%, 100%);
+  display: block;
+  position: relative;
+  background: #000;
+  overflow: hidden;
+}

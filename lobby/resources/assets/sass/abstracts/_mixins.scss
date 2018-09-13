@@ -1,0 +1,684 @@
+@mixin animation($args){
+  -webkit-animation: $args;
+          animation: $args;
+  @include prefix(animation, $args);
+} // animation
+
+
+@mixin autofillfix($name) {
+  &:-webkit-autofill, &:-webkit-autofill:hover, &:-webkit-autofill:hover {
+    @include prefix(animation-name, $name);
+    @include prefix(animation-fill-mode, both);
+  }
+
+  @at-root {
+    @include keyframes($name) {
+      @content;
+    }
+  }
+} // autofillfix
+
+
+@mixin autofill($bgcolor, $txcolor) {
+  @include box-shadow(inset 0 0 0 50px $bgcolor);
+  -webkit-text-fill-color: $txcolor;
+} // autofill
+
+
+@mixin keyframes($aniVar) {
+  @-webkit-keyframes #{$aniVar} {
+    @content;
+  }
+  @-moz-keyframes #{$aniVar} {
+    @content;
+  }
+  @-o-keyframes #{$aniVar} {
+    @content;
+  }
+  @keyframes #{$aniVar} {
+    @content;
+  }
+} // keyframes
+
+
+@mixin blockCenter($top:0, $bottom:0) {
+  display: block;
+  margin: $top auto $bottom;
+} // blockCenter
+
+
+@mixin cf() {
+  *zoom: 1;
+  &:before,
+  &:after {  content: ""; display: table; }
+  &:after { clear: both; }
+} // clearfix
+
+
+
+@mixin cols($numPerRow, $margin) {
+  float: left;
+  width: ((100% - (($numPerRow - 1) * $margin)) / $numPerRow);
+  &:nth-child(n) {
+    margin-right: $margin;
+  }
+  &:nth-child(#{$numPerRow}n) {
+    margin-right: 0;
+  }
+} // cols
+
+
+@mixin prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -ms-#{$property}: #{$value};
+  -o-#{$property}: #{$value};
+  #{$property}: #{$value};
+} // prefix
+
+
+@mixin bgs($img, $w:null, $h:null, $type: null) {
+  background-repeat: no-repeat;
+
+  @if $type == null {
+    @include prefix('background-size', $w $h);
+    background-image: url($img);
+  } // NULL
+
+  @if $type == cover {
+    @include wh($w, $h);
+    @include prefix('background-size', 'cover');
+    background-position: center center;
+    background-image: url($img);
+  } // COVER
+
+  @if $type == contain {
+    @include wh($w, $h);
+    @include prefix('background-size', 'contain');
+    background-image: url($img);
+  } // CONTAIN
+} // background-size
+
+
+@mixin rbgcon($img) {
+  @include wh(image-height($img), image-height($img));
+  @include prefix('background-size', 'contain');
+  background-image: url($img);
+  background-repeat: no-repeat;
+  height: 0;
+  padding-bottom: percentage($w/$h);
+} // responsive background container
+
+@mixin rbg($img, $w, $h) {
+  @include prefix('background-size', $w);
+  background-image: url($img);
+  background-repeat: no-repeat;
+  height: 0;
+  padding-bottom: $h;
+} // responsive background
+
+@mixin border-gradient($from, $to, $weight: 0) {
+  $mix-main: mix($from, $to);
+  $mix-sub-from: mix($mix-main, $from);
+  $mix-sub-to: mix($mix-main, $to);
+
+  box-shadow: 0 1px 0 $weight rgba($mix-sub-to, .25),
+              0 -1px 0 $weight rgba($mix-sub-from, .25),
+              1px 0 0 $weight rgba($mix-sub-to, .25),
+              -1px 0 0 $weight  rgba($mix-sub-from, .25),
+              1px -1px 0 $weight rgba($mix-main, .5),
+              -1px 1px 0 $weight rgba($mix-main, .5),
+              1px 1px 0 $weight rgba($to, .75),
+              -1px -1px 0 $weight rgba($from, .75);
+}
+
+@mixin border($loc, $val) {
+  @if $loc == all {
+    border-top: $val;
+    border-right: $val;
+    border-bottom: $val;
+    border-left: $val;
+  }
+
+  @if $loc == t { border-top: $val; }
+  @if $loc == r { border-right: $val; }
+  @if $loc == b { border-bottom: $val; }
+  @if $loc == l { border-left: $val; }
+
+  @if $loc == tr or $loc == rt {
+    border-top: $val;
+    border-right: $val;
+  }
+  @if $loc == tb or $loc == bt {
+    border-top: $val;
+    border-bottom: $val;
+  }
+  @if $loc == tl or $loc == lt {
+    border-top: $val;
+    border-left: $val;
+  }
+  @if $loc == rb or $loc == br {
+    border-bottom: $val;
+    border-right: $val;
+  }
+  @if $loc == rl or $loc == lr {
+    border-right: $val;
+    border-left: $val;
+  }
+  @if $loc == lb or $loc == bl {
+    border-left: $val;
+    border-bottom: $val;
+  }
+  @if $loc == tb or $loc == bt {
+    border-top: $val;
+    border-bottom: $val;
+  }
+
+  @if $loc == trl or $loc == tlr or $loc == rtl or $loc == rlt or $loc == lrt or $loc == ltr {
+    border-top: $val;
+    border-right: $val;
+    border-left: $val;
+  }
+
+  @if $loc == trb or $loc == tbr or $loc == rtb or $loc == rbt or $loc == brt or $loc == btr {
+    border-top: $val;
+    border-right: $val;
+    border-bottom: $val;
+  }
+
+  @if $loc == rbl or $loc == rlb or $loc == brl or $loc == blr or $loc == lrb or $loc == lbr {
+    border-right: $val;
+    border-bottom: $val;
+    border-left: $val;
+  }
+
+  @if $loc == btl or $loc == blt or $loc == lbt or $loc == ltb or $loc == tbl or $loc == tlb {
+    border-top: $val;
+    border-bottom: $val;
+    border-left: $val;
+  }
+} // border
+
+
+@mixin bradius($loc, $num){
+  @if $loc == all {
+    @include prefix(border-radius, $num);
+  }
+
+  @if $loc == l {
+    @include prefix(border-top-left-radius, $num);
+    @include prefix(border-bottom-left-radius, $num);
+  }
+
+  @if $loc == r {
+    @include prefix(border-top-right-radius, $num);
+    @include prefix(border-bottom-right-radius, $num);
+  }
+
+  @if $loc == b {
+    @include prefix(border-bottom-right-radius, $num);
+    @include prefix(border-bottom-left-radius, $num);
+  }
+
+  @if $loc == t {
+    @include prefix(border-top-right-radius, $num);
+    @include prefix(border-top-left-radius, $num);
+  }
+
+  @if $loc == tl or $loc == lt {
+    @include prefix(border-top-left-radius, $num);
+  }
+
+  @if $loc == tr or $loc == rt {
+    @include prefix(border-top-right-radius, $num);
+  }
+
+  @if $loc == bl or $loc == lb {
+    @include prefix(border-bottom-left-radius, $num);
+  }
+
+  @if $loc == br or $loc == rb {
+    @include prefix(border-bottom-right-radius, $num);
+  }
+} // border-radius
+
+
+@mixin ellip($line-num: 2){
+  @if $line-num == 1 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+  @if $line-num == 2 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+  @if $line-num == 3 {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+} // ellipsis
+
+
+@function str-replace($string, $search, $replace: "") {
+  $index: str-index($string, $search);
+
+  @if $index {
+    @return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+  }
+
+  @return $string;
+}
+ // string replace
+/*====================================*\
+>> font-face
+/*====================================*/
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+  $extmods: (
+  eot: "?",
+  svg: "#" + str-replace($name, " ", "_")
+  );
+
+  $formats: (
+  otf: "opentype",
+  ttf: "truetype"
+  );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+} // font face
+
+
+@mixin grayscale ($scale: 1) {
+  filter: gray;
+  @include prefix(filter, grayscale($scale));
+} // grayscale
+
+@mixin white () { @include prefix(filter, brightness(0) invert(1)); }
+@mixin black () { @include prefix(filter, brightness(0) invert(0)); }
+@mixin colored () { @include prefix(filter, brightness(1) invert(0)); }
+
+
+@mixin hide() {
+  @include wh(1px, 1px);
+  border: 0;
+  clip: rect(0 0 0 0);
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+} // hide
+
+@mixin ir() { font: 0/0 a; text-shadow: none; color: transparent; } // image replacement
+
+
+@mixin objf($img, $h) {
+  @include wh(100%, $h);
+  display: block;
+  object-fit: $img;
+  object-position: top center;
+  overflow: hidden;
+} // object fit
+
+
+@mixin placeholder() {
+  &::-webkit-input-placeholder  {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+} // placeholder
+
+
+@mixin position($type, $top: null, $right: null, $bottom: null, $left: null){
+  position: $type;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+} // position
+
+@mixin absolute($top: null, $right: null, $bottom: null, $left: null) {
+  @include position(absolute, $top, $right, $bottom, $left);
+}
+
+@mixin relative($top: null, $right: null, $bottom: null, $left: null) {
+  @include position(relative, $top, $right, $bottom, $left);
+}
+
+@mixin fixed($top: null, $right: null, $bottom: null, $left: null) {
+  @include position(fixed, $top, $right, $bottom, $left);
+}
+
+
+
+@mixin retina($img) {
+  $image: ($img);
+  $h: (image-height($image)/2);
+  $w: (image-width($image)/2);
+
+  @include wh($w, $h);
+  @include prefix('background-size', $w $h);
+  background-image: url($image);
+  background-repeat: no-repeat;
+
+} // retina
+
+
+@mixin rsprite($map, $sprite, $percent) {
+  $spritePath   : sprite-path($map);
+  $spriteWidth  : image-width($spritePath);
+  $spriteHeight : image-height($spritePath);
+  $width        : image-width(sprite-file($map, $sprite));
+  $height       : image-height(sprite-file($map, $sprite));
+  @include background-size(ceil($spriteWidth * ($percent/100)) ceil($spriteHeight * ($percent/100)));
+  @include wh(ceil($width*($percent/100)), ceil($height*($percent/100)));
+  background-position: 0 floor(nth(sprite-position($map, $sprite), 2)  * ($percent/100) );
+} // retine sprites
+
+
+@mixin stroke($stroke, $color) {
+  text-shadow: stroke($stroke, $color);
+} // stroke
+
+@function stroke($stroke, $color) {
+  $shadow: ();
+  $from: $stroke*-1;
+  @for $i from $from through $stroke {
+    @for $j from $from through $stroke {
+      $shadow: append($shadow, $i*1px $j*1px 0 $color, comma);
+    }
+  }
+  @return $shadow;
+} // stroke
+
+
+@mixin translate ($x, $y) {
+ @include prefix(transform, translate($x, $y));
+}
+
+@mixin translateY ($y) {
+ @include prefix(transform, translateY($y));
+}
+
+@mixin translateX ($x) {
+ @include prefix(transform, translateX($x));
+}
+
+@mixin translate3d ($perc, $x, $y) {
+ @include prefix(transform, translate3d($perc, $x, $y));
+}
+
+@mixin rotate ($deg) {
+ @include prefix(transform, rotate($deg));
+}
+
+@mixin scale ($scale: 1.25) {
+ @include prefix(transform, scale($scale));
+}
+
+@mixin transform($args) {
+ @include prefix(transform, $args);
+}
+
+
+@mixin transition($args: all .36s ease) {
+  @include prefix('transition', $args);
+}
+
+
+@mixin triangle ($dir, $width, $color) {
+  @if $dir == tl or $dir == lt {
+    @include wh(0, 0);
+    border-style: solid;
+    border-width: $width $width 0 0;
+    border-color: $color transparent transparent transparent;
+    line-height: 0px;
+    _border-color: $color #000 #000 #000;
+    _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000');
+  } // tl
+
+  @if $dir == tr or $dir == rt {
+    @include wh(0, 0);
+    border-style: solid;
+    border-width: $width 0 0 $width;
+    border-color: $color transparent transparent transparent;
+    line-height: 0px;
+    _border-color: $color #000 #000 #000;
+    _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000');
+  } // tr
+
+  @if $dir == bl or $dir == lb {
+    @include wh(0, 0);
+    display: inline-block;
+    border-style: solid;
+    border-width: $width 0 0 $width;
+    border-color: transparent transparent transparent $color;
+    line-height: 0px;
+    _border-color: #000 #000 #000  $color;
+    _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000');
+  } // bl
+
+  @if $dir == br or $dir == rb {
+    @include wh(0, 0);
+    display: inline-block;
+    border-style: solid;
+    border-width: 0 0 $width $width;
+    border-color: transparent transparent $color transparent;
+    line-height: 0px;
+    _border-color: #000 #000 $color #000;
+    _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000');
+  } // bl
+
+  @if $dir == t {
+    @include wh(0, 0);
+    border-bottom: $width solid $color;
+    border-left: $width solid transparent;
+    border-right: $width solid transparent;
+    _border-color: #000000 #000000 $color #000000;
+    _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+  } // up
+
+  @else if $dir == b {
+    @include wh(0, 0);
+    border-left: $width solid transparent;
+    border-right: $width solid transparent;
+    border-top: $width solid $color;
+    _border-color: $color #000000 #000000 #000000;
+    _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+  } // down
+
+  @else if $dir == r {
+    @include wh(0, 0);
+    border-bottom: $width solid transparent;
+    border-left: $width solid $color;
+    border-top: $width solid transparent;
+    _border-color: #000000 $color #000000 #000000;
+    _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+  } // right
+
+  @else if $dir == l {
+    @include wh(0, 0);
+    border-bottom: $width solid transparent;
+    border-right: $width solid $color;
+    border-top: $width solid transparent;
+    _border-color: #000000 #000000 #000000  $color;
+    _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+  } // left
+
+  @if $dir == ri {
+    @include wh(0, 0);
+    border-bottom: $width solid $color;
+    border-left: $width solid transparent;
+    border-top: $width solid $color;
+  } // right > inset
+
+  @if $dir == li {
+    @include wh(0, 0);
+    border-bottom: $width solid $color;
+    border-right: $width solid transparent;
+    border-top: $width solid $color;
+  } // right > inset
+} // triangle
+
+@mixin coln($numPerRow, $margin) {
+  float: left;
+  width: ((100% - (($numPerRow - 1) * $margin)) / $numPerRow);
+  &:nth-child(n) {
+    // margin-bottom: $margin;
+    margin-right: $margin;
+  }
+  &:nth-child(#{$numPerRow}n) {
+    margin-right: 0;
+    // margin-bottom: 0;
+  }
+}
+
+@mixin opacity($opacity: 0.5) {
+  $opacityMultiplied: ($opacity * 100);
+  filter: alpha(opacity=$opacityMultiplied);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + $opacityMultiplied + ")";
+  @include prefix('opacity', $opacity);
+}  // opacity
+
+
+@mixin wh($width: null, $height: null) {
+  width: $width;
+  height: $height;
+} // width height
+
+@mixin wp($width: null, $padding: null) {
+  width: $width;
+  padding-bottom: $padding;
+} // width padding-bottom
+
+@mixin vm($style: null, $top: null, $left: null) {
+  @if $style == null {
+    @include position(absolute, 50%, null, null, 50%);
+    @include translate(-50%, -50%);
+  } // null
+
+  @if $style == custom {
+    @if $top == null {
+      @include position(absolute, $top, null, null, $left);
+      @include translate(-50%,0);
+    }
+    @else if $left == null {
+      @include position(absolute, $top, null, null, $left);
+      @include translate(0, -50%);
+    }
+    @else {
+      @include position(absolute, $top, null, null, $left);
+      @include translate(-50%, -50%);
+    }
+  } // custom
+
+  @if $style == flex {
+    @include flexbox;
+    justify-content: center;
+    align-items: center;
+  } // flex
+
+  @if $style == ghost {
+    text-align: center;
+    &:before {
+      content: '\200B';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    } // before
+  } // ghost
+
+  @if $style == ghostcon {
+    display: inline-block;
+    vertical-align: middle;
+  } // ghost
+}  // vertical alignn middel
+
+@mixin word-break { word-break: break-all; }
+@mixin word-wrap { overflow: hidden; word-wrap: break-word; }
+
+@mixin multiple-column($col_count, $col_gap) {
+  -moz-column-count: $col_count;
+  -moz-column-gap: $col_gap;
+  -webkit-column-count: $col_count;
+  -webkit-column-gap: $col_gap;
+  column-count: $col_count;
+  column-gap: $col_gap;
+}
+
+/*====================================*\
+  >> background gradient
+/*====================================*/
+@mixin bg-gradient($dir: tb2, $color1:#000, $color2:#fff, $color3: null) {
+  @if $dir == tb2 {
+    background-color : $color1;
+    background-image : -webkit-gradient(linear, left top, left bottom, from($color1), to($color2));
+    background-image : -webkit-linear-gradient(top, $color1, $color2);
+    background-image : -moz-linear-gradient(top, $color1, $color2);
+    background-image : -ms-linear-gradient(top, $color1, $color2);
+    background-image : -o-linear-gradient(top, $color1, $color2);
+    background-image : linear-gradient(top, $color1, $color2);
+    filter           : progid:DXImageTransform.Microsoft.gradient(start-colorStr='#{$color1}', end-colorStr='#{$color2}');
+  }
+
+  @if $dir == tb3 {
+    background-color : $color1;
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, $color1), color-stop(50%, $color2), color-stop(100%, $color3));
+    background-image : -webkit-linear-gradient((top, $color1 0%, $color2 50%, $color3 100%));
+    background-image : -o-linear-gradient(top, $color1 0%, $color2 50%, $color3 100%);
+    background-image : -ms-linear-gradient(top, $color1 0%, $color2 50%, $color3 100%);
+    background-image : -moz-linear-gradient(top, $color1 0%, $color2 50%, $color3 100%);
+    background-image : linear-gradient(to bottom, $color1 0%, $color2 50%, $color3 100%);
+    filter           : progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$color1}', endColorstr='#{$color2}', GradientType=0 );
+  }
+
+  @if $dir == lr2 {
+    background-color : $color1;
+    background-image : -webkit-gradient(linear, left top, right top, from($color1), to($color2));
+    background-image : -webkit-linear-gradient(left, $color1, $color2);
+    background-image : -moz-linear-gradient(left, $color1, $color2);
+    background-image : -ms-linear-gradient(left, $color1, $color2);
+    background-image : -o-linear-gradient(left, $color1, $color2);
+    background-image : linear-gradient(left, $color1, $color2);
+    filter           : progid:DXImageTransform.Microsoft.gradient(start-colorStr='#{$color1}', end-colorStr='#{$color2}', gradientType='1');
+  }
+
+  @if $dir == lr3 {
+    background : $color1;
+    background : -webkit-gradient(left top, right top,
+            color-stop(0%, $color1),
+            color-stop(52%, $color2),
+            color-stop(100%, $color3));
+    background : -moz-linear-gradient(left, $color1 0%, $color2 52%, $color3 100%);
+    background : -webkit-linear-gradient(left, $color1 0%, $color2 52%, $color3 100%);
+    background : -o-linear-gradient(left, $color1 0%, $color2 52%, $color3 100%);
+    background : -ms-linear-gradient(left, $color1 0%, $color2 52%, $color3 100%);
+    background : linear-gradient(to right, $color1 0%, $color2 52%, $color3 100%);
+    filter     : progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$color1}', endColorstr='#{$color2}', GradientType=1 );
+  }
+
+}

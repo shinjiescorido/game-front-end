@@ -1,0 +1,401 @@
+.room-con {
+  @include transform(translate(0,0));
+  @include wh(518px, auto); //335px
+  max-height: 490px;
+  min-height: 182px;
+  background: rgba(22, 22, 22, 0.9);
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 399px;
+  padding: 10px;
+  overflow-x: hidden;
+  z-index: 10;
+
+  &::-webkit-scrollbar{	width: 6px; }
+  &::-webkit-scrollbar-track{
+  	width: 4px;
+  	background: #1d1d1d;
+  	// box-shadow:inset #4d4d4d 2px 0px 0px, inset #4d4d4d -2px 0px 0px;
+  }
+  &::-webkit-scrollbar-thumb{
+  	border-radius: 10px;
+  	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  	background-color: #fff;
+  }
+
+  &.active { display: block; }
+
+  &.-other {
+    max-height: 330px;
+  }
+}
+
+.room__items {
+  @include cols(3, 1.2%);
+  @include bradius(t, 10px);
+  position: relative;
+  float: left;
+  height: 98px;
+  background: #333;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.room__head, .room__body {
+  display: block;
+  padding: 0 20px 0 125px;
+  width: 100%;
+  position: relative;
+}
+
+.room__head {
+  height: 38px;
+  @include background-image(linear-gradient(to right, #970000, #2d0000));
+  &.-othergames {
+    @include background-image(linear-gradient(to right, #871a51, #280f1a));
+  }
+
+  span {
+    @include transform(translateY(-50%));
+    color: #efe282;
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'arvoItalic';
+    position: relative;
+    top: 50%;
+    // width: 68%;
+
+    &.slave-supersix:before {
+      content: '';
+      @include wh(22px, 25px);
+      background-image: url('/img/icons/baccarat/supersix/super6_table_list.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      right: -35px;
+      top: -1px;
+    }
+
+    &.junket-timer{
+      color: #fff;
+      text-align: right;
+      font-family: 'lato-black';
+      font-size: 18px;
+      float: right;
+      margin-right: 20px;
+
+      &:before {
+        @include bgs('/img/icons/3.0/junket_timer.png', contain);
+        @include wh(14px, 16px);
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: -25px;
+      }
+    }
+
+  }
+
+}
+
+.room--users .room__head span.junket-timer { margin-right: 0; }
+
+.room__body {
+  height: calc(100% - 38px);
+  h3 {
+    color: #fff;
+    display: inline-block;
+    font-size: 18px;
+    font-family: 'lato';
+    margin-right: 5px;
+    position: relative;
+    // top: 50%;
+    width: 135px;
+    // @include transform(translateY(-50%));
+  }
+}
+
+.room__body-con {
+  display: block;
+  position: relative;
+
+  &:not(:last-child) { margin-bottom: 15px; }
+}
+
+.room__round, .room__player, .room__type, .room__betrange {
+  @extend %cf;
+  display: inline-block;
+  position: relative;
+  position: relative;
+  // top: 45%;
+  // @include transform(translateY(-50%));
+}
+
+.room__round, .room__player  {
+  width: 165px;
+  top: -4px;
+  // margin-right: 10px;
+}
+
+.room__type, .room__betrange {
+  width: 160px;
+}
+
+.room__betrange, .room__type {
+  // width: 140px;
+  // margin-top: 15px;
+  // display: inline-block;
+  p {
+    font-size: 20px;
+    font-family: 'lato';
+    color: #fff;
+  }
+}
+
+.room--roundnum, .room--playertotal {
+  display: inline-block;
+  color:#fff;
+  font-size: 20px;
+  font-family: 'lato-black';
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+.room__avatar {
+  @include background-image(linear-gradient(to bottom, #eee07f, #d8c26c));
+  @include wh(80px, 80px);
+  @include bradius(all, 50%);
+  border: 2px solid #565b57;
+  display: block;
+  position: absolute;
+  left: 20px;
+  top: 9px;
+  overflow: hidden;
+}
+.avatar--red_king { background-image: url('/img/avatar/3.0/red-king.png');}
+.avatar--red_queen { background-image: url('/img/avatar/3.0/red-queen.png');}
+.avatar--red_jack { background-image: url('/img/avatar/3.0/red-jack.png');}
+.avatar--red_joker { background-image: url('/img/avatar/3.0/red-joker.png');}
+.avatar--blue_king { background-image: url('/img/avatar/3.0/blue-king.png');}
+.avatar--blue_quuen { background-image: url('/img/avatar/3.0/blue-queen.png');}
+.avatar--blue_jack { background-image: url('/img/avatar/3.0/blue-jack.png');}
+.avatar--blue_joker { background-image: url('/img/avatar/3.0/blue-joker.png');}
+
+.avatar-con {
+  @include wh(100%, 100%);
+  display: block;
+  position: relative;
+  background-size: contain;
+}
+
+
+/************************* FOR JUNKET ROOM ********************/
+.room__items.room--junket {
+  @include wh(100%, 150px);
+  margin-bottom: 10px;
+
+  &:last-child { margin-bottom: 0; }
+
+  .room__head, .room__body {
+    padding: 20px;
+  }
+
+  &.-other {
+    height: 98px;
+
+    .room__betrange { width: 130px; }
+    .room__round { width: 105px; }
+    .room__player { width: 100px; }
+  }
+}
+.btn-junket-join {
+  @include wh(120px, 40px);
+  @include bradius(all, 11px);
+  @include transform(translateY(-50%));
+  @include background-image(linear-gradient(to bottom, #fff39f 20%, #9e8d55 70%, #9f8f53 87%, #e9d98b 100%));
+  display: block;
+  float: right;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  // top: 33px;
+  cursor: pointer;
+
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+
+  color: #1a1a1a;
+  font: normal 22px lato-black;
+
+  @include breakpoint(hoverable) {
+    &:hover {
+      @include background-image(linear-gradient(to bottom, #dad18a 20%, #807245 70%, #7b6f40 87%, #c7ba79 100%));
+
+      &.disabled-btn {
+        background: #b4b4b4;
+        @include box-shadow(inset 0px 0px 54px -10px black);
+        cursor: default !important;
+      }
+    }
+  } // hoverable
+
+  &.disabled-btn {
+    background: #b4b4b4;
+    // @include box-shadow(inset 0px -2px 34px -8px rgba(0,0,0,0.75));
+    @include box-shadow(inset 0px 0px 54px -10px black);
+    // opacity: 0.9;
+    cursor: default !important;
+  }
+}
+
+#junket-container { padding-left: 10px; overflow: hidden; }
+.junket-tables {
+  @include wh(50%, 40px);
+  display: none;
+  padding-left: 10px;
+  position: relative;
+
+  span {
+    display: inline-block;
+    color: #fff;
+    position: relative;
+    font-size: 20px;
+    font-family: 'LatoBlack';
+    padding-left: 10px;
+    text-transform: uppercase;
+    vertical-align: middle;
+  }
+}
+.junket-menu {
+  @extend %cf;
+  display: block;
+  padding-left: 17px;
+  position: relative;
+  width: 100%;
+}
+.junket-menu__items {
+  display: block;
+  float: left;
+  cursor: pointer;
+  padding: 0 5px;
+  position: relative;
+  font: 20px 'LatoBlack';
+  color: #83948c;
+  text-transform: uppercase;
+  &:not(:last-child) { margin-right: 60px; }
+
+  &:before {
+    content: '';
+    background: #52ae85;
+    height: 6px;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+  }
+
+  &:not(.active) {
+    @include breakpoint(hoverable) {
+      &:hover {
+        &:before {
+          @include animation(junket_menu 0.2s ease-in-out forwards);
+          border: 1px solid #2c6b4e;
+          width: 0;
+
+          @at-root {
+            @include keyframes(junket_menu) {
+              0%   { width: 0; }
+              100% { width: 100%; }
+            }
+          }
+        }
+      }
+    } // hoverable
+  }
+
+  &.active {
+    color: #fff;
+    &:before {
+      border: 1px solid #2c6b4e;
+      width: 100%;
+    }
+
+    @include breakpoint(hoverable) {
+      &:hover {
+        &:before {
+          width: 100%;
+        }
+      }
+    } // hoverable
+  }
+} //junket-menu__items
+.junket-menu__information {
+  float: right;
+  font-family: lato-regular;
+  font-size: 20px;
+  color: #fff;
+  margin-right: 20px;
+  display: none;
+
+  &.-dragontiger_limit { display: none };
+
+  & > .junket_limit {
+    color: #eadc7e;
+    font-family: lato-black;
+    font-size: 22px;
+  }
+}
+.junket-con {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: calc(100% - 55px);
+  margin-top: 30px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+.junket-room-con {
+  @extend %cf;
+  display: block;
+  position: relative;
+  overflow-y: scroll;
+  max-height: calc(100% - 250px);
+  width: 100%;
+}
+
+#junket-sicbo-con, #junket-paigow-con, #junket-banner-con {
+  &.junket-con { overflow: initial; }
+}
+#junket-no-rooms {
+  margin-top: 0;
+  position:absolute;
+  top:40px;
+
+  .junketnorooms {
+    @include vm();
+    p {
+      font: 30px LatoBold;
+      margin-top: 30px;
+      color: #fff;
+    }
+    img { margin: 0 auto; display: block; }
+  }
+}
+
+.game-room-overlay {
+  pointer-events: none;
+  z-index: 10;
+}
+.game-room-overlay.-hasroom:before {
+  @include bradius(tl, 16px);
+  @include wh(100.3%, 100.7%);
+  content: '';
+  border: 2px solid #ffd67a;
+  position: absolute;
+  left: -1px;
+  top: -1px;
+}

@@ -1,0 +1,10 @@
+.env
+desktop.ini
+.log
+node_modules
+public/dist/*
+/vendor
+.idea
+.idea/
+.sass-cache/
+*.scssc

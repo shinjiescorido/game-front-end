@@ -1,0 +1,221 @@
+@mixin media($queries) {
+  @if length($queries) == 0 { @content; }
+
+  @else {
+    $first-key: nth(map-keys($queries), 1);
+
+    @media ($first-key: map-get($queries, $first-key)) {
+      $queries: map-remove($queries, $first-key);
+      @include media($queries) { @content; }
+    }
+  }
+}
+
+$breakpoints: (
+  'min-xs': (min-width: 0),
+  'min-sm': (min-width: em(768px)),
+  'min-md': (min-width: em(992px)),
+
+  'min-pc': (min-width: em(1025px)),
+  'min-lg': (min-width: em(1200px)),
+
+  'max-xs': (max-width: em(767px)),
+  'max-sm': (max-width: em(991px)),
+  'max-md': (max-width: em(1199px)),
+  'max-lg': (max-width: em(1300px)),
+
+  'min-mb-s': (min-width: em(472px)),
+  'min-mb-md': (min-width: em(641px)),
+  'max-mb-xs': (max-width: em(471px)),
+  'max-mb-s': (max-width: em(640px)),
+
+  'min-pc-md': (min-width: em(1301px)),
+  'min-pc-lg': (min-width: em(1500px)),
+  'min-pc-xl': (min-width: em(1650px)),
+  'min-pc-xxl': (min-width: em(1800px)),
+
+  'max-pc-md': (max-width: em(1499px)),
+  'max-pc-lg': (max-width: em(1649px)),
+
+  'custom-s' : (min-width: en(541px)),
+
+  'max-h-799' : (max-height: em(799px)),
+  'max-h-450' : (max-height: em(450px)),
+);
+
+@mixin breakpoint($breakpoint, $extra: false) {
+
+  $type : type-of($breakpoint);
+  $type_of_extra : type-of($extra);
+
+  @if $breakpoint == "retina" {
+    $queries: "only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx)";
+
+    @media #{$queries} {  @content; }
+  } // retina
+
+  @else if $breakpoint == "hoverable" {
+    // $queries: "(hover: hover)";
+
+    // @media #{$queries} {  @content; }
+
+      // @include breakpoint(min-md) {
+        cursor: pointer;
+        @content;
+      // }
+  } // hoverable
+
+  @else {
+    @if $type == list and $extra == false {
+      $length : length($breakpoint);
+
+      @if $length == 2 {
+        $min : nth($breakpoint, 1);
+        $max : nth($breakpoint, 2);
+
+        $queries : 'only screen and (min-width:#{em($min)}) and (max-width:#{em($max)})';
+        @media #{$queries} { @content ; }
+      }
+    } // list min-width ~ max-width
+
+    @else if $type == list and $extra == 'width' {
+      $length : length($breakpoint);
+
+      @if $length == 2 {
+        $min : nth($breakpoint, 1);
+        $max : nth($breakpoint, 2);
+
+        $queries : 'only screen and (min-width:#{em($min)}) and (max-width:#{em($max)})';
+        @media #{$queries} { @content ; }
+      }
+    } // list min-width ~ max-width
+
+    @else if $type == list and $extra == "height" {
+      $length : length($breakpoint);
+
+      @if $length == 2 {
+        $min : nth($breakpoint, 1);
+        $max : nth($breakpoint, 2);
+
+        $queries : 'only screen and (min-height:#{em($min)}) and (max-height:#{em($max)})';
+        @media #{$queries} { @content ; }
+      }
+    } // list min-height ~ max-height
+
+    @else if $type == list and $extra == 'minw-minh' {
+      $length : length($breakpoint);
+
+      @if $length == 2 {
+        $minw : nth($breakpoint, 1);
+        $maxh : nth($breakpoint, 2);
+
+        $queries : 'only screen and (min-width:#{em($minw)}) and (min-height:#{em($maxh)})';
+        @media #{$queries} { @content ; }
+      }
+    } // list min-width ~ min-width
+
+    @else if $type == list and $extra == 'minw-maxh' {
+      $length : length($breakpoint);
+
+      @if $length == 2 {
+        $width : nth($breakpoint, 1);
+        $height : nth($breakpoint, 2);
+
+        $queries : 'only screen and (min-width:#{em($width)}) and (max-height:#{em($height)})';
+        @media #{$queries} { @content ; }
+      }
+    } // list min-width ~ max-height
+
+    @else if $type == list and $extra == 'maxw-maxh' {
+      $length : length($breakpoint);
+
+      @if $length == 2 {
+        $width : nth($breakpoint, 1);
+        $height : nth($breakpoint, 2);
+
+        $queries : 'only screen and (max-width:#{em($width)}) and (max-height:#{em($height)})';
+        @media #{$queries} { @content ; }
+      }
+    } // list max-width ~ max-height
+
+    @else if $type == list and $extra == 'maxw-minh' {
+      $length : length($breakpoint);
+
+      @if $length == 2 {
+        $width : nth($breakpoint, 1);
+        $height : nth($breakpoint, 2);
+
+        $queries : 'only screen and (max-width:#{em($width)}) and (min-height:#{em($height)})';
+        @media #{$queries} { @content ; }
+      }
+    } // list max-width ~ min-height
+
+    @else if $type == string {
+      $queries: map-get($breakpoints, $breakpoint);
+      @if not $queries {
+        @error "Breakpoint does not exist";
+      }
+      @include media($queries) { @content; }
+    } // string
+
+    @else if $type == number {
+      $breakpoint: em($breakpoint);
+
+      @if $breakpoint != 0 and $extra == false {
+        $queries : 'only screen and (min-width: #{$breakpoint})';
+        @media #{$queries} { @content }
+      }
+
+      @else if $breakpoint != 0 and $extra == 'min' {
+        $queries : 'only screen and (min-width: #{$breakpoint})';
+        @media #{$queries} { @content }
+      }
+
+      @else if $breakpoint != 0 and $extra == 'min-width' {
+        $queries : 'only screen and (min-width: #{$breakpoint})';
+        @media #{$queries} { @content }
+      }
+
+      @else if $breakpoint != 0 and $extra == 'max' {
+        $queries : 'only screen and (max-width: #{$breakpoint})';
+        @media #{$queries} { @content }
+      }
+
+      @else if $breakpoint != 0 and $extra == 'max-width' {
+        $queries : 'only screen and (max-width: #{$breakpoint})';
+        @media #{$queries} { @content }
+      }
+
+      @else if $breakpoint != 0 and $extra == 'minh' {
+        $queries : 'only screen and (min-height: #{$breakpoint})';
+        @media #{$queries} { @content }
+      }
+
+      @else if $breakpoint != 0 and $extra == 'min-height' {
+        $queries : 'only screen and (min-height: #{$breakpoint})';
+        @media #{$queries} { @content }
+      }
+
+      @else if $breakpoint != 0 and $extra == 'maxh' {
+        $queries : 'only screen and (max-height: #{$breakpoint})';
+
+        @media #{$queries} { @content }
+      }
+
+      @else if $breakpoint != 0 and $extra == 'max-height' {
+        $queries : 'only screen and (max-height: #{$breakpoint})';
+
+        @media #{$queries} { @content }
+      }
+
+      @else {
+        @error "Invalid Breakpoint";
+      }
+    } // number
+  }
+} // media queries

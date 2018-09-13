@@ -1,0 +1,33 @@
+window.user_money = '50000';
+
+window.user_chips = ["1000","5000","10000","30000","max"];
+
+window.videostream_url = "http://d556i00mq0ud2.cloudfront.net/Poker01/video/playlist.m3u8";
+
+
+for(var key in window.bets) {
+	if(window.bets[key] !== null) {
+		if(typeof window.bets[key] == "string" && _.includes(window.bets[key],"init")) {
+			window.bets[key] =  JSON.parse(window.bets[key]);
+			var sample_key = key;
+			sample_key = sample_key.replace("_bet","");
+			window.sample_saved_bets.push({
+				"table_id" : sample_key,
+				"bet_amt" : window.bets[key].init
+			});
+		}
+	}
+}
+
+window.dealer = {
+	"screen_name" : "april",
+	"img" : "april.png",
+	"image" : "april.png"
+}
+
+window.theme = "black";
+
+window.bet_limit = {
+	min: 1000,
+	max: 200000
+}

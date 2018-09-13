@@ -1,0 +1,495 @@
+/* CSS file for Junket */
+.junket-con {
+  position: absolute;
+  /* top: 7.3%; */
+  top: 11.8%;
+  width: 480px;
+  /*right: 100%;*/
+  pointer-events: auto;
+  display: none
+}
+
+#junketHeader {
+  position: relative;
+  float: left;
+  width: 100%;
+  padding: 12px 10px;
+}
+#junketRoomName {
+  float: left;
+  font: 24px lato-black;
+  text-align: left;
+}
+
+.menu-timer {
+  float: right;
+  font: 24px lato-black;
+  text-align: right;
+  display: none;
+}
+.timer-ico {
+  background-image: url('/img/menu/3.0/sub/timer.png');
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -ms-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  display: block;
+  float: right;
+  height: 20px;
+  margin: 8px;
+  width: 20px;
+}
+
+.junket-body-info {
+  background: rgba(22, 22, 22, 0.9);
+  float: left;
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+}
+
+.junket-body-info.-junket-buttons,
+.junket-body-info.-junket-toggle {
+  background: none;
+  padding: 0;
+  height: 60px;
+}
+
+.junket-info-list {
+  width: 100%;
+  height: 37px;
+  padding-top: 8px;
+  position: relative;
+}
+.info-list-left {
+  position: relative;
+  float: left;
+  color: #fff;
+  font: 22px lato-regular;
+}
+.info-list-right {
+  position: relative;
+  float: right;
+  color: #fff;
+  font: 24px bebas-regular;
+}
+.btn-junket {
+  cursor: pointer;
+  font: bold 24px lato-bold;
+  height: 60px;
+  /*margin-top: 6px;*/
+  width: 240px;
+  float: left;
+}
+.btn-junket span {
+  display: block;
+  text-align: center;
+  transform: translateY(-50%);
+  top: 50%;
+  position: relative;
+}
+
+.disband-room {
+  background: #d32f2e;
+  color: #fff;
+}
+.change-password {
+  background: #171717;
+  border: 1px solid #f0e385;
+  color: #f0e385;
+}
+
+.room-info, .room-users, .room-balance {
+  /*background: rgba(22, 22, 22, 0.9);*/
+  background: #dcc869;
+  color: #000;
+}
+.btn-junket.room-info.active,
+.btn-junket.room-balance.active,
+.btn-junket.room-users.active {
+  background: rgba(22, 22, 22, 0.9);
+  color: #dcc869;
+}
+
+#agentMoney { top: -2px; }
+.agent-ico {
+  position: absolute;
+  top: -2px;
+  width: 14px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-image: url('/img/channel/3.0/user_ico.png');
+}
+.agent-name {
+  position: relative;
+  top: -3px;
+  left: 20px;
+  color: #ede382;
+  font-weight: bold;
+}
+
+.junket-player-con {
+  float: left;
+  width: 100%;
+  height: auto;
+  background: rgba(22, 22, 22, 0.9);
+  padding-top:16px;
+  display: none
+}
+.junket-player-header {
+  height: 40px;
+  background: #5f5f5f;
+  padding-top: 8px;
+  text-transform: capitalize;
+}
+.player-header-list {
+  color: #fff;
+  float: left;
+  font: bold 18px lato-regular;
+}
+.header-username { text-align: left; width: 124px; padding-left: 15px; }
+.header-credit { text-align: right; width: 94px; word-break: keep-all; } /*55px*/
+.header-bets { text-align: right; width: 92px; } /*103px*/
+.header-winlose { text-align: right; width: 113px; padding-right: 10px; }
+
+.table--junket .table-td { display: inline-block; padding: 4px 0 0 5px; }
+.junket-player-bg {
+  display: block;
+  width: 100%;
+  height: 464px;
+  padding: 5px 10px;
+}
+.player-tbl-con {
+  display: block;
+  width: 100%;
+  height: 445px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.player-list-tr { cursor: pointer; height: 45px }
+/*.player-list-tr:hover .table-td.-hover { background: #f1e382; }*/
+/*.player-list-tr:hover .table-td { color: #000; }*/
+.table--junket .table-td:not(:last-child) { padding-right: 1px; margin-right: -1px; }
+
+.table--junket { width: 98.3%; }
+.table--junket .table-td, .table--junket .table-th { color: #fff }
+.table--junket .table-td.-text { width: 90px; padding-top: 3px; font: normal 22px lato-regular; }
+.table--junket .table-td.-credit,
+.table--junket .table-td.-bets,
+.table--junket .table-td.-winlose { font: normal 26px bebas-regular; text-align: right; width: 93px; }
+.table--junket .table-td.-winlose { width: 110px; padding-right: 5px; }
+.table--junket .table-td.-winlose.--win { color: #63a524; }
+.table--junket .table-td.-winlose.--lose { color: #d2302e; }
+.table--junket .table-td.-chat { width: 30px; }
+.table--junket .table-td.-credit { width: 128px; }
+.selected-lang-th .header-bets { width: 89px; }
+.selected-lang-th .header-winlose { width: 86px; }
+.selected-lang-th .player-header-list { font-size: 16px; }
+
+.chat-notif {
+  border-radius: 50%;
+  color: #fff;
+  height: 28px;
+  margin-left: 0px;
+  width: 25px;
+}
+.chat-notif.-inactive { background: transparent; }
+.chat-notif.-active { background: #d32f2e; }
+
+.chat-notif.chatactive {
+  -webkit-animation: chatAnimPM 2s ease-in-out infinite; /* Safari 4.0 - 8.0 */
+  animation: chatAnimPM 2s ease-in-out infinite;
+}
+@keyframes chatAnimPM {
+  0% { background: #d32f2e }
+  50% { background: rgba(22, 22, 22, 0.9) }
+  100% { background: #d32f2e }
+}
+
+.chat-ico {
+  background-size: contain;
+  height: 25px;
+  font: 15px bebas-regular;
+  left: -1px;
+  text-align: center;
+  top: -1px;
+  padding-top: 1px;
+  position: relative;
+  width: 25px;
+  /*top: 4px;*/
+  background-repeat: no-repeat;
+}
+.chat-ico.-inactive { background-image: url('/img/menu/3.0/sub/chat_inactive.png'); }
+.chat-ico.-active { background-image: url('/img/menu/3.0/sub/chat_active.png'); }
+
+.circle-con { margin: 9px 0 0 3px; }
+.extra-circle {
+  display: block;
+  width: 5px;
+  height: 5px;
+  float: left;
+  margin-right: 2px;
+  border-radius: 50%;
+  background: #dd752e;
+}
+
+/* Chat */
+.junket-chat-con {
+  background: greey;
+  height: 100%;
+  right: 0%;
+  width: 100%;
+  position: absolute;
+  pointer-events: none;
+  z-index: 999999;
+}
+
+/*Confirmation Modal*/
+.junket-confirm {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+.mdl_overlay {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.75);
+  width: 1920px;
+  height: 1080px;
+  right: 0;
+}
+
+#mdl_click-con, #mdl_password-con {
+  display: none;
+}
+
+.mdl_bg {
+  position: absolute;
+  width: 410px;
+  background: rgba(22, 22, 22, 0.9);
+  border-radius: 4px;
+  top: 28%;
+  right: 33%;
+  display: none;
+}
+.mdl_bg.-closeroom { height: 300px;}
+.mdl_bg.-password { height: 405px; top: 16%;}
+.mdl_bg.-success { height: 230px; }
+
+.mdl_warning_ico {
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  -ms-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+  background-image: url("/img/alert/alert.png");
+  width: 65px;
+  height: 60px;
+  display: block;
+  margin: 10% 0 0 43%;
+}
+.mdl_alert_txt {
+  color: #f1e382;
+  font: bold 25px lato-regular;
+  text-align: center;
+  padding-top: 11px;
+  margin-bottom: 35px;
+}
+.mdl_message {
+  text-align: center;
+  font: 20px lato-regular;
+  color: #fff;
+  margin-bottom: 10px;
+  display: block;
+  white-space: pre-wrap;
+  padding: 0 10px;
+}
+.mdl_message.-password:not(:first-child) { margin-top: 25px; }
+.reset_pass { padding-top: 20px; }
+.mdl_message-error {
+  color: #d32f2e;
+  font: bold 13px lato-regular;
+  text-align: center;
+  padding-top: 0px;
+  display: none;
+}
+/*.mdl_input {
+  border: none;
+  border-radius: 3px;
+  height: 40px;
+  width: 285px;
+  margin: 10px 0 0 135px;
+  text-align: center;
+  font-size: 25px;
+}*/
+.mdl_input {
+  border: none;
+  border-radius: 2px;
+  height: 40px;
+  width: 205px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 25px;
+  display: block;
+}
+.mdl_btn {
+  width: 50%;
+  height: 60px;
+  bottom: 0;
+  position: absolute;
+  text-align: center;
+  cursor: pointer;
+}
+.mdl_btn.-no {
+  background: #c9bc6e;
+  border-radius: 0 0 0 4px;
+}
+.mdl_btn.-yes {
+  right: 0;
+  background: #68a12e;
+  border-radius: 0 0 4px 0;
+}
+.mdl_btn.-confirm {
+  background: #68a12e;
+  border-radius: 0 0 4px 4px;
+  width: 100%;
+}
+
+.mdl_btn span {
+  color: #fffffd;
+  font: bold 19px lato-regular;
+  display: block;
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.mdl_btn.-no span { color: #000; }
+
+.mdl_msg_bet {
+  font: bold 30px lato-regular;
+  color: #343434;
+  text-align: center;
+  margin-top: 10px;
+  display: none;
+}
+.mdl_lobby {
+  position: absolute;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
+  background: #cbbb6e;
+  border-radius: 0 0 4px 4px;
+  cursor: pointer;
+  text-align: center;
+  display: none;
+}
+.mdl_lobby span {
+  font: 24px lato-black;
+  color: #000;
+  display: block;
+  position: relative;
+  transform: translateY(-50%);
+  top: 50%;
+}
+
+.password-con {
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: block;
+  padding: 40px 40px;
+}
+.password-btn-con {
+  width: 100%;
+  height: 60px;
+  position: relative;
+  display: block;
+}
+
+/** junket portrat */
+.junket-con.-portrait {
+  display: none;
+}
+
+/**portrait **/
+.-portrait .password-con { padding: 68px 40px;}
+.-portrait .mdl_input { width: 290px;}
+.-portrait .mdl_message.-password:not(:first-child) { margin-top: 35px;}
+.-portrait .mdl_overlay {
+  width: 100%;
+  height: 100%
+}
+.-portrait .mdl_bg.-password {
+    height: 525px;
+    top: 31%;
+    right: 13%;
+    width: 530px;
+}
+
+.-portrait .mdl_bg.-closeroom {
+  height: 400px;
+  width: 560px;
+  right: 11%;
+}
+.-portrait .mdl_warning_ico { 
+  width: 75px;
+  height: 90px;
+}
+
+.-portrait .mdl_alert_txt { font: bold 35px lato-regular; }
+.-portrait .mdl_message {  font: 24px lato-regular; }
+
+.junket-con.-portrait {
+  top:0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+.junket-con.-portrait .btn-junket {
+  width: 360px
+}
+.junket-con.-portrait .junket-body-info.-junket-toggle {
+  display: none;
+}
+.junket-con.-portrait .junket-player-con {
+  display: block
+}
+.junket-con.-portrait .junket-player-bg {
+  height: 960px
+}
+.junket-con.-portrait .player-tbl-con {
+  height: 935px
+}
+
+.junket-con.-portrait .header-username,
+.junket-con.-portrait .header-credit,
+.junket-con.-portrait .header-bets,
+.junket-con.-portrait .header-winlose {
+  width: 160px
+}
+
+.junket-con.-portrait .table--junket .table-td.-text,
+.junket-con.-portrait .table--junket .table-td.-credit,
+.junket-con.-portrait .table--junket .table-td.-bets,
+.junket-con.-portrait .table--junket .table-td.-winlose {
+  width: 155px;
+}
+.junket-con.-portrait .table--junket .table-td.-extra { width:65px}
+.junket-con.-portrait .player-list-tr { height: 65px}
+
+.junket-con.-portrait .chat-notif { margin-left: 24px}
+
+.junket-con.-portrait .table--junket .table-td {padding: 14px 0 0 5px}
+
+

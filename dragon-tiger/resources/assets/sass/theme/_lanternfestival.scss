@@ -1,0 +1,35 @@
+.wrapper-effects {
+  @include wh(100%, 100%);
+  @include prefix(transform-origin, top left );
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.particles {
+  @include wh(15px, 15px);
+  @include bradius(all, 50%);
+  @include box-shadow(0 0 25px 3px #fbe071);
+  @include background-image(radial-gradient(circle at top left, #ffec9d, #fbe071));
+  @include animation(light 3s ease infinite);
+  position: absolute;
+  opacity: 0;
+  display: block;
+
+  @at-root {
+    @include keyframes(light) {
+      0% {
+        // @include transform(scale(0));
+        @include opacity(0);
+      }
+      50% {
+        @include opacity((random(1) + 0.5));
+        // @include transform(scale(1));
+      }
+      100% {
+        // @include transform(scale(0));
+        @include opacity(0);
+      }
+    }
+  }
+} //particles
